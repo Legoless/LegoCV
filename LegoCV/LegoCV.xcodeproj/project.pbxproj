@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		381F15091E2AA1D50072F870 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; };
+		381F150B1E2AA22A0072F870 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
+		381F150C1E2AA22A0072F870 /* LegoCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,6 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		381F150D1E2AA22A0072F870 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38B4D4A71E2AA01F008AAAB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38B4D4AF1E2AA01F008AAAB0;
+			remoteInfo = LegoCV;
+		};
 		38B4D4BB1E2AA01F008AAAB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38B4D4A71E2AA01F008AAAB0 /* Project object */;
@@ -27,6 +36,20 @@
 			remoteInfo = LegoCV;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		381F150F1E2AA22A0072F870 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				381F150C1E2AA22A0072F870 /* LegoCV.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		381F15081E2AA1D50072F870 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../ios/opencv2.framework; sourceTree = "<group>"; };
@@ -66,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381F150B1E2AA22A0072F870 /* LegoCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,10 +221,12 @@
 				38B4D4CC1E2AA110008AAAB0 /* Sources */,
 				38B4D4CD1E2AA110008AAAB0 /* Frameworks */,
 				38B4D4CE1E2AA110008AAAB0 /* Resources */,
+				381F150F1E2AA22A0072F870 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				381F150E1E2AA22A0072F870 /* PBXTargetDependency */,
 			);
 			name = FaceDetection;
 			productName = FaceDetection;
@@ -309,6 +335,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		381F150E1E2AA22A0072F870 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38B4D4AF1E2AA01F008AAAB0 /* LegoCV */;
+			targetProxy = 381F150D1E2AA22A0072F870 /* PBXContainerItemProxy */;
+		};
 		38B4D4BC1E2AA01F008AAAB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 38B4D4AF1E2AA01F008AAAB0 /* LegoCV */;
@@ -444,6 +475,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = ../ios;
 				INFOPLIST_FILE = LegoCV/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -463,6 +495,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = ../ios;
 				INFOPLIST_FILE = LegoCV/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
