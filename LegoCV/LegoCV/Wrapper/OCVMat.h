@@ -6,8 +6,11 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface OCVMat : NSObject
+
+- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
+
 
 @end
