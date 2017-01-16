@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #import "OCVSize.h"
+#import "OCVMatExpr.h"
+#import "OCVInputArray.h"
 
 @interface OCVMat : NSObject
 
@@ -24,6 +26,20 @@
 // MARK: Public Methods
 //
 
+- (OCVMat *)reshapeWithChannels:(NSInteger)cn;
+- (OCVMat *)reshapeWithChannels:(NSInteger)cn rows:(NSInteger)rows;
+
+- (OCVMatExpr *)t;
+
+- (OCVMatExpr *)inv;
+- (OCVMatExpr *)invWithMethod:(NSInteger)method;
+
+- (OCVMatExpr *)mulWithArray:(OCVInputArray *)inputArray;
+- (OCVMatExpr *)mulWithArray:(OCVInputArray *)inputArray scale:(double)scale;
+
+- (OCVMat *)crossWithArray:(OCVInputArray *)inputArray;
+
+- (double)dotWithArray:(OCVInputArray *)inputArray;
 
 //
 // MARK: Factory Methods
@@ -38,12 +54,14 @@
 @end
 
 //
-// MARK: Unavailable in Swift, convenience for OpenCV
+// MARK: Unavailable in Swift, convenience for OpenCV, should be private
 //
 
 #import <opencv2/core/mat.hpp>
 
 @interface OCVMat (OpenCV)
+
+- (instancetype)initWithMatInstance:(cv::Mat)mat;
 
 - (cv::Mat)matInstance;
 
