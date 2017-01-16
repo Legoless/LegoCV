@@ -10,4 +10,10 @@
 
 @interface OCVSize : NSObject
 
+@property (nonatomic, assign) NSInteger width;
+@property (nonatomic, assign) NSInteger height;
+
+- (instancetype)initWithWidth:(NSInteger)width height:(NSInteger)height;
+- (instancetype)initWithSize:(OCVSize *)size;
+
 @end
