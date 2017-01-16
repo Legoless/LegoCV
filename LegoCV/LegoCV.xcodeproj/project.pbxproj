@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381193C51E2D4C1A00CF9D00 /* OCVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 381193C31E2D4C1A00CF9D00 /* OCVMat.h */; };
+		381193C61E2D4C1A00CF9D00 /* OCVMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 381193C41E2D4C1A00CF9D00 /* OCVMat.m */; };
 		381F15091E2AA1D50072F870 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; };
 		381F150B1E2AA22A0072F870 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		381F150C1E2AA22A0072F870 /* LegoCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -52,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		381193C31E2D4C1A00CF9D00 /* OCVMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVMat.h; sourceTree = "<group>"; };
+		381193C41E2D4C1A00CF9D00 /* OCVMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVMat.m; sourceTree = "<group>"; };
 		381F15081E2AA1D50072F870 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../ios/opencv2.framework; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381193C21E2D4BF600CF9D00 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				381193C31E2D4C1A00CF9D00 /* OCVMat.h */,
+				381193C41E2D4C1A00CF9D00 /* OCVMat.m */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
 		38B4D4A61E2AA01F008AAAB0 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +134,7 @@
 		38B4D4B21E2AA01F008AAAB0 /* LegoCV */ = {
 			isa = PBXGroup;
 			children = (
+				381193C21E2D4BF600CF9D00 /* Wrapper */,
 				38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */,
 				38B4D4B41E2AA01F008AAAB0 /* Info.plist */,
 			);
@@ -171,6 +185,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381193C51E2D4C1A00CF9D00 /* OCVMat.h in Headers */,
 				38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381193C61E2D4C1A00CF9D00 /* OCVMat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
