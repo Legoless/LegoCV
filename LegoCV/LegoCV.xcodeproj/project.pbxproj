@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		381193C51E2D4C1A00CF9D00 /* OCVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 381193C31E2D4C1A00CF9D00 /* OCVMat.h */; };
-		381193C61E2D4C1A00CF9D00 /* OCVMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 381193C41E2D4C1A00CF9D00 /* OCVMat.m */; };
+		381193C61E2D4C1A00CF9D00 /* OCVMat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 381193C41E2D4C1A00CF9D00 /* OCVMat.mm */; };
 		381193C91E2D4FDA00CF9D00 /* OCVSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 381193C71E2D4FDA00CF9D00 /* OCVSize.h */; };
 		381193CA1E2D4FDA00CF9D00 /* OCVSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 381193C81E2D4FDA00CF9D00 /* OCVSize.m */; };
 		381F15091E2AA1D50072F870 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; };
@@ -56,8 +56,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		381193C31E2D4C1A00CF9D00 /* OCVMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVMat.h; sourceTree = "<group>"; };
-		381193C41E2D4C1A00CF9D00 /* OCVMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVMat.m; sourceTree = "<group>"; };
+		381193C31E2D4C1A00CF9D00 /* OCVMat.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = OCVMat.h; sourceTree = "<group>"; };
+		381193C41E2D4C1A00CF9D00 /* OCVMat.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVMat.mm; sourceTree = "<group>"; };
 		381193C71E2D4FDA00CF9D00 /* OCVSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSize.h; sourceTree = "<group>"; };
 		381193C81E2D4FDA00CF9D00 /* OCVSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVSize.m; sourceTree = "<group>"; };
 		381F15081E2AA1D50072F870 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../ios/opencv2.framework; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				381193C31E2D4C1A00CF9D00 /* OCVMat.h */,
-				381193C41E2D4C1A00CF9D00 /* OCVMat.m */,
+				381193C41E2D4C1A00CF9D00 /* OCVMat.mm */,
 				381193C71E2D4FDA00CF9D00 /* OCVSize.h */,
 				381193C81E2D4FDA00CF9D00 /* OCVSize.m */,
 			);
@@ -334,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				381193C61E2D4C1A00CF9D00 /* OCVMat.m in Sources */,
+				381193C61E2D4C1A00CF9D00 /* OCVMat.mm in Sources */,
 				381193CA1E2D4FDA00CF9D00 /* OCVSize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
