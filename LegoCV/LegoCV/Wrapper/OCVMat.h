@@ -21,6 +21,11 @@
 - (instancetype)initWithMat:(OCVMat *)mat;
 
 //
+// MARK: Public Methods
+//
+
+
+//
 // MARK: Factory Methods
 //
 
