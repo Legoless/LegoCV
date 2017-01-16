@@ -19,12 +19,23 @@
 // MARK: Public Properties
 //
 
+@property (nonatomic, readonly) NSInteger rows;
+@property (nonatomic, readonly) NSInteger cols;
+
+@property (nonatomic, readonly) NSInteger dims;
+
 @property (nonatomic, readonly) BOOL isSubmatrix;
 @property (nonatomic, readonly) BOOL isContinuous;
+
+@property (nonatomic, readonly) BOOL isEmpty;
+@property (nonatomic, readonly) NSInteger total;
 
 @property (nonatomic, readonly) NSInteger elemSize;
 @property (nonatomic, readonly) NSInteger elemSize1;
 @property (nonatomic, readonly) OCVChannelType type;
+
+@property (nonatomic, readonly) NSInteger depth;
+@property (nonatomic, readonly) NSInteger channels;
 
 //
 // MARK: Initialization
