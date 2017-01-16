@@ -12,9 +12,23 @@
 
 @interface OCVMat : NSObject
 
+//
+// MARK: Initialization
+//
+
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
 - (instancetype)initWithSize:(OCVSize *)size type:(NSInteger)type;
 - (instancetype)initWithMat:(OCVMat *)mat;
+
+//
+// MARK: Factory Methods
+//
+
++ (instancetype)zerosWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
++ (instancetype)zerosWithSize:(OCVSize *)size type:(NSInteger)type;
+
++ (instancetype)onesWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
++ (instancetype)onesWithSize:(OCVSize *)size type:(NSInteger)type;
 
 @end
 
