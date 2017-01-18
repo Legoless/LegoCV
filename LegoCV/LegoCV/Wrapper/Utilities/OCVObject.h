@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OCVObject : NSObject
+@interface OCVObject : NSObject {
+    void *pointer;
+}
+
+- (instancetype)initWithUnsafePointer:(void *)pointer;
 
 @end
