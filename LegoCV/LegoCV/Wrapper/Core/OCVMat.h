@@ -84,7 +84,7 @@
 // MARK: Unavailable in Swift, convenience for OpenCV, should be private
 //
 
-#import <opencv2/core/mat.hpp>
+#import <opencv2/mat.hpp>
 
 @interface OCVMat (OpenCV)
 
