@@ -222,6 +222,8 @@
 		383BC5B51E30017C002EA7A1 /* OCVDTFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5B31E30017C002EA7A1 /* OCVDTFilter.m */; };
 		383BC5B81E30018A002EA7A1 /* OCVXPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC5B61E30018A002EA7A1 /* OCVXPhoto.h */; };
 		383BC5B91E30018A002EA7A1 /* OCVXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5B71E30018A002EA7A1 /* OCVXPhoto.m */; };
+		383BC5BC1E3001E6002EA7A1 /* OCVInputOutputArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */; };
+		383BC5BD1E3001E6002EA7A1 /* OCVInputOutputArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -489,6 +491,8 @@
 		383BC5B31E30017C002EA7A1 /* OCVDTFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVDTFilter.m; sourceTree = "<group>"; };
 		383BC5B61E30018A002EA7A1 /* OCVXPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVXPhoto.h; sourceTree = "<group>"; };
 		383BC5B71E30018A002EA7A1 /* OCVXPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVXPhoto.m; sourceTree = "<group>"; };
+		383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputOutputArray.h; sourceTree = "<group>"; };
+		383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVInputOutputArray.m; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1072,6 +1076,8 @@
 				67E646287C3C3D415F1D7019 /* OCVTypes.h */,
 				383BC4121E2FF99D002EA7A1 /* OCVOutputArray.h */,
 				383BC4131E2FF99D002EA7A1 /* OCVOutputArray.m */,
+				383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */,
+				383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1184,6 +1190,7 @@
 				383BC5281E2FFFBD002EA7A1 /* OCVSticher.h in Headers */,
 				383BC4401E2FFBB3002EA7A1 /* OCVFisherFaceRecognizer.h in Headers */,
 				67E645AFE0D4053E62EF9C20 /* OCVSize.h in Headers */,
+				383BC5BC1E3001E6002EA7A1 /* OCVInputOutputArray.h in Headers */,
 				383BC5241E2FFFB5002EA7A1 /* OCVStereographicWarper.h in Headers */,
 				383BC4681E2FFC8F002EA7A1 /* OCVDTree.h in Headers */,
 				67E644B5E56E5349F6453B3E /* OCVMatExpr.h in Headers */,
@@ -1477,6 +1484,7 @@
 				383BC4C11E2FFE4E002EA7A1 /* OCVPageIterator.m in Sources */,
 				383BC5651E30009D002EA7A1 /* OCVVideoCaptureFrameSource.m in Sources */,
 				383BC5811E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.m in Sources */,
+				383BC5BD1E3001E6002EA7A1 /* OCVInputOutputArray.m in Sources */,
 				67E640484491E8713097DEB2 /* OCVComplex.m in Sources */,
 				383BC4CD1E2FFE7C002EA7A1 /* OCVOrientation.m in Sources */,
 				383BC5311E2FFFD9002EA7A1 /* OCVWarperCreator.m in Sources */,
