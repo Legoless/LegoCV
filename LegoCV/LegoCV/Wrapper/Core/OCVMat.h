@@ -44,6 +44,7 @@
 // MARK: Initialization
 //
 
+- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols;
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVChannelType)type;
 - (instancetype)initWithSize:(OCVSize *)size type:(NSInteger)type;
 - (instancetype)initWithMat:(OCVMat *)mat;
@@ -96,6 +97,8 @@
 - (instancetype)initWithImage:(UIImage *)image;
 - (instancetype)initWithImageRef:(CGImageRef)imageRef;
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
+- (instancetype)initWithCGSize:(CGSize)size;
+- (instancetype)initWithCGSize:(CGSize)size type:(OCVChannelType)type;
 
 /*!
  *  Construct image reference and returns it

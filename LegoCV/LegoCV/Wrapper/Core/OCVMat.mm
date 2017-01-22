@@ -44,6 +44,10 @@
     return nil;
 }
 
+- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols {
+    return [self initWithRows:rows cols:cols type:CV_8UC4];
+}
+
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVChannelType)type {
     self = [super init];
     
@@ -90,6 +94,14 @@
     cv::Mat mat = [self.class matFromImageRef:imageRef];
     
     return [self initWithMatInstance:mat];
+}
+
+- (instancetype)initWithCGSize:(CGSize)size {
+    return [self initWithCGSize:size type:CV_8UC4];
+}
+
+- (instancetype)initWithCGSize:(CGSize)size type:(OCVChannelType)type {
+    return [self initWithRows:(NSInteger)size.width cols:(NSInteger)size.height type:type];
 }
 
 //
