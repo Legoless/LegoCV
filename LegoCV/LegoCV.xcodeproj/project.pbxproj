@@ -229,6 +229,8 @@
 		386F2B821E3524D300320AEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B7F1E3524D300320AEB /* CoreGraphics.framework */; };
 		386F2B831E3524D300320AEB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B801E3524D300320AEB /* CoreVideo.framework */; };
 		386F2B841E3524D300320AEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B811E3524D300320AEB /* UIKit.framework */; };
+		386F2B871E352A4800320AEB /* OCVPointerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B851E352A4800320AEB /* OCVPointerObject.h */; };
+		386F2B881E352A4800320AEB /* OCVPointerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F2B861E352A4800320AEB /* OCVPointerObject.m */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -503,6 +505,8 @@
 		386F2B7F1E3524D300320AEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		386F2B801E3524D300320AEB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		386F2B811E3524D300320AEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		386F2B851E352A4800320AEB /* OCVPointerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPointerObject.h; sourceTree = "<group>"; };
+		386F2B861E352A4800320AEB /* OCVPointerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVPointerObject.m; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -871,6 +875,8 @@
 			children = (
 				383BC40E1E2FF974002EA7A1 /* OCVObject.h */,
 				383BC40F1E2FF974002EA7A1 /* OCVObject.m */,
+				386F2B851E352A4800320AEB /* OCVPointerObject.h */,
+				386F2B861E352A4800320AEB /* OCVPointerObject.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1233,6 +1239,7 @@
 				383BC4BC1E2FFE1C002EA7A1 /* OCVProgramSource.h in Headers */,
 				383BC5101E2FFF82002EA7A1 /* OCVOrbFeaturesFinder.h in Headers */,
 				383BC5481E30003C002EA7A1 /* OCVERFilterNM1.h in Headers */,
+				386F2B871E352A4800320AEB /* OCVPointerObject.h in Headers */,
 				383BC4241E2FFB32002EA7A1 /* OCVCharucoBoard.h in Headers */,
 				383BC5881E3000FF002EA7A1 /* OCVHistogramViewer.h in Headers */,
 				383BC57C1E3000DA002EA7A1 /* OCVBackgroundSubtractorKNN.h in Headers */,
@@ -1436,6 +1443,7 @@
 				67E64D06E470E4D6C46DB141 /* OCVInputArray.m in Sources */,
 				383BC4F11E2FFF14002EA7A1 /* OCVNormHistogramCostExtractor.m in Sources */,
 				383BC4451E2FFBBF002EA7A1 /* OCVLBPHFaceRecognizer.m in Sources */,
+				386F2B881E352A4800320AEB /* OCVPointerObject.m in Sources */,
 				383BC46D1E2FFCA2002EA7A1 /* OCVEM.m in Sources */,
 				383BC5191E2FFF99002EA7A1 /* OCVPaniniWarper.m in Sources */,
 				383BC4C51E2FFE63002EA7A1 /* OCVTesseract.m in Sources */,
