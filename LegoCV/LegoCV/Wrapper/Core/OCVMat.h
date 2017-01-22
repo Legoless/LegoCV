@@ -112,10 +112,9 @@
 #import <opencv2/core/mat.hpp>
 #import <CoreVideo/CoreVideo.h>
 
-
 @interface OCVMat (OpenCV)
 
-@property (nonatomic, readonly) cv::Mat matInstance;
+@property (nonatomic, readonly) cv::Mat source;
 
 - (instancetype)initWithMatInstance:(cv::Mat)mat;
 

@@ -19,23 +19,59 @@
 @implementation OCVMat
 
 //
+// MARK: Public Properties
+//
+
+- (NSInteger)rows {
+    return source.rows;
+}
+
+- (NSInteger)cols {
+    return source.cols;
+}
+
+- (cv::Mat)source {
+    return source;
+}
+
+//
 // MARK: Initialization
 //
 
-- (instancetype)initWithMat:(OCVMat *)mat {
-    cv::Mat sourceMat = mat.matInstance;
+- (instancetype)init {
+    [NSException raise:@"InitNotImplemented" format:@"Use another initializer instead of default one."];
     
-    return [self initWithMatInstance:sourceMat];
+    return nil;
+}
+
+- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVChannelType)type {
+    self = [super init];
+    
+    if (self) {
+        self->source = cv::Mat((int)rows, (int)cols, (int)type);
+    }
+    
+    return self;
 }
 
 - (instancetype)initWithMatInstance:(cv::Mat)mat {
     self = [super init];
     
     if (self) {
-        self->source = mat;
+        self->source = cv::Mat(mat);
     }
     
     return self;
+}
+
+//
+// MARK: Convenience initializers
+//
+
+- (instancetype)initWithMat:(OCVMat *)mat {
+    cv::Mat sourceMat = mat.source;
+    
+    return [self initWithMatInstance:sourceMat];
 }
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer {
