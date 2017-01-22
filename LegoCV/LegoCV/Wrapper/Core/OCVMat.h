@@ -52,6 +52,7 @@
 // MARK: Public Methods
 //
 
+
 //
 // MARK: Operations
 //
@@ -96,6 +97,12 @@
 - (instancetype)initWithImageRef:(CGImageRef)imageRef;
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
 
+/*!
+ *  Construct image reference and returns it
+ */
+- (CGImageRef)imageRef;
+- (UIImage *)image;
+
 @end
 
 //
@@ -108,9 +115,9 @@
 
 @interface OCVMat (OpenCV)
 
+@property (nonatomic, readonly) cv::Mat matInstance;
 
 - (instancetype)initWithMatInstance:(cv::Mat)mat;
 
-- (cv::Mat)matInstance;
 
 @end
