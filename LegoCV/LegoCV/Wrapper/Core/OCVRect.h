@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "OCVObject.h"
 
 @interface OCVRect : OCVObject
 

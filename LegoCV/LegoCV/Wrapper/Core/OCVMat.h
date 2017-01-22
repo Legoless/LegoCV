@@ -13,6 +13,9 @@
 #import "OCVMatExpr.h"
 #import "OCVInputArray.h"
 
+/*!
+ *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
+ */
 @interface OCVMat : NSObject
 
 //
@@ -81,12 +84,30 @@
 @end
 
 //
+// MARK: UIKit / CoreGraphics Extensions
+//
+
+#import <UIKit/UIKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+
+@interface OCVMat (UIKit)
+
+- (instancetype)initWithImage:(UIImage *)image;
+- (instancetype)initWithImageRef:(CGImageRef)imageRef;
+- (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
+
+@end
+
+//
 // MARK: Unavailable in Swift, convenience for OpenCV, should be private
 //
 
 #import <opencv2/core/mat.hpp>
+#import <CoreVideo/CoreVideo.h>
+
 
 @interface OCVMat (OpenCV)
+
 
 - (instancetype)initWithMatInstance:(cv::Mat)mat;
 
