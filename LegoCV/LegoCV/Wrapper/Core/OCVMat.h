@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "OCVObject.h"
 
 #import "OCVTypes.h"
 #import "OCVSize.h"
@@ -16,7 +16,7 @@
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
  */
-@interface OCVMat : NSObject
+@interface OCVMat : OCVObject
 
 //
 // MARK: Public Properties

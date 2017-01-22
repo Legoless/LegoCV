@@ -10,14 +10,4 @@
 
 @implementation OCVObject
 
-- (instancetype)initWithUnsafePointer:(void *)unsafePointer {
-    self = [super init];
-    
-    if (self) {
-        pointer = unsafePointer;
-    }
-    
-    return self;
-}
-
 @end

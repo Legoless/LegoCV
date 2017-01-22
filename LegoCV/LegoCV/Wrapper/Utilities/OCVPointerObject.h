@@ -8,6 +8,10 @@
 
 #import "OCVObject.h"
 
-@interface OCVPointerObject : OCVObject
+@interface OCVPointerObject : OCVObject {
+    void *pointer;
+}
+
+- (instancetype)initWithUnsafePointer:(void *)pointer;
 
 @end
