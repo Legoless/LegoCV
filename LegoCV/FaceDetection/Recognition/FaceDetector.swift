@@ -6,8 +6,8 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-import UIKit
+import LegoCV
 
-class FaceDetector: NSObject {
+class FaceDetector {
 
 }
