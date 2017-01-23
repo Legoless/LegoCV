@@ -6,8 +6,24 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "OCVCamera.h"
 
-@interface OCVPhotoCamera : NSObject
+@class OCVPhotoCamera;
+
+@protocol OCVPhotoCameraDelegate <NSObject>
+
+- (void)photoCamera:(OCVPhotoCamera *)photoCamera capturedImage:(UIImage *)image;
+- (void)photoCameraCancel:(OCVPhotoCamera *)photoCamera;
+
+@end
+
+@interface OCVPhotoCamera : OCVCamera
+/*{
+    AVCaptureStillImageOutput *stillImageOutput;
+}*/
+
+@property (nonatomic, weak) id<OCVPhotoCameraDelegate> delegate;
+
+- (void)takePicture;
 
 @end

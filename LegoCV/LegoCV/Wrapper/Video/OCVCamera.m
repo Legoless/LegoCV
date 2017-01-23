@@ -1,13 +1,13 @@
 //
-//  FaceDetector.swift
+//  OCVCamera.m
 //  LegoCV
 //
 //  Created by Dal Rupnik on 23/01/2017.
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-import LegoCV
+#import "OCVCamera.h"
 
-class FaceDetector {
-    var mat : OCVMat? = nil
-}
+@implementation OCVCamera
+
+@end
