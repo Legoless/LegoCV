@@ -11,7 +11,6 @@
 //
 
 #import <opencv2/core/mat.hpp>
-#import <CoreVideo/CoreVideo.h>
 
 @interface OCVMat (OpenCV)
 

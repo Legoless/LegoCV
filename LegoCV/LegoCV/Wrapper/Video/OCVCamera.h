@@ -9,9 +9,12 @@
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
 
-#import "OCVObject.h"
+#import "OCVReferenceObject.h"
 
-@interface OCVCamera : OCVObject
+/*!
+ *  Abstract camera, do not use directly
+ */
+@interface OCVCamera : OCVReferenceObject
 
 @property (nonatomic, strong) AVCaptureSession* captureSession;
 @property (nonatomic, strong) AVCaptureConnection* videoCaptureConnection;
@@ -38,6 +41,9 @@
 - (void)stop;
 - (void)switchCameras;
 
+/*!
+ *  Used by subclasses
+ */
 - (instancetype)initWithParentView:(UIView*)parent;
 
 - (void)createCaptureOutput;

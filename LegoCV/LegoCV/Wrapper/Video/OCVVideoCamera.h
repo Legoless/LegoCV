@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <CoreAnimation/CoreAnimation.h>
+#import <CoreGraphics/CoreGraphics.h>
 
 #import "OCVCamera.h"
 #import "OCVMat.h"

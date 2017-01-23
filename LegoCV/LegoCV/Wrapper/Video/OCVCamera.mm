@@ -7,7 +7,12 @@
 //
 
 #import "OCVCamera.h"
+#import "OCVCamera+Private.h"
 
 @implementation OCVCamera
+
+- (CvAbstractCamera *)source {
+    return (CvAbstractCamera *)self.object;
+}
 
 @end
