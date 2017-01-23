@@ -30,6 +30,10 @@
     [((CvPhotoCamera *)self.source) takePicture];
 }
 
+//
+// MARK: CvPhotoCameraDelegate
+//
+
 - (void)photoCamera:(CvPhotoCamera*)photoCamera capturedImage:(UIImage *)image {
     [self.delegate photoCamera:self capturedImage:image];
 }
