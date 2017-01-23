@@ -12,12 +12,20 @@
 
 @interface OCVPhotoCamera () <CvPhotoCameraDelegate>
 
+@property (nonatomic, readonly) CvPhotoCamera *cameraSource;
+
 @end
 
 @implementation OCVPhotoCamera
 
+- (CvPhotoCamera *)cameraSource {
+    return (CvPhotoCamera *)self.source;
+}
+
 - (void)setDelegate:(id<OCVPhotoCameraDelegate>)delegate {
-    ((CvPhotoCamera *)self.source).delegate = self;
+    _delegate = delegate;
+    
+    self.cameraSource.delegate = self;
 }
 
 - (instancetype)initWithParentView:(UIView *)parent {
@@ -27,7 +35,7 @@
 }
 
 - (void)takePicture {
-    [((CvPhotoCamera *)self.source) takePicture];
+    [self.cameraSource takePicture];
 }
 
 //

@@ -19,11 +19,6 @@
 
 @interface OCVVideoCamera : OCVCamera
 
-@property (nonatomic, strong) AVCaptureVideoDataOutput* videoDataOutput;
-@property (nonatomic, strong) dispatch_queue_t videoDataOutputQueue;
-@property (nonatomic, strong) CALayer *customPreviewLayer;
-@property (nonatomic, assign) CMTime lastSampleTime;
-
 @property (nonatomic, weak) id<OCVVideoCameraDelegate> delegate;
 @property (nonatomic, assign) BOOL grayscaleMode;
 

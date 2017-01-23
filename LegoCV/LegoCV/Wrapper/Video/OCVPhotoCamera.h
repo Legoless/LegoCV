@@ -19,11 +19,6 @@
 
 @interface OCVPhotoCamera : OCVCamera
 
-@property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;
-
-// Add for iOS 10
-//@property (nonatomic, strong) AVCapturePhotoOutput *stillPhotoOutput;
-
 @property (nonatomic, weak) id<OCVPhotoCameraDelegate> delegate;
 
 - (void)takePicture;
