@@ -6,6 +6,8 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
+#import <CoreAnimation/CoreAnimation.h>
+
 #import "OCVCamera.h"
 #import "OCVMat.h"
 
@@ -16,16 +18,11 @@
 @end
 
 @interface OCVVideoCamera : OCVCamera
-/*
-{
-    AVCaptureVideoDataOutput *videoDataOutput;
-    
-    dispatch_queue_t videoDataOutputQueue;
-    CALayer *customPreviewLayer;
-    
-    CMTime lastSampleTime;
-    
-}*/
+
+@property (nonatomic, strong) AVCaptureVideoDataOutput* videoDataOutput;
+@property (nonatomic, strong) dispatch_queue_t videoDataOutputQueue;
+@property (nonatomic, strong) CALayer *customPreviewLayer;
+@property (nonatomic, assign) CMTime lastSampleTime;
 
 @property (nonatomic, weak) id<OCVVideoCameraDelegate> delegate;
 @property (nonatomic, assign) BOOL grayscaleMode;

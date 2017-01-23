@@ -12,18 +12,15 @@
 #import "OCVObject.h"
 
 @interface OCVCamera : OCVObject
-/*
-{
-    UIDeviceOrientation currentDeviceOrientation;
-    
-    BOOL cameraAvailable;
-}*/
 
 @property (nonatomic, strong) AVCaptureSession* captureSession;
 @property (nonatomic, strong) AVCaptureConnection* videoCaptureConnection;
 
 @property (nonatomic, readonly) BOOL running;
 @property (nonatomic, readonly) BOOL captureSessionLoaded;
+
+@property (nonatomic, assign) BOOL cameraAvailable;
+@property (nonatomic, assign) UIDeviceOrientation currentDeviceOrientation;
 
 @property (nonatomic, assign) int defaultFPS;
 @property (nonatomic, readonly) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;

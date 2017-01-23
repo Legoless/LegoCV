@@ -18,10 +18,8 @@
 @end
 
 @interface OCVPhotoCamera : OCVCamera
-/*{
-    AVCaptureStillImageOutput *stillImageOutput;
-}*/
 
+@property (nonatomic, strong) AVCaptureStillImageOutput *stillImageOutput;
 @property (nonatomic, weak) id<OCVPhotoCameraDelegate> delegate;
 
 - (void)takePicture;
