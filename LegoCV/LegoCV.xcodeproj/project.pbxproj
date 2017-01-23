@@ -224,7 +224,7 @@
 		383BC5B91E30018A002EA7A1 /* OCVXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5B71E30018A002EA7A1 /* OCVXPhoto.m */; };
 		383BC5BC1E3001E6002EA7A1 /* OCVInputOutputArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */; };
 		383BC5BD1E3001E6002EA7A1 /* OCVInputOutputArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */; };
-		386F2B7D1E35228F00320AEB /* OCVRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B7B1E35228F00320AEB /* OCVRect.h */; };
+		386F2B7D1E35228F00320AEB /* OCVRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B7B1E35228F00320AEB /* OCVRect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		386F2B7E1E35228F00320AEB /* OCVRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F2B7C1E35228F00320AEB /* OCVRect.m */; };
 		386F2B821E3524D300320AEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B7F1E3524D300320AEB /* CoreGraphics.framework */; };
 		386F2B831E3524D300320AEB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B801E3524D300320AEB /* CoreVideo.framework */; };
@@ -243,7 +243,7 @@
 		389718781E361ECC00CB02B4 /* OCVVideoCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 389718761E361ECC00CB02B4 /* OCVVideoCamera.mm */; };
 		3897187B1E361F0600CB02B4 /* OCVPhotoCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718791E361F0600CB02B4 /* OCVPhotoCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3897187C1E361F0600CB02B4 /* OCVPhotoCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3897187A1E361F0600CB02B4 /* OCVPhotoCamera.mm */; };
-		3897187F1E3621D000CB02B4 /* OCVCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 3897187D1E3621D000CB02B4 /* OCVCamera.h */; };
+		3897187F1E3621D000CB02B4 /* OCVCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 3897187D1E3621D000CB02B4 /* OCVCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389718801E3621D000CB02B4 /* OCVCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3897187E1E3621D000CB02B4 /* OCVCamera.mm */; };
 		389718851E36263A00CB02B4 /* OCVReferenceObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718831E36263A00CB02B4 /* OCVReferenceObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389718861E36263A00CB02B4 /* OCVReferenceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 389718841E36263A00CB02B4 /* OCVReferenceObject.m */; };
@@ -261,6 +261,8 @@
 		38B4D4D81E2AA110008AAAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4D61E2AA110008AAAB0 /* Main.storyboard */; };
 		38B4D4DA1E2AA111008AAAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4D91E2AA111008AAAB0 /* Assets.xcassets */; };
 		38B4D4DD1E2AA111008AAAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4DB1E2AA111008AAAB0 /* LaunchScreen.storyboard */; };
+		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67E640484491E8713097DEB2 /* OCVComplex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E647669347DEDB0F2128DA /* OCVComplex.m */; };
 		67E644A83A079FB7EFF64636 /* OCVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E64B597AADF642B92A4FF4 /* OCVMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67E644B5E56E5349F6453B3E /* OCVMatExpr.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E64AE62B89D99AFF5B7ED1 /* OCVMatExpr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -562,6 +564,8 @@
 		38B4D4D91E2AA111008AAAB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B4D4DC1E2AA111008AAAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38B4D4DE1E2AA111008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
+		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		67E6409D184D6D07E50BFEBB /* OCVImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVImage.m; sourceTree = "<group>"; };
 		67E641D2EEE051993A828F10 /* OCVInputArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVInputArray.m; sourceTree = "<group>"; };
 		67E6429531419EE64501EFC2 /* OCVComplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVComplex.h; sourceTree = "<group>"; };
@@ -684,6 +688,7 @@
 		389718741E361EA800CB02B4 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				38DB13EB1E366E0100822472 /* OCVVideo.h */,
 				3897187D1E3621D000CB02B4 /* OCVCamera.h */,
 				3897187E1E3621D000CB02B4 /* OCVCamera.mm */,
 				389718811E36250800CB02B4 /* OCVCamera+Private.h */,
@@ -1183,6 +1188,7 @@
 		67E64E1D1A75A6F4A9339476 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				38DB13ED1E366FD500822472 /* OCVCore.h */,
 				67E64AE2C47B7C63D77B8226 /* OCVImage.h */,
 				67E6409D184D6D07E50BFEBB /* OCVImage.m */,
 				67E645E6607C62CB26AB3A2E /* OCVInputArray.h */,
@@ -1267,6 +1273,7 @@
 				383BC5181E2FFF99002EA7A1 /* OCVPaniniWarper.h in Headers */,
 				383BC4FC1E2FFF44002EA7A1 /* OCVThinPlateSplineShapeTransformer.h in Headers */,
 				383BC4801E2FFCE1002EA7A1 /* OCVStatModelExtensions.h in Headers */,
+				38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */,
 				383BC5401E30001E002EA7A1 /* OCVSuperResolution.h in Headers */,
 				383BC4841E2FFCEA002EA7A1 /* OCVSVM.h in Headers */,
 				383BC46C1E2FFCA2002EA7A1 /* OCVEM.h in Headers */,
@@ -1372,6 +1379,7 @@
 				383BC4CC1E2FFE7C002EA7A1 /* OCVOrientation.h in Headers */,
 				383BC4141E2FF99D002EA7A1 /* OCVOutputArray.h in Headers */,
 				383BC5601E30007F002EA7A1 /* OCVTracker.h in Headers */,
+				38DB13EE1E366FE700822472 /* OCVCore.h in Headers */,
 				383BC4DC1E2FFED0002EA7A1 /* OCVChiHistogramCostExtractor.h in Headers */,
 				67E644A83A079FB7EFF64636 /* OCVMat.h in Headers */,
 				383BC4A81E2FFDE5002EA7A1 /* OCVQueue.h in Headers */,
