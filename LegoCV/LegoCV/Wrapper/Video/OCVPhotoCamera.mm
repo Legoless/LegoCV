@@ -10,20 +10,31 @@
 
 #import "OCVPhotoCamera.h"
 
-@interface OCVPhotoCamera ()
+@interface OCVPhotoCamera () <CvPhotoCameraDelegate>
 
 @end
 
 @implementation OCVPhotoCamera
 
+- (void)setDelegate:(id<OCVPhotoCameraDelegate>)delegate {
+    ((CvPhotoCamera *)self.source).delegate = self;
+}
+
 - (instancetype)initWithParentView:(UIView *)parent {
-    self = [super initWithObject:[[CvAbstractCamera alloc] initWithParentView:parent]];
+    self = [super initWithObject:[[CvPhotoCamera alloc] initWithParentView:parent]];
         
     return self;
 }
 
 - (void)takePicture {
     [((CvPhotoCamera *)self.source) takePicture];
+}
+
+- (void)photoCamera:(CvPhotoCamera*)photoCamera capturedImage:(UIImage *)image {
+    [self.delegate photoCamera:self capturedImage:image];
+}
+- (void)photoCameraCancel:(CvPhotoCamera*)photoCamera {
+    [self.delegate photoCameraCancel:self];
 }
 
 @end
