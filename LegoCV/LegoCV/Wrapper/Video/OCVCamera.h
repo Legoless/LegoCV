@@ -22,15 +22,15 @@
 @property (nonatomic, readonly) BOOL running;
 @property (nonatomic, readonly) BOOL captureSessionLoaded;
 
-@property (nonatomic, assign) int defaultFPS;
+@property (nonatomic, assign) NSInteger defaultFPS;
 @property (nonatomic, readonly) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
 @property (nonatomic, assign) AVCaptureDevicePosition defaultAVCaptureDevicePosition;
 @property (nonatomic, assign) AVCaptureVideoOrientation defaultAVCaptureVideoOrientation;
 @property (nonatomic, assign) BOOL useAVCaptureVideoPreviewLayer;
 @property (nonatomic, strong) NSString *const defaultAVCaptureSessionPreset;
 
-@property (nonatomic, assign) int imageWidth;
-@property (nonatomic, assign) int imageHeight;
+@property (nonatomic, assign) NSInteger imageWidth;
+@property (nonatomic, assign) NSInteger imageHeight;
 
 @property (nonatomic, strong) UIView* parentView;
 

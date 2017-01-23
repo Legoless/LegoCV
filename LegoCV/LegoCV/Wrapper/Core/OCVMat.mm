@@ -104,9 +104,7 @@
     return [self initWithRows:(NSInteger)size.width cols:(NSInteger)size.height type:type];
 }
 
-//
-// MARK: Public Methods
-//
+#pragma mark - Public Methods
 
 - (CGImageRef)imageRef {
     return [self.class imageRefFromMat:self->source];
@@ -118,10 +116,7 @@
     return [UIImage imageWithCGImage:imageRef];
 }
 
-//
-// MARK: Private Utility Methods
-//
-
+#pragma mark - Private Utility Methods
 
 + (cv::Mat)matFromImageRef:(CGImageRef)imageRef {
     CGColorSpaceRef colorSpace = CGImageGetColorSpace(imageRef);

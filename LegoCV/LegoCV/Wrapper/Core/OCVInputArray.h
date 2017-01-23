@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OCVInputArray : NSObject
+@protocol OCVInputArray <NSObject>
 
 @end

@@ -6,8 +6,9 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
+#import "OCVInputArray.h"
 #import "OCVOutputArray.h"
 
-@interface OCVInputOutputArray : OCVOutputArray
+@protocol OCVInputOutputArray <OCVInputArray, OCVOutputArray>
 
 @end

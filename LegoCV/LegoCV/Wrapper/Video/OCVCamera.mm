@@ -43,12 +43,12 @@
     return self.source.captureSessionLoaded;
 }
 
-- (int)defaultFPS {
+- (NSInteger)defaultFPS {
     return self.source.defaultFPS;
 }
 
-- (void)setDefaultFPS:(int)defaultFPS {
-    self.source.defaultFPS = defaultFPS;
+- (void)setDefaultFPS:(NSInteger)defaultFPS {
+    self.source.defaultFPS = (int)defaultFPS;
 }
 
 - (AVCaptureVideoPreviewLayer *)captureVideoPreviewLayer {
@@ -87,20 +87,20 @@
     self.source.defaultAVCaptureSessionPreset = defaultAVCaptureSessionPreset;
 }
 
-- (int)imageWidth {
+- (NSInteger)imageWidth {
     return self.source.imageWidth;
 }
 
-- (void)setImageWidth:(int)imageWidth {
-    self.source.imageWidth = imageWidth;
+- (void)setImageWidth:(NSInteger)imageWidth {
+    self.source.imageWidth = (int)imageWidth;
 }
 
-- (int)imageHeight {
+- (NSInteger)imageHeight {
     return self.source.imageHeight;
 }
 
-- (void)setImageHeight:(int)imageHeight {
-    self.source.imageHeight = imageHeight;
+- (void)setImageHeight:(NSInteger)imageHeight {
+    self.source.imageHeight = (int)imageHeight;
 }
 
 - (UIView *)parentView {

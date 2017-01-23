@@ -53,6 +53,7 @@
 // MARK: Public Methods
 //
 
+- (OCVMat *)clone;
 
 //
 // MARK: Operations
@@ -66,12 +67,12 @@
 - (OCVMatExpr *)inv;
 - (OCVMatExpr *)invWithMethod:(NSInteger)method;
 
-- (OCVMatExpr *)mulWithArray:(OCVInputArray *)inputArray;
-- (OCVMatExpr *)mulWithArray:(OCVInputArray *)inputArray scale:(double)scale;
+- (OCVMatExpr *)mulWithArray:(id<OCVInputArray>)inputArray;
+- (OCVMatExpr *)mulWithArray:(id<OCVInputArray>)inputArray scale:(double)scale;
 
-- (OCVMat *)crossWithArray:(OCVInputArray *)inputArray;
+- (OCVMat *)crossWithArray:(id<OCVInputArray>)inputArray;
 
-- (double)dotWithArray:(OCVInputArray *)inputArray;
+- (double)dotWithArray:(id<OCVInputArray>)inputArray;
 
 //
 // MARK: Factory Methods

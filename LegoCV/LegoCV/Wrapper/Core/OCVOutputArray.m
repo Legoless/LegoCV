@@ -7,7 +7,3 @@
 //
 
 #import "OCVOutputArray.h"
-
-@implementation OCVOutputArray
-
-@end

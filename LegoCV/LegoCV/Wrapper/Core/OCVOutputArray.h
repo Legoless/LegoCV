@@ -6,8 +6,8 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVInputArray.h"
+#import <Foundation/Foundation.h>
 
-@interface OCVOutputArray : OCVInputArray
+@protocol OCVOutputArray <NSObject>
 
 @end

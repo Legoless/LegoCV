@@ -27,11 +27,11 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     func startCapture () {
-        
+        videoCamera.start()
     }
     
     func stopCapture () {
-        
+        videoCamera.stop()
     }
     
     func detectedFaces () -> [CGRect] {
@@ -54,13 +54,18 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         return faceImgs[index].image()
     }
     
+    func processImage(_ image: OCVMat!) {
+        
+    }
+    
     private func setupCamera () {
         videoCamera = OCVVideoCamera(parentView: imageView)
         videoCamera.defaultAVCaptureDevicePosition = .back
         videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset640x480
+        videoCamera.defaultAVCaptureVideoOrientation = .portrait
+        videoCamera.defaultFPS = 30
+        videoCamera.grayscaleMode = false
+        videoCamera.delegate = self
     }
     
-    func processImage(_ image: OCVMat!) {
-        
-    }
 }
