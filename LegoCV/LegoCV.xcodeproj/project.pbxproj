@@ -248,6 +248,12 @@
 		389718851E36263A00CB02B4 /* OCVReferenceObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718831E36263A00CB02B4 /* OCVReferenceObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389718861E36263A00CB02B4 /* OCVReferenceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 389718841E36263A00CB02B4 /* OCVReferenceObject.m */; };
 		389718871E3627D100CB02B4 /* OCVCamera+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718811E36250800CB02B4 /* OCVCamera+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		389718891E362B8F00CB02B4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389718881E362B8F00CB02B4 /* AVFoundation.framework */; };
+		3897188B1E362B9700CB02B4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3897188A1E362B9700CB02B4 /* CoreMedia.framework */; };
+		3897188D1E36439B00CB02B4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3897188C1E36439B00CB02B4 /* AssetsLibrary.framework */; };
+		3897188F1E3643A100CB02B4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3897188E1E3643A100CB02B4 /* Accelerate.framework */; };
+		389718911E3643A900CB02B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389718901E3643A900CB02B4 /* CoreImage.framework */; };
+		389718931E3643B600CB02B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389718921E3643B600CB02B4 /* QuartzCore.framework */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -538,6 +544,12 @@
 		389718811E36250800CB02B4 /* OCVCamera+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCVCamera+Private.h"; sourceTree = "<group>"; };
 		389718831E36263A00CB02B4 /* OCVReferenceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVReferenceObject.h; sourceTree = "<group>"; };
 		389718841E36263A00CB02B4 /* OCVReferenceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVReferenceObject.m; sourceTree = "<group>"; };
+		389718881E362B8F00CB02B4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3897188A1E362B9700CB02B4 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		3897188C1E36439B00CB02B4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		3897188E1E3643A100CB02B4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		389718901E3643A900CB02B4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		389718921E3643B600CB02B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -570,8 +582,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3897188F1E3643A100CB02B4 /* Accelerate.framework in Frameworks */,
+				3897188D1E36439B00CB02B4 /* AssetsLibrary.framework in Frameworks */,
+				389718891E362B8F00CB02B4 /* AVFoundation.framework in Frameworks */,
 				386F2B821E3524D300320AEB /* CoreGraphics.framework in Frameworks */,
+				389718911E3643A900CB02B4 /* CoreImage.framework in Frameworks */,
+				3897188B1E362B9700CB02B4 /* CoreMedia.framework in Frameworks */,
 				386F2B831E3524D300320AEB /* CoreVideo.framework in Frameworks */,
+				389718931E3643B600CB02B4 /* QuartzCore.framework in Frameworks */,
 				386F2B841E3524D300320AEB /* UIKit.framework in Frameworks */,
 				381F15091E2AA1D50072F870 /* opencv2.framework in Frameworks */,
 			);
@@ -722,6 +740,12 @@
 		38B4D4CA1E2AA090008AAAB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				389718921E3643B600CB02B4 /* QuartzCore.framework */,
+				389718901E3643A900CB02B4 /* CoreImage.framework */,
+				3897188E1E3643A100CB02B4 /* Accelerate.framework */,
+				3897188C1E36439B00CB02B4 /* AssetsLibrary.framework */,
+				3897188A1E362B9700CB02B4 /* CoreMedia.framework */,
+				389718881E362B8F00CB02B4 /* AVFoundation.framework */,
 				386F2B7F1E3524D300320AEB /* CoreGraphics.framework */,
 				386F2B801E3524D300320AEB /* CoreVideo.framework */,
 				386F2B811E3524D300320AEB /* UIKit.framework */,

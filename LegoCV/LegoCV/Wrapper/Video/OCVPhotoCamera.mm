@@ -17,12 +17,8 @@
 @implementation OCVPhotoCamera
 
 - (instancetype)initWithParentView:(UIView *)parent {
-    self = [super initWithParentView:parent];
-    
-    if (self) {
-        self.source = [[CvPhotoCamera alloc] initWithParentView:parent];
-    }
-    
+    self = [super initWithObject:[[CvAbstractCamera alloc] initWithParentView:parent]];
+        
     return self;
 }
 
