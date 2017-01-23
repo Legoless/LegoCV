@@ -234,6 +234,8 @@
 		389718651E36170F00CB02B4 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 389718641E36170F00CB02B4 /* data */; };
 		389718691E36175E00CB02B4 /* LiveCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389718681E36175E00CB02B4 /* LiveCameraVC.swift */; };
 		3897186B1E36176B00CB02B4 /* FaceRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */; };
+		3897186D1E3618B200CB02B4 /* FaceRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */; };
+		3897186F1E3618BC00CB02B4 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186E1E3618BC00CB02B4 /* FaceDetector.swift */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -512,6 +514,8 @@
 		389718641E36170F00CB02B4 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../opencv/data; sourceTree = "<group>"; };
 		389718681E36175E00CB02B4 /* LiveCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCameraVC.swift; sourceTree = "<group>"; };
 		3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognitionVC.swift; sourceTree = "<group>"; };
+		3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognizer.swift; sourceTree = "<group>"; };
+		3897186E1E3618BC00CB02B4 /* FaceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -620,6 +624,8 @@
 		389718661E36172200CB02B4 /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
+				3897186E1E3618BC00CB02B4 /* FaceDetector.swift */,
+				3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */,
 			);
 			path = Recognition;
 			sourceTree = "<group>";
@@ -1572,8 +1578,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3897186F1E3618BC00CB02B4 /* FaceDetector.swift in Sources */,
 				389718691E36175E00CB02B4 /* LiveCameraVC.swift in Sources */,
 				38B4D4D31E2AA110008AAAB0 /* AppDelegate.swift in Sources */,
+				3897186D1E3618B200CB02B4 /* FaceRecognizer.swift in Sources */,
 				3897186B1E36176B00CB02B4 /* FaceRecognitionVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
