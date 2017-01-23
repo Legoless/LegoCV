@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 //! Project version number for LegoCV.
 FOUNDATION_EXPORT double LegoCVVersionNumber;
@@ -16,4 +16,4 @@ FOUNDATION_EXPORT const unsigned char LegoCVVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <LegoCV/PublicHeader.h>
 
-
+#import "OCVMat.h"
