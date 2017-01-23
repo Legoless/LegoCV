@@ -35,7 +35,15 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     func detectedFaces () -> [CGRect] {
-        return []
+        var rects : [CGRect] = []
+        
+        for faceRect in faceRects {
+            let rect = CGRect(x: scale * CGFloat(faceRect.x) / 480.0, y: scale * CGFloat(faceRect.y) / 640.0, width: scale * CGFloat(faceRect.width) / 480.0, height: scale * CGFloat(faceRect.height) / 640.0)
+            rects.append(rect)
+        }
+        
+        
+        return rects
     }
     
     func face(with index: Int) -> UIImage? {

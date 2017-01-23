@@ -6,8 +6,13 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVObject.h"
+#import <Foundation/Foundation.h>
 
-@interface OCVRect : OCVObject
-
-@end
+typedef struct OCVRect
+{
+    NSInteger x;
+    NSInteger y;
+    NSInteger width;
+    NSInteger height;
+}
+OCVRect;

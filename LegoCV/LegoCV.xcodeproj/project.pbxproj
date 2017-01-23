@@ -225,7 +225,6 @@
 		383BC5BC1E3001E6002EA7A1 /* OCVInputOutputArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */; };
 		383BC5BD1E3001E6002EA7A1 /* OCVInputOutputArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */; };
 		386F2B7D1E35228F00320AEB /* OCVRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B7B1E35228F00320AEB /* OCVRect.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		386F2B7E1E35228F00320AEB /* OCVRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F2B7C1E35228F00320AEB /* OCVRect.m */; };
 		386F2B821E3524D300320AEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B7F1E3524D300320AEB /* CoreGraphics.framework */; };
 		386F2B831E3524D300320AEB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B801E3524D300320AEB /* CoreVideo.framework */; };
 		386F2B841E3524D300320AEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B811E3524D300320AEB /* UIKit.framework */; };
@@ -525,7 +524,6 @@
 		383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputOutputArray.h; sourceTree = "<group>"; };
 		383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVInputOutputArray.m; sourceTree = "<group>"; };
 		386F2B7B1E35228F00320AEB /* OCVRect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVRect.h; sourceTree = "<group>"; };
-		386F2B7C1E35228F00320AEB /* OCVRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRect.m; sourceTree = "<group>"; };
 		386F2B7F1E3524D300320AEB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		386F2B801E3524D300320AEB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		386F2B811E3524D300320AEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1208,7 +1206,6 @@
 				383BC5BA1E3001E6002EA7A1 /* OCVInputOutputArray.h */,
 				383BC5BB1E3001E6002EA7A1 /* OCVInputOutputArray.m */,
 				386F2B7B1E35228F00320AEB /* OCVRect.h */,
-				386F2B7C1E35228F00320AEB /* OCVRect.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1593,7 +1590,6 @@
 				383BC4AD1E2FFDEC002EA7A1 /* OCVKernel.m in Sources */,
 				383BC41D1E2FFAD4002EA7A1 /* OCVGPUMat.m in Sources */,
 				383BC47D1E2FFCD3002EA7A1 /* OCVRTree.m in Sources */,
-				386F2B7E1E35228F00320AEB /* OCVRect.m in Sources */,
 				383BC4551E2FFC18002EA7A1 /* OCVGeodeticCoordinate.m in Sources */,
 				383BC4911E2FFD13002EA7A1 /* OCVVarType.m in Sources */,
 				383BC4E91E2FFEF8002EA7A1 /* OCVHausdorffDistanceExtractor.m in Sources */,
