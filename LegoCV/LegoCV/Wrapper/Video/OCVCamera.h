@@ -22,9 +22,6 @@
 @property (nonatomic, readonly) BOOL running;
 @property (nonatomic, readonly) BOOL captureSessionLoaded;
 
-@property (nonatomic, assign) BOOL cameraAvailable;
-@property (nonatomic, assign) UIDeviceOrientation currentDeviceOrientation;
-
 @property (nonatomic, assign) int defaultFPS;
 @property (nonatomic, readonly) AVCaptureVideoPreviewLayer *captureVideoPreviewLayer;
 @property (nonatomic, assign) AVCaptureDevicePosition defaultAVCaptureDevicePosition;
@@ -37,14 +34,15 @@
 
 @property (nonatomic, strong) UIView* parentView;
 
-- (void)start;
-- (void)stop;
-- (void)switchCameras;
-
 /*!
  *  Used by subclasses
  */
 - (instancetype)initWithParentView:(UIView*)parent;
+
+- (void)start;
+- (void)stop;
+- (void)switchCameras;
+
 
 - (void)createCaptureOutput;
 - (void)createVideoPreviewLayer;
