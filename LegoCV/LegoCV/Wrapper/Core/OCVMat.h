@@ -62,13 +62,13 @@
 - (OCVMat *)reshapeWithChannels:(NSInteger)cn;
 - (OCVMat *)reshapeWithChannels:(NSInteger)cn rows:(NSInteger)rows;
 
-- (OCVMatExpr *)t;
+- (OCVMat *)transpose;
 
-- (OCVMatExpr *)inv;
-- (OCVMatExpr *)invWithMethod:(NSInteger)method;
+- (OCVMat *)inverse;
+- (OCVMat *)inverseWithMethod:(NSInteger)method;
 
-- (OCVMatExpr *)mulWithArray:(id<OCVInputArray>)inputArray;
-- (OCVMatExpr *)mulWithArray:(id<OCVInputArray>)inputArray scale:(double)scale;
+- (OCVMat *)multiplyWithArray:(id<OCVInputArray>)inputArray;
+- (OCVMat *)multiplyWithArray:(id<OCVInputArray>)inputArray scale:(double)scale;
 
 - (OCVMat *)crossWithArray:(id<OCVInputArray>)inputArray;
 
