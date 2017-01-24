@@ -230,7 +230,6 @@
 		3897186D1E3618B200CB02B4 /* FaceRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */; };
 		3897186F1E3618BC00CB02B4 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186E1E3618BC00CB02B4 /* FaceDetector.swift */; };
 		389718701E361A3600CB02B4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; };
-		389718721E361D3A00CB02B4 /* OCVMat+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718711E361D1400CB02B4 /* OCVMat+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		389718731E361D8C00CB02B4 /* OCVTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E646287C3C3D415F1D7019 /* OCVTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389718771E361ECC00CB02B4 /* OCVVideoCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718751E361ECC00CB02B4 /* OCVVideoCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389718781E361ECC00CB02B4 /* OCVVideoCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 389718761E361ECC00CB02B4 /* OCVVideoCamera.mm */; };
@@ -258,6 +257,9 @@
 		38A74FF91E3750960036091A /* OCVInputOutputArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A74FF71E3750960036091A /* OCVInputOutputArray.m */; };
 		38A74FFB1E3755DA0036091A /* OCVPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FFA1E3755DA0036091A /* OCVPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FFF1E3762CF0036091A /* OCVInputArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FFE1E3762CB0036091A /* OCVInputArray+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		38A750021E3766530036091A /* OCVMatDataAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750001E3766530036091A /* OCVMatDataAllocator.h */; };
+		38A750031E3766530036091A /* OCVMatDataAllocator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38A750011E3766530036091A /* OCVMatDataAllocator.mm */; };
+		38A750051E37667E0036091A /* OCVMatDataAllocator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -533,7 +535,6 @@
 		3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognitionVC.swift; sourceTree = "<group>"; };
 		3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognizer.swift; sourceTree = "<group>"; };
 		3897186E1E3618BC00CB02B4 /* FaceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceDetector.swift; sourceTree = "<group>"; };
-		389718711E361D1400CB02B4 /* OCVMat+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCVMat+Private.h"; sourceTree = "<group>"; };
 		389718751E361ECC00CB02B4 /* OCVVideoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideoCamera.h; sourceTree = "<group>"; };
 		389718761E361ECC00CB02B4 /* OCVVideoCamera.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVVideoCamera.mm; sourceTree = "<group>"; };
 		389718791E361F0600CB02B4 /* OCVPhotoCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPhotoCamera.h; sourceTree = "<group>"; };
@@ -560,6 +561,9 @@
 		38A74FF71E3750960036091A /* OCVInputOutputArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVInputOutputArray.m; sourceTree = "<group>"; };
 		38A74FFA1E3755DA0036091A /* OCVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPoint.h; sourceTree = "<group>"; };
 		38A74FFE1E3762CB0036091A /* OCVInputArray+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCVInputArray+Private.h"; sourceTree = "<group>"; };
+		38A750001E3766530036091A /* OCVMatDataAllocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVMatDataAllocator.h; sourceTree = "<group>"; };
+		38A750011E3766530036091A /* OCVMatDataAllocator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVMatDataAllocator.mm; sourceTree = "<group>"; };
+		38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVMatDataAllocator+Private.h"; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1201,9 +1205,10 @@
 				67E6442EFD2D3DF5ABC0A0E7 /* OCVSize.h */,
 				67E64AE62B89D99AFF5B7ED1 /* OCVMatExpr.h */,
 				67E6485684255E43DB2CA592 /* OCVMatExpr.mm */,
-				389718711E361D1400CB02B4 /* OCVMat+Private.h */,
 				67E64B597AADF642B92A4FF4 /* OCVMat.h */,
 				67E648E1AA0A892E67239349 /* OCVMat.mm */,
+				38A750001E3766530036091A /* OCVMatDataAllocator.h */,
+				38A750011E3766530036091A /* OCVMatDataAllocator.mm */,
 				38DB13EF1E367B1F00822472 /* OCVOperation.h */,
 				38DB13F01E367B1F00822472 /* OCVOperation.m */,
 				67E6429531419EE64501EFC2 /* OCVComplex.h */,
@@ -1221,6 +1226,7 @@
 				38A74FF31E3750790036091A /* OCVOutputArray.m */,
 				38A74FF61E3750960036091A /* OCVInputOutputArray.h */,
 				38A74FF71E3750960036091A /* OCVInputOutputArray.m */,
+				38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1338,9 +1344,9 @@
 				383BC4401E2FFBB3002EA7A1 /* OCVFisherFaceRecognizer.h in Headers */,
 				67E645AFE0D4053E62EF9C20 /* OCVSize.h in Headers */,
 				383BC5241E2FFFB5002EA7A1 /* OCVStereographicWarper.h in Headers */,
-				389718721E361D3A00CB02B4 /* OCVMat+Private.h in Headers */,
 				383BC4681E2FFC8F002EA7A1 /* OCVDTree.h in Headers */,
 				67E644B5E56E5349F6453B3E /* OCVMatExpr.h in Headers */,
+				38A750051E37667E0036091A /* OCVMatDataAllocator+Private.h in Headers */,
 				38DB13F41E367C1800822472 /* OCVColorConversionType.h in Headers */,
 				383BC4441E2FFBBF002EA7A1 /* OCVLBPHFaceRecognizer.h in Headers */,
 				3897187F1E3621D000CB02B4 /* OCVCamera.h in Headers */,
@@ -1350,6 +1356,7 @@
 				383BC5381E2FFFFC002EA7A1 /* OCVRgba.h in Headers */,
 				67E64667BC1DFFA5580A5132 /* OCVComplex.h in Headers */,
 				383BC53C1E300015002EA7A1 /* OCVFrameSource.h in Headers */,
+				38A750021E3766530036091A /* OCVMatDataAllocator.h in Headers */,
 				383BC5001E2FFF5A002EA7A1 /* OCVFeaturesFinder.h in Headers */,
 				389718871E3627D100CB02B4 /* OCVCamera+Private.h in Headers */,
 				383BC5781E3000D0002EA7A1 /* OCVBackgroundSubtractor.h in Headers */,
@@ -1621,6 +1628,7 @@
 				383BC43D1E2FFBA6002EA7A1 /* OCVFaceRecognizer.m in Sources */,
 				67E64B75FF8706499F78F527 /* OCVMatExpr.mm in Sources */,
 				383BC5691E3000A4002EA7A1 /* OCVVideoFrameSource.m in Sources */,
+				38A750031E3766530036091A /* OCVMatDataAllocator.mm in Sources */,
 				383BC4C91E2FFE6C002EA7A1 /* OCVTesseractResult.m in Sources */,
 				383BC4611E2FFC6F002EA7A1 /* OCVBoost.m in Sources */,
 				383BC5391E2FFFFC002EA7A1 /* OCVRgba.m in Sources */,

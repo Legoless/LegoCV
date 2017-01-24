@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVObject.h"
+#import "OCVMatDataAllocator.h"
 
 #import "OCVTypes.h"
 #import "OCVSize.h"
@@ -18,7 +18,7 @@
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
  */
-@interface OCVMat : OCVObject <OCVInputArrayable, OCVOutputArrayable, OCVInputOutputArrayable>
+@interface OCVMat : OCVMatDataAllocator <OCVInputArrayable, OCVOutputArrayable, OCVInputOutputArrayable>
 
 #pragma mark - Public Properties
 

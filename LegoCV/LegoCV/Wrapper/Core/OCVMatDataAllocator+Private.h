@@ -1,8 +1,8 @@
 //
-//  OCVMat+Private.h
+//  OCVMatDataAllocator+Private.h
 //  LegoCV
 //
-//  Created by Dal Rupnik on 23/01/2017.
+//  Created by Dal Rupnik on 24/01/2017.
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
@@ -10,10 +10,10 @@
 // MARK: Unavailable in Swift, convenience for OpenCV, should be private
 //
 
-#import "OCVMat.h"
+#import "OCVMatDataAllocator.h"
 #import <opencv2/core/mat.hpp>
 
-@interface OCVMat (OpenCV)
+@interface OCVMatDataAllocator (OpenCV)
 
 @property (nonatomic, readonly) cv::Mat source;
 

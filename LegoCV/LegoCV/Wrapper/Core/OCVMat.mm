@@ -6,14 +6,11 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <opencv2/core/core.hpp>
+#import "OCVMatDataAllocator+Private.h"
 
 #import "OCVMat.h"
 
-@interface OCVMat () {
-    cv::Mat source;
-}
-
+@interface OCVMat ()
 @end
 
 @implementation OCVMat
@@ -21,16 +18,13 @@
 #pragma mark - Public Properties
 
 - (NSInteger)rows {
-    return source.rows;
+    return self.source.rows;
 }
 
 - (NSInteger)cols {
-    return source.cols;
+    return self.source.cols;
 }
 
-- (cv::Mat)source {
-    return source;
-}
 
 #pragma mark - Initialization
 
@@ -45,26 +39,10 @@
 }
 
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels {
-    self = [super init];
+    // Convert type to OpenCV type
+    int cvType = (int)CV_MAKETYPE(type, channels);
     
-    if (self) {
-        // Convert type to OpenCV type
-        int cvType = (int)CV_MAKETYPE(type, channels);
-        
-        self->source = cv::Mat((int)rows, (int)cols, cvType);
-    }
-    
-    return self;
-}
-
-- (instancetype)initWithMatInstance:(cv::Mat)mat {
-    self = [super init];
-    
-    if (self) {
-        self->source = mat;
-    }
-    
-    return self;
+    return [super initWithMatInstance:cv::Mat((int)rows, (int)cols, cvType)];
 }
 
 #pragma mark - Convenience Initialization
@@ -104,13 +82,13 @@
 #pragma mark - Public Methods
 
 - (OCVMat *)clone {
-    cv::Mat mat = source.clone();
+    cv::Mat mat = self.source.clone();
     
     return [[OCVMat alloc] initWithMatInstance:mat];
 }
 
 - (CGImageRef)imageRef {
-    return [self.class imageRefFromMat:self->source];
+    return [self.class imageRefFromMat:self.source];
 }
 
 - (UIImage *)image {
