@@ -41,14 +41,17 @@
 }
 
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols {
-    return [self initWithRows:rows cols:cols type:CV_8UC4];
+    return [self initWithRows:rows cols:cols type:OCVDepthTypeCv8U channels:4];
 }
 
-- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVChannelType)type {
+- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels {
     self = [super init];
     
     if (self) {
-        self->source = cv::Mat((int)rows, (int)cols, (int)type);
+        // Convert type to OpenCV type
+        int cvType = (int)CV_MAKETYPE(type, channels);
+        
+        self->source = cv::Mat((int)rows, (int)cols, cvType);
     }
     
     return self;
@@ -91,11 +94,11 @@
 }
 
 - (instancetype)initWithCGSize:(CGSize)size {
-    return [self initWithCGSize:size type:CV_8UC4];
+    return [self initWithCGSize:size type:OCVDepthTypeCv8U channels:4];
 }
 
-- (instancetype)initWithCGSize:(CGSize)size type:(OCVChannelType)type {
-    return [self initWithRows:(NSInteger)size.width cols:(NSInteger)size.height type:type];
+- (instancetype)initWithCGSize:(CGSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
+    return [self initWithRows:(NSInteger)size.width cols:(NSInteger)size.height type:type channels:channels];
 }
 
 #pragma mark - Public Methods

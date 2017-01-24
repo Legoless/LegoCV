@@ -7,7 +7,25 @@
 //
 
 #import "OCVObject.h"
+//#import "OCVMat.h"
+
+typedef NS_ENUM(NSInteger, OCVInputArrayType) {
+    OCVInputArrayTypeMat        = 65536,
+    OCVInputArrayTypeExpression = 393216
+};
 
 @interface OCVInputArray : OCVObject
+
+@property (nonatomic, readonly) OCVInputArrayType type;
+
+#pragma mark - Public Methods
+
+- (NSInteger)channels;
+- (NSInteger)channelsWithIndex:(NSInteger)index;
+
+- (NSInteger)depth;
+- (NSInteger)depthWithIndex:(NSInteger)index;
+
+//- (OCVMat *)mat;
 
 @end

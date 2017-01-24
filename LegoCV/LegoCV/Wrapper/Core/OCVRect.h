@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "OCVPoint.h"
+#import "OCVSize.h"
+
 typedef struct OCVRect
 {
-    NSInteger x;
-    NSInteger y;
-    NSInteger width;
-    NSInteger height;
+    OCVPoint origin;
+    OCVSize size;
 }
 OCVRect;

@@ -8,12 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface OCVSize : NSObject
-
-@property (nonatomic, assign) NSInteger width;
-@property (nonatomic, assign) NSInteger height;
-
-- (instancetype)initWithWidth:(NSInteger)width height:(NSInteger)height;
-- (instancetype)initWithSize:(OCVSize *)size;
-
-@end
+typedef struct OCVSize
+{
+    NSInteger width;
+    NSInteger height;
+}
+OCVSize;

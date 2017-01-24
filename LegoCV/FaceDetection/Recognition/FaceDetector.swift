@@ -38,7 +38,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         var rects : [CGRect] = []
         
         for faceRect in faceRects {
-            let rect = CGRect(x: scale * CGFloat(faceRect.x) / 480.0, y: scale * CGFloat(faceRect.y) / 640.0, width: scale * CGFloat(faceRect.width) / 480.0, height: scale * CGFloat(faceRect.height) / 640.0)
+            let rect = CGRect(x: scale * CGFloat(faceRect.origin.x) / 480.0, y: scale * CGFloat(faceRect.origin.y) / 640.0, width: scale * CGFloat(faceRect.size.width) / 480.0, height: scale * CGFloat(faceRect.size.height) / 640.0)
             rects.append(rect)
         }
         

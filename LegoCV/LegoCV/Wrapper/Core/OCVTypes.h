@@ -6,10 +6,13 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#ifndef OCVTypes_h
-#define OCVTypes_h
-
-typedef NSInteger OCVChannelType;
-
-
-#endif /* OCVTypes_h */
+typedef NS_ENUM(NSInteger, OCVDepthType) {
+    OCVDepthTypeDefault = -1,
+    OCVDepthTypeCv8U = 0,
+    OCVDepthTypeCv8S = 1,
+    OCVDepthTypeCv16U = 2,
+    OCVDepthTypeCv16S = 3,
+    OCVDepthTypeCv32S = 4,
+    OCVDepthTypeCv32F = 5,
+    OCVDepthTypeCv64F = 6
+};

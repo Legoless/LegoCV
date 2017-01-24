@@ -37,18 +37,20 @@
 
 @property (nonatomic, readonly) NSInteger elemSize;
 @property (nonatomic, readonly) NSInteger elemSize1;
-@property (nonatomic, readonly) OCVChannelType type;
 
-@property (nonatomic, readonly) NSInteger depth;
+@property (nonatomic, readonly) OCVDepthType type;
+
 @property (nonatomic, readonly) NSInteger channels;
+
+@property (nonatomic, readonly) OCVSize size;
 
 //
 // MARK: Initialization
 //
 
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols;
-- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVChannelType)type;
-- (instancetype)initWithSize:(OCVSize *)size type:(NSInteger)type;
+- (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels;
+- (instancetype)initWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels;
 - (instancetype)initWithMat:(OCVMat *)mat;
 
 //
@@ -104,7 +106,7 @@
 @interface OCVMat (CoreGraphics)
 - (instancetype)initWithImageRef:(CGImageRef)imageRef;
 - (instancetype)initWithCGSize:(CGSize)size;
-- (instancetype)initWithCGSize:(CGSize)size type:(OCVChannelType)type;
+- (instancetype)initWithCGSize:(CGSize)size type:(OCVDepthType)type;
 
 /*!
  *  Construct image reference and returns it
