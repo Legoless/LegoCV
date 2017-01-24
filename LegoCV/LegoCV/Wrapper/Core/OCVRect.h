@@ -14,10 +14,9 @@
 typedef struct OCVRect
 {
     OCVPoint origin;
-    OCVSize size;cd op
+    OCVSize size;
 }
 OCVRect;
-
 
 /*!
  *  Objective-C class immutable wrapper for OCVRect struct
