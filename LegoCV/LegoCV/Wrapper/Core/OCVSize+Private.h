@@ -16,3 +16,11 @@ cv::Size convertSize(OCVSize size) {
     
     return finalSize;
 }
+
+OCVSize convertSize(cv::Size size) {
+    OCVSize finalSize;
+    finalSize.width = size.width;
+    finalSize.height = size.height;
+    
+    return finalSize;
+}

@@ -23,6 +23,14 @@
 
 @implementation OCVCascadeClassifier
 
+- (BOOL)isOldFormatCascade {
+    return self.classifier->isOldFormatCascade();
+}
+
+- (OCVSize)originalWindowSize {
+    return convertSize(self.classifier->getOriginalWindowSize());
+}
+
 - (cv::CascadeClassifier *)classifier {
     return (cv::CascadeClassifier *)pointer;
 }
