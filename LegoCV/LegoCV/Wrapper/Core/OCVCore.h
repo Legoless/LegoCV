@@ -15,5 +15,6 @@
 #import "OCVOutputArrayable.h"
 #import "OCVInputOutputArray.h"
 #import "OCVInputOutputArrayable.h"
+#import "OCVCascadeClassifier.h"
 
 #endif /* OCVCore_h */

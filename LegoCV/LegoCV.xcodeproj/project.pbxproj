@@ -262,6 +262,8 @@
 		38A750051E37667E0036091A /* OCVMatDataAllocator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */; };
 		38A750071E37736D0036091A /* OCVOutputArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750061E37736D0036091A /* OCVOutputArray+Private.h */; };
 		38A750091E37740D0036091A /* OCVInputOutputArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750081E37740D0036091A /* OCVInputOutputArray+Private.h */; };
+		38A7500C1E3792D20036091A /* OCVCascadeClassifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A7500A1E3792D20036091A /* OCVCascadeClassifier.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38A7500D1E3792D20036091A /* OCVCascadeClassifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A7500B1E3792D20036091A /* OCVCascadeClassifier.m */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -568,6 +570,8 @@
 		38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVMatDataAllocator+Private.h"; sourceTree = "<group>"; };
 		38A750061E37736D0036091A /* OCVOutputArray+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVOutputArray+Private.h"; sourceTree = "<group>"; };
 		38A750081E37740D0036091A /* OCVInputOutputArray+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVInputOutputArray+Private.h"; sourceTree = "<group>"; };
+		38A7500A1E3792D20036091A /* OCVCascadeClassifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVCascadeClassifier.h; sourceTree = "<group>"; };
+		38A7500B1E3792D20036091A /* OCVCascadeClassifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVCascadeClassifier.m; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1233,6 +1237,8 @@
 				38A750081E37740D0036091A /* OCVInputOutputArray+Private.h */,
 				38A74FF61E3750960036091A /* OCVInputOutputArray.h */,
 				38A74FF71E3750960036091A /* OCVInputOutputArray.mm */,
+				38A7500A1E3792D20036091A /* OCVCascadeClassifier.h */,
+				38A7500B1E3792D20036091A /* OCVCascadeClassifier.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1416,6 +1422,7 @@
 				383BC4DC1E2FFED0002EA7A1 /* OCVChiHistogramCostExtractor.h in Headers */,
 				67E644A83A079FB7EFF64636 /* OCVMat.h in Headers */,
 				383BC4A81E2FFDE5002EA7A1 /* OCVQueue.h in Headers */,
+				38A7500C1E3792D20036091A /* OCVCascadeClassifier.h in Headers */,
 				383BC47C1E2FFCD3002EA7A1 /* OCVRTree.h in Headers */,
 				383BC4B01E2FFDF6002EA7A1 /* OCVImage2D.h in Headers */,
 				383BC4901E2FFD13002EA7A1 /* OCVVarType.h in Headers */,
@@ -1670,6 +1677,7 @@
 				383BC5311E2FFFD9002EA7A1 /* OCVWarperCreator.m in Sources */,
 				383BC5991E300142002EA7A1 /* OCVDAISY.m in Sources */,
 				383BC54D1E300044002EA7A1 /* OCVERFilterNM2.m in Sources */,
+				38A7500D1E3792D20036091A /* OCVCascadeClassifier.m in Sources */,
 				383BC5851E3000F7002EA7A1 /* OCVHistogramBox.m in Sources */,
 				383BC5491E30003C002EA7A1 /* OCVERFilterNM1.m in Sources */,
 				383BC5A91E30015E002EA7A1 /* OCVSIFT.m in Sources */,
