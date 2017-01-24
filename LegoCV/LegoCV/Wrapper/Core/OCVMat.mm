@@ -18,9 +18,7 @@
 
 @implementation OCVMat
 
-//
-// MARK: Public Properties
-//
+#pragma mark - Public Properties
 
 - (NSInteger)rows {
     return source.rows;
@@ -34,9 +32,7 @@
     return source;
 }
 
-//
-// MARK: Initialization
-//
+#pragma mark - Initialization
 
 - (instancetype)init {
     [NSException raise:@"InitNotImplemented" format:@"Use another initializer instead of default one."];
@@ -68,9 +64,7 @@
     return self;
 }
 
-//
-// MARK: Convenience initializers
-//
+#pragma mark - Convenience Initialization
 
 - (instancetype)initWithMat:(OCVMat *)mat {
     cv::Mat sourceMat = mat.source;
@@ -105,6 +99,12 @@
 }
 
 #pragma mark - Public Methods
+
+- (OCVMat *)clone {
+    cv::Mat mat = source.clone();
+    
+    return [[OCVMat alloc] initWithMatInstance:mat];
+}
 
 - (CGImageRef)imageRef {
     return [self.class imageRefFromMat:self->source];

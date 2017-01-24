@@ -12,11 +12,13 @@
 #import "OCVSize.h"
 #import "OCVMatExpr.h"
 #import "OCVInputArrayable.h"
+#import "OCVOutputArrayable.h"
+#import "OCVInputOutputArrayable.h"
 
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
  */
-@interface OCVMat : OCVObject
+@interface OCVMat : OCVObject <OCVInputArrayable, OCVOutputArrayable, OCVInputOutputArrayable>
 
 //
 // MARK: Public Properties
@@ -86,18 +88,21 @@
 
 @end
 
-//
-// MARK: UIKit / CoreGraphics Extensions
-//
+#pragma mark - iOS Extensions
 
 #import <UIKit/UIKit.h>
-#import <CoreGraphics/CoreGraphics.h>
 
 @interface OCVMat (UIKit)
 
 - (instancetype)initWithImage:(UIImage *)image;
+- (UIImage *)image;
+
+@end
+
+#import <CoreGraphics/CoreGraphics.h>
+
+@interface OCVMat (CoreGraphics)
 - (instancetype)initWithImageRef:(CGImageRef)imageRef;
-- (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
 - (instancetype)initWithCGSize:(CGSize)size;
 - (instancetype)initWithCGSize:(CGSize)size type:(OCVChannelType)type;
 
@@ -105,6 +110,13 @@
  *  Construct image reference and returns it
  */
 - (CGImageRef)imageRef;
-- (UIImage *)image;
+
+@end
+
+#import <CoreVideo/CoreVideo.h>
+
+@interface OCVMat (CoreVideo)
+
+- (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
 
 @end
