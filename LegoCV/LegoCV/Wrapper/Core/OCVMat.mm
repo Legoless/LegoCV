@@ -37,6 +37,10 @@
     return nil;
 }
 
+- (instancetype)initWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
+    return [self initWithRows:size.height cols:size.width type:type channels:channels];
+}
+
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols {
     return [self initWithRows:rows cols:cols type:OCVDepthTypeCv8U channels:4];
 }
@@ -79,7 +83,7 @@
 }
 
 - (instancetype)initWithCGSize:(CGSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
-    return [self initWithRows:(NSInteger)size.width cols:(NSInteger)size.height type:type channels:channels];
+    return [self initWithRows:(NSInteger)size.height cols:(NSInteger)size.width type:type channels:channels];
 }
 
 #pragma mark - Public Methods
@@ -120,6 +124,22 @@
     return [[OCVMat alloc] initWithMatInstance:self.source.inv((int)method)];
 }
 
+- (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray {
+    return [self multiplyWithArray:inputArray scale:1];
+}
+
+- (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray scale:(double)scale {
+    return [[OCVMat alloc] initWithMatInstance:self.source.mul(inputArray.input.source, scale)];
+}
+
+- (OCVMat *)crossWithArray:(id<OCVInputArrayable>)inputArray {
+    return [[OCVMat alloc] initWithMatInstance:self.source.cross(inputArray.input.source)];
+}
+
+- (double)dotWithArray:(id<OCVInputArrayable>)inputArray {
+    return self.source.dot(inputArray.input.source);
+}
+
 #pragma mark - OCVInputArrayable
 
 - (OCVInputArray *)input {
@@ -136,6 +156,32 @@
 
 - (OCVInputOutputArray *)inputOutput {
     return [[OCVInputOutputArray alloc] initWithArrayInstance:self.source];
+}
+
+#pragma mark - Public Factory Methods
+
++ (instancetype)zerosWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
+    return [self zerosWithRows:size.height cols:size.width type:type channels:channels];
+}
+
++ (instancetype)zerosWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels {
+    int cvType = (int)CV_MAKETYPE(type, channels);
+    
+    cv::Mat mat = cv::Mat::zeros((int)rows, (int)cols, cvType);
+    
+    return [[OCVMat alloc] initWithMatInstance:mat];
+}
+
++ (instancetype)onesWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
+    return [self onesWithRows:size.height cols:size.width type:type channels:channels];
+}
+
++ (instancetype)onesWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels {
+    int cvType = (int)CV_MAKETYPE(type, channels);
+    
+    cv::Mat mat = cv::Mat::ones((int)rows, (int)cols, cvType);
+    
+    return [[OCVMat alloc] initWithMatInstance:mat];
 }
 
 #pragma mark - Private Utility Methods

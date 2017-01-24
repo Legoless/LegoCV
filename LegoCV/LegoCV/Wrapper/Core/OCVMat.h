@@ -82,11 +82,11 @@ typedef NS_ENUM(NSInteger, OCVMatDecompositionType) {
 
 #pragma mark - Public Factory Methods
 
-+ (instancetype)zerosWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
-+ (instancetype)zerosWithSize:(OCVSize *)size type:(NSInteger)type;
++ (instancetype)zerosWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels;
++ (instancetype)zerosWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels;
 
-+ (instancetype)onesWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
-+ (instancetype)onesWithSize:(OCVSize *)size type:(NSInteger)type;
++ (instancetype)onesWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels;
++ (instancetype)onesWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels;
 
 @end
 
