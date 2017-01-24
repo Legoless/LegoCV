@@ -57,16 +57,29 @@
     self.classifier->load(path.UTF8String);
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize outputRejectLevels:(BOOL)outputRejectLevels {
-    NSMutableArray *values = [NSMutableArray array];
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize {
     
     std::vector<cv::Rect> faceRects;
     
     self.classifier->detectMultiScale(image.input._input, faceRects, scaleFactor, (int)minNeighbours, (int)flags, convertSize(minSize), convertSize(maxSize));
     
+    return [self convertRects:faceRects];
+}
+
+#pragma mark - Private Methods
+
+- (NSArray<OCVRectValue *>*)convertRects:(std::vector<cv::Rect>)rects {
+    NSMutableArray *values = [NSMutableArray array];
     int i = 0;
     
-    for (std::vector<cv::Rect>::const_iterator r = faceRects.begin(); r != faceRects.end(); r++, i++) {
+    //
+    // Convert Face Rects into OCVRectValue wrappers to return correctly.
+    //
+    
+    for (std::vector<cv::Rect>::const_iterator r = rects.begin(); r != rects.end(); r++, i++) {
+        OCVRect rect = convertRect(rects[i]);
+        
+        [values addObject:[[OCVRectValue alloc] initWithRect:rect]];
     }
     
     return values.copy;

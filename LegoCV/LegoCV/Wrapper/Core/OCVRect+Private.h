@@ -20,3 +20,13 @@ cv::Rect convertRect(OCVRect rect) {
     
     return finalRect;
 }
+
+OCVRect convertRect(cv::Rect rect) {
+    OCVRect finalRect;
+    finalRect.origin.x = rect.x;
+    finalRect.origin.y = rect.y;
+    finalRect.size.width = rect.width;
+    finalRect.size.height = rect.height;
+    
+    return finalRect;
+}
