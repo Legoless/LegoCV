@@ -257,7 +257,7 @@
 		38A74FF91E3750960036091A /* OCVInputOutputArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A74FF71E3750960036091A /* OCVInputOutputArray.m */; };
 		38A74FFB1E3755DA0036091A /* OCVPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FFA1E3755DA0036091A /* OCVPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FFF1E3762CF0036091A /* OCVInputArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FFE1E3762CB0036091A /* OCVInputArray+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		38A750021E3766530036091A /* OCVMatDataAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750001E3766530036091A /* OCVMatDataAllocator.h */; };
+		38A750021E3766530036091A /* OCVMatDataAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750001E3766530036091A /* OCVMatDataAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A750031E3766530036091A /* OCVMatDataAllocator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38A750011E3766530036091A /* OCVMatDataAllocator.mm */; };
 		38A750051E37667E0036091A /* OCVMatDataAllocator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };

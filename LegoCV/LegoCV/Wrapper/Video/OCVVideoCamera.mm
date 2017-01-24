@@ -7,7 +7,8 @@
 //
 
 #import "OCVCamera+Private.h"
-#import "OCVMat+Private.h"
+#import "OCVMatDataAllocator+Private.h"
+#import "OCVMat.h"
 
 #import "OCVVideoCamera.h"
 
