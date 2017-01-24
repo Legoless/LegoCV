@@ -7,6 +7,9 @@
 //
 
 #import "OCVMatDataAllocator+Private.h"
+#import "OCVInputArray+Private.h"
+#import "OCVOutputArray.h"
+#import "OCVInputOutputArray.h"
 
 #import "OCVMat.h"
 
@@ -95,6 +98,44 @@
     CGImageRef imageRef = [self imageRef];
     
     return [UIImage imageWithCGImage:imageRef];
+}
+
+- (OCVMat *)reshapeWithChannels:(NSInteger)channels {
+    return [self reshapeWithChannels:channels rows:0];
+}
+
+- (OCVMat *)reshapeWithChannels:(NSInteger)channels rows:(NSInteger)rows {
+    return [[OCVMat alloc] initWithMatInstance:self.source.reshape((int)channels, (int)rows)];
+}
+
+- (OCVMat *)transpose {
+    return [[OCVMat alloc] initWithMatInstance:self.source.t()];
+}
+
+- (OCVMat *)inverse {
+    return [self inverseWithMethod:OCVMatDecompositionTypeLU];
+}
+
+- (OCVMat *)inverseWithMethod:(OCVMatDecompositionType)method {
+    return [[OCVMat alloc] initWithMatInstance:self.source.inv((int)method)];
+}
+
+#pragma mark - OCVInputArrayable
+
+- (OCVInputArray *)input {
+    return [[OCVInputArray alloc] initWithArrayInstance:self.source];
+}
+
+#pragma mark - OCVOutputArrayable
+
+- (OCVOutputArray *)output {
+    return [[OCVOutputArray alloc] initWithArrayInstance:self.source];
+}
+
+#pragma mark -OCVInputOutputArrayable
+
+- (OCVInputOutputArray *)inputOutput {
+    return [[OCVInputOutputArray alloc] initWithArrayInstance:self.source];
 }
 
 #pragma mark - Private Utility Methods

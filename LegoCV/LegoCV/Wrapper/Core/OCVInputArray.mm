@@ -77,4 +77,11 @@
     return [[OCVMat alloc] initWithMatInstance:self.source.getMat()];
 }
 
+#pragma mark - Factory Methods
+
++ (OCVInputArray *)empty {
+    cv::InputArray array = cv::_InputArray();
+    return [[OCVInputArray alloc] initWithArrayInstance:array];
+}
+
 @end

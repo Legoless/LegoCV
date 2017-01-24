@@ -15,6 +15,15 @@
 #import "OCVOutputArrayable.h"
 #import "OCVInputOutputArrayable.h"
 
+typedef NS_ENUM(NSInteger, OCVMatDecompositionType) {
+    OCVMatDecompositionTypeLU       = 0,
+    OCVMatDecompositionTypeSVD      = 1,
+    OCVMatDecompositionTypeEIG      = 2,
+    OCVMatDecompositionTypeCholesky = 3,
+    OCVMatDecompositionTypeQR       = 4,
+    OCVMatDecompositionTypeNormal   = 16
+};
+
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
  */
@@ -62,7 +71,7 @@
 - (OCVMat *)transpose;
 
 - (OCVMat *)inverse;
-- (OCVMat *)inverseWithMethod:(NSInteger)method;
+- (OCVMat *)inverseWithMethod:(OCVMatDecompositionType)method;
 
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray;
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray scale:(double)scale;
