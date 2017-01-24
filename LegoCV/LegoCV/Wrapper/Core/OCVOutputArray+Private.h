@@ -1,5 +1,5 @@
 //
-//  OCVOutputArray.m
+//  OCVOutputArray+Private.h
 //  LegoCV
 //
 //  Created by Dal Rupnik on 24/01/2017.
@@ -7,7 +7,10 @@
 //
 
 #import "OCVOutputArray.h"
+#import <opencv2/core/mat.hpp>
 
-@implementation OCVOutputArray
+@interface OCVOutputArray (OpenCV)
+
+@property (nonatomic, readonly) cv::_OutputArray _output;
 
 @end

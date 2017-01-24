@@ -11,8 +11,10 @@
 
 @interface OCVInputArray (OpenCV)
 
-@property (nonatomic, readonly) cv::_InputArray source;
+@property (nonatomic, readonly) cv::_InputArray *source;
 
-- (instancetype)initWithArrayInstance:(cv::_InputArray)inputArray;
+@property (nonatomic, readonly) cv::_InputArray _input;
+
+- (instancetype)initWithArrayInstance:(cv::_InputArray *)array;
 
 @end

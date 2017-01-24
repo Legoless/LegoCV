@@ -113,7 +113,7 @@
 #pragma mark - CvVideoCameraDelegate
 
 - (void)processImage:(cv::Mat &)image {
-    [self.delegate processImage:[[OCVMat alloc] initWithMatInstance:image]];
+    [self.delegate processImage:[[OCVMat alloc] initWithMatInstance:&image]];
 }
 
 @end

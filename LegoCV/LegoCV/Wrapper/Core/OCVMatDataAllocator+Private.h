@@ -15,8 +15,8 @@
 
 @interface OCVMatDataAllocator (OpenCV)
 
-@property (nonatomic, readonly) cv::Mat source;
+@property (nonatomic, readonly) cv::Mat *source;
 
-- (instancetype)initWithMatInstance:(cv::Mat)mat;
+- (instancetype)initWithMatInstance:(cv::Mat *)mat;
 
 @end

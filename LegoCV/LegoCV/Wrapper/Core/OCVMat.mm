@@ -21,11 +21,11 @@
 #pragma mark - Public Properties
 
 - (NSInteger)rows {
-    return self.source.rows;
+    return self.source->rows;
 }
 
 - (NSInteger)cols {
-    return self.source.cols;
+    return self.source->cols;
 }
 
 
@@ -49,33 +49,35 @@
     // Convert type to OpenCV type
     int cvType = (int)CV_MAKETYPE(type, channels);
     
-    return [super initWithMatInstance:cv::Mat((int)rows, (int)cols, cvType)];
+    cv::Mat mat = cv::Mat((int)rows, (int)cols, cvType);
+    
+    return [super initWithMatInstance:&mat];
 }
 
 #pragma mark - Convenience Initialization
 
 - (instancetype)initWithMat:(OCVMat *)mat {
-    cv::Mat sourceMat = mat.source.clone();
+    cv::Mat sourceMat = mat.source->clone();
     
-    return [self initWithMatInstance:sourceMat];
+    return [self initWithMatInstance:&sourceMat];
 }
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer {
     cv::Mat mat = [self.class matFromBuffer:buffer];
     
-    return [self initWithMatInstance:mat];
+    return [self initWithMatInstance:&mat];
 }
 
 - (instancetype)initWithImage:(UIImage *)image {
     cv::Mat mat = [self.class matFromImage:image];
     
-    return [self initWithMatInstance:mat];
+    return [self initWithMatInstance:&mat];
 }
 
 - (instancetype)initWithImageRef:(CGImageRef)imageRef {
     cv::Mat mat = [self.class matFromImageRef:imageRef];
     
-    return [self initWithMatInstance:mat];
+    return [self initWithMatInstance:&mat];
 }
 
 - (instancetype)initWithCGSize:(CGSize)size {
@@ -89,13 +91,17 @@
 #pragma mark - Public Methods
 
 - (OCVMat *)clone {
-    cv::Mat mat = self.source.clone();
+    cv::Mat mat = self.source->clone();
     
-    return [[OCVMat alloc] initWithMatInstance:mat];
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (CGImageRef)imageRef {
-    return [self.class imageRefFromMat:self.source];
+    if (self.source == NULL) {
+        return nil;
+    }
+    
+    return [self.class imageRefFromMat:*(self.source)];
 }
 
 - (UIImage *)image {
@@ -109,11 +115,13 @@
 }
 
 - (OCVMat *)reshapeWithChannels:(NSInteger)channels rows:(NSInteger)rows {
-    return [[OCVMat alloc] initWithMatInstance:self.source.reshape((int)channels, (int)rows)];
+    cv::Mat mat = self.source->reshape((int)channels, (int)rows);
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (OCVMat *)transpose {
-    return [[OCVMat alloc] initWithMatInstance:self.source.t()];
+    cv::Mat mat = self.source->t();
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (OCVMat *)inverse {
@@ -121,7 +129,8 @@
 }
 
 - (OCVMat *)inverseWithMethod:(OCVMatDecompositionType)method {
-    return [[OCVMat alloc] initWithMatInstance:self.source.inv((int)method)];
+    cv::Mat mat = self.source->inv((int)method);
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray {
@@ -129,33 +138,41 @@
 }
 
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray scale:(double)scale {
-    return [[OCVMat alloc] initWithMatInstance:self.source.mul(inputArray.input.source, scale)];
+    cv::Mat mat = self.source->mul(inputArray.input._input, scale);
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (OCVMat *)crossWithArray:(id<OCVInputArrayable>)inputArray {
-    return [[OCVMat alloc] initWithMatInstance:self.source.cross(inputArray.input.source)];
+    cv::Mat mat = self.source->cross(inputArray.input._input);
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (double)dotWithArray:(id<OCVInputArrayable>)inputArray {
-    return self.source.dot(inputArray.input.source);
+    return self.source->dot(inputArray.input._input);
 }
 
 #pragma mark - OCVInputArrayable
 
 - (OCVInputArray *)input {
-    return [[OCVInputArray alloc] initWithArrayInstance:self.source];
+    cv::_InputArray array = cv::_InputOutputArray(*(self.source));
+    
+    return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
 }
 
 #pragma mark - OCVOutputArrayable
 
 - (OCVOutputArray *)output {
-    return [[OCVOutputArray alloc] initWithArrayInstance:self.source];
+    cv::_InputOutputArray array = cv::_InputOutputArray(*(self.source));
+    
+    return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
 }
 
 #pragma mark -OCVInputOutputArrayable
 
 - (OCVInputOutputArray *)inputOutput {
-    return [[OCVInputOutputArray alloc] initWithArrayInstance:self.source];
+    cv::_InputOutputArray array = cv::_InputOutputArray(*(self.source));
+    
+    return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
 }
 
 #pragma mark - Public Factory Methods
@@ -169,7 +186,7 @@
     
     cv::Mat mat = cv::Mat::zeros((int)rows, (int)cols, cvType);
     
-    return [[OCVMat alloc] initWithMatInstance:mat];
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 + (instancetype)onesWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
@@ -181,7 +198,7 @@
     
     cv::Mat mat = cv::Mat::ones((int)rows, (int)cols, cvType);
     
-    return [[OCVMat alloc] initWithMatInstance:mat];
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 #pragma mark - Private Utility Methods

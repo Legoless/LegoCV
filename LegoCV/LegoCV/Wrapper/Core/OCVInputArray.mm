@@ -14,15 +14,19 @@
 #import "OCVMat.h"
 
 @interface OCVInputArray () {
-    cv::_InputArray source;
+    cv::_InputArray *source;
 }
 
 @end
 
 @implementation OCVInputArray
 
-- (cv::_InputArray)source {
+- (cv::_InputArray *)source {
     return source;
+}
+
+- (cv::_InputArray)_input {
+    return *(source);
 }
 
 - (NSInteger)channels {
@@ -45,11 +49,11 @@
     return nil;
 }
 
-- (instancetype)initWithArrayInstance:(cv::_InputArray)inputArray {
+- (instancetype)initWithArrayInstance:(cv::_InputArray *)array {
     self = [super init];
     
     if (self) {
-        self->source = inputArray;
+        self->source = array;
     }
     
     return self;
@@ -58,15 +62,15 @@
 #pragma mark - Public Methods
 
 - (NSInteger)channelsWithIndex:(NSInteger)index {
-    return self.source.channels((int)index);
+    return source->channels((int)index);
 }
 
 - (NSInteger)depthWithIndex:(NSInteger)index {
-    return self.source.depth((int)index);
+    return source->depth((int)index);
 }
 
 - (NSInteger)dimsWithIndex:(NSInteger)index {
-    return self.source.dims((int)index);
+    return source->dims((int)index);
 }
 
 - (OCVMat *)mat {
@@ -74,14 +78,16 @@
 }
 
 - (OCVMat *)matWithIndex:(NSInteger)index {
-    return [[OCVMat alloc] initWithMatInstance:self.source.getMat()];
+    
+    cv::Mat mat = source->getMat((int)index);
+    return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 #pragma mark - Factory Methods
 
 + (OCVInputArray *)empty {
-    cv::InputArray array = cv::_InputArray();
-    return [[OCVInputArray alloc] initWithArrayInstance:array];
+    cv::_InputArray array = cv::_InputArray();
+    return [[OCVInputArray alloc] initWithArrayInstance:&array];
 }
 
 @end

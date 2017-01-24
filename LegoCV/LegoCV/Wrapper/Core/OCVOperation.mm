@@ -6,7 +6,11 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <opencv2/core.hpp>
+#import <opencv2/core/core.hpp>
+#import <opencv2/imgproc/imgproc.hpp>
+
+#import "OCVInputArray+Private.h"
+#import "OCVOutputArray+Private.h"
 
 #import "OCVOperation.h"
 
@@ -18,6 +22,7 @@
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn {
     
+    cv::cvtColor(source.input._input, destination.output._output, (int)type, (int)destinationCn);
 }
 
 @end
