@@ -257,6 +257,7 @@
 		38A74FF81E3750960036091A /* OCVInputOutputArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FF61E3750960036091A /* OCVInputOutputArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FF91E3750960036091A /* OCVInputOutputArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A74FF71E3750960036091A /* OCVInputOutputArray.m */; };
 		38A74FFB1E3755DA0036091A /* OCVPoint.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FFA1E3755DA0036091A /* OCVPoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38A74FFF1E3762CF0036091A /* OCVInputArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FFE1E3762CB0036091A /* OCVInputArray+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
 		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -558,6 +559,7 @@
 		38A74FF61E3750960036091A /* OCVInputOutputArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputOutputArray.h; sourceTree = "<group>"; };
 		38A74FF71E3750960036091A /* OCVInputOutputArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVInputOutputArray.m; sourceTree = "<group>"; };
 		38A74FFA1E3755DA0036091A /* OCVPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPoint.h; sourceTree = "<group>"; };
+		38A74FFE1E3762CB0036091A /* OCVInputArray+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCVInputArray+Private.h"; sourceTree = "<group>"; };
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1212,6 +1214,7 @@
 				38A74FE81E374FC10036091A /* OCVInputArrayable.h */,
 				38A74FEA1E374FF80036091A /* OCVOutputArrayable.h */,
 				38A74FEC1E3750350036091A /* OCVInputOutputArrayable.h */,
+				38A74FFE1E3762CB0036091A /* OCVInputArray+Private.h */,
 				38A74FEE1E37506D0036091A /* OCVInputArray.h */,
 				38A74FEF1E37506D0036091A /* OCVInputArray.mm */,
 				38A74FF21E3750790036091A /* OCVOutputArray.h */,
@@ -1356,6 +1359,7 @@
 				38A74FED1E3750350036091A /* OCVInputOutputArrayable.h in Headers */,
 				383BC5801E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.h in Headers */,
 				383BC45C1E2FFC5C002EA7A1 /* OCVLSDDetector.h in Headers */,
+				38A74FFF1E3762CF0036091A /* OCVInputArray+Private.h in Headers */,
 				383BC55C1E300078002EA7A1 /* OCVMultiTracker.h in Headers */,
 				383BC5541E300062002EA7A1 /* OCVTiffWriter.h in Headers */,
 				383BC41C1E2FFAD4002EA7A1 /* OCVGPUMat.h in Headers */,

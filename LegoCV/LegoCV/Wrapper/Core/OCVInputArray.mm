@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <opencv2/core/core.hpp>
+#import "OCVInputArray+Private.h"
 
 #import "OCVInputArray.h"
 
@@ -28,6 +28,24 @@
 
 - (NSInteger)dims {
     return [self dimsWithIndex:-1];
+}
+
+#pragma mark - Initialization
+
+- (instancetype)init {
+    [NSException raise:@"InitNotImplemented" format:@"Direct initialization not supported."];
+    
+    return nil;
+}
+
+- (instancetype)initWithInstance:(cv::_InputArray)inputArray {
+    self = [super init];
+    
+    if (self) {
+        self->source = inputArray;
+    }
+    
+    return self;
 }
 
 @end

@@ -61,7 +61,7 @@
     self = [super init];
     
     if (self) {
-        self->source = cv::Mat(mat);
+        self->source = mat;
     }
     
     return self;
@@ -70,7 +70,7 @@
 #pragma mark - Convenience Initialization
 
 - (instancetype)initWithMat:(OCVMat *)mat {
-    cv::Mat sourceMat = mat.source;
+    cv::Mat sourceMat = mat.source.clone();
     
     return [self initWithMatInstance:sourceMat];
 }

@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger, OCVInputArrayType) {
 @property (nonatomic, readonly) NSInteger depth;
 @property (nonatomic, readonly) NSInteger dims;
 
+@property (nonatomic, readonly) BOOL isEmpty;
+
 @property (nonatomic, readonly) BOOL isMat;
 
 #pragma mark - Initialization
