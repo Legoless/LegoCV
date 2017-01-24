@@ -13,6 +13,6 @@
 
 @property (nonatomic, readonly) cv::_InputArray source;
 
-- (instancetype)initWithInstance:(cv::_InputArray)inputArray;
+- (instancetype)initWithArrayInstance:(cv::_InputArray)inputArray;
 
 @end

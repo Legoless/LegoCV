@@ -20,9 +20,7 @@
  */
 @interface OCVMat : OCVObject <OCVInputArrayable, OCVOutputArrayable, OCVInputOutputArrayable>
 
-//
-// MARK: Public Properties
-//
+#pragma mark - Public Properties
 
 @property (nonatomic, readonly) NSInteger rows;
 @property (nonatomic, readonly) NSInteger cols;
@@ -44,24 +42,19 @@
 
 @property (nonatomic, readonly) OCVSize size;
 
-//
-// MARK: Initialization
-//
+#pragma mark - Initialization
 
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols;
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels;
 - (instancetype)initWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels;
 - (instancetype)initWithMat:(OCVMat *)mat;
 
-//
-// MARK: Public Methods
-//
+#pragma mark - Public Methods
 
+// TODO: Should replace with NSCopying
 - (OCVMat *)clone;
 
-//
-// MARK: Operations
-//
+#pragma mark - Operations
 
 - (OCVMat *)reshapeWithChannels:(NSInteger)channels;
 - (OCVMat *)reshapeWithChannels:(NSInteger)channels rows:(NSInteger)rows;
@@ -78,9 +71,7 @@
 
 - (double)dotWithArray:(id<OCVInputArrayable>)inputArray;
 
-//
-// MARK: Factory Methods
-//
+#pragma mark - Public Factory Methods
 
 + (instancetype)zerosWithRows:(NSInteger)rows cols:(NSInteger)cols type:(NSInteger)type;
 + (instancetype)zerosWithSize:(OCVSize *)size type:(NSInteger)type;
