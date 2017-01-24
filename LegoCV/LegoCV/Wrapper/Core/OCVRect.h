@@ -14,7 +14,7 @@
 typedef struct OCVRect
 {
     OCVPoint origin;
-    OCVSize size;
+    OCVSize size;cd op
 }
 OCVRect;
 
