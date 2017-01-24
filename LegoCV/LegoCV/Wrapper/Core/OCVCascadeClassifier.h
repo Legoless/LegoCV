@@ -14,7 +14,7 @@
 - (instancetype)initWithPath:(NSString *)path;
 
 /*!
- *  Needs to be absolute path to the XML model for classifier: Bundle.main.bundlePath
+ *  Needs to be absolute path to the XML model for classifier: Bundle.main.bundlePath + relativePath
  */
 - (void)loadPath:(NSString *)path;
 - (void)loadURL:(NSURL *)url;
