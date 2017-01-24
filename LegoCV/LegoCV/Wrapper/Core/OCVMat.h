@@ -63,8 +63,8 @@
 // MARK: Operations
 //
 
-- (OCVMat *)reshapeWithChannels:(NSInteger)cn;
-- (OCVMat *)reshapeWithChannels:(NSInteger)cn rows:(NSInteger)rows;
+- (OCVMat *)reshapeWithChannels:(NSInteger)channels;
+- (OCVMat *)reshapeWithChannels:(NSInteger)channels rows:(NSInteger)rows;
 
 - (OCVMat *)transpose;
 

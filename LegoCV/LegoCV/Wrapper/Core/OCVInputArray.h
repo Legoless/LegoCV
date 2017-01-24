@@ -7,25 +7,45 @@
 //
 
 #import "OCVObject.h"
-//#import "OCVMat.h"
+
+#import "OCVSize.h"
 
 typedef NS_ENUM(NSInteger, OCVInputArrayType) {
     OCVInputArrayTypeMat        = 65536,
     OCVInputArrayTypeExpression = 393216
 };
 
+@class OCVMat;
+
 @interface OCVInputArray : OCVObject
 
+#pragma mark - Public Properties
+
 @property (nonatomic, readonly) OCVInputArrayType type;
+@property (nonatomic, readonly) OCVSize size;
+
+@property (nonatomic, readonly) NSInteger channels;
+@property (nonatomic, readonly) NSInteger depth;
+@property (nonatomic, readonly) NSInteger dims;
+
+@property (nonatomic, readonly) BOOL isMat;
+
+#pragma mark - Initialization
+
 
 #pragma mark - Public Methods
 
-- (NSInteger)channels;
 - (NSInteger)channelsWithIndex:(NSInteger)index;
 
-- (NSInteger)depth;
 - (NSInteger)depthWithIndex:(NSInteger)index;
 
-//- (OCVMat *)mat;
+- (NSInteger)dimsWithIndex:(NSInteger)index;
+
+- (OCVMat *)mat;
+- (OCVMat *)matWithIndex:(NSInteger)index;
+
+#pragma mark - Static Factory Methods
+
++ (OCVInputArray *)empty;
 
 @end

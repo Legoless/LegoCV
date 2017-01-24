@@ -10,4 +10,9 @@
 
 @interface OCVOutputArray : OCVInputArray
 
+@property (nonatomic, readonly) BOOL isFixedSize;
+@property (nonatomic, readonly) BOOL isFixedType;
+
+@property (nonatomic, readonly) BOOL isNeeded;
+
 @end
