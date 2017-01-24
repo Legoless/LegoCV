@@ -106,7 +106,7 @@
 @interface OCVMat (CoreGraphics)
 - (instancetype)initWithImageRef:(CGImageRef)imageRef;
 - (instancetype)initWithCGSize:(CGSize)size;
-- (instancetype)initWithCGSize:(CGSize)size type:(OCVDepthType)type;
+- (instancetype)initWithCGSize:(CGSize)size type:(OCVDepthType)type channels:(NSInteger)channels;
 
 /*!
  *  Construct image reference and returns it
