@@ -7,7 +7,13 @@
 //
 
 #import "OCVInputOutputArray.h"
+#import "OCVInputOutputArray+Private.h"
+#import "OCVInputArray+Private.h"
 
 @implementation OCVInputOutputArray
+
+- (cv::_InputOutputArray)_inputOutput {
+    return *((cv::_InputOutputArray *)self.source);
+}
 
 @end
