@@ -31,4 +31,36 @@
     return self;
 }
 
+- (instancetype)initWithPath:(NSString *)path {
+    self = [self init];
+    
+    if (self) {
+        [self loadPath:path];
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithURL:(NSURL *)url {
+    return [self initWithPath:[self.class convertUrlToPath:url]];
+}
+
+- (void)loadURL:(NSURL *)url {
+    [self loadPath:[self.class convertUrlToPath:url]];
+}
+
+- (void)loadPath:(NSString *)path {
+    self.classifier->load(path.UTF8String);
+}
+
+#pragma mark - Private Class Methods
+
++ (NSString *)convertUrlToPath:(NSURL *)url {
+    //
+    // TODO: Correctly handle all path variants, such as file://
+    //
+    
+    return [url absoluteString];
+}
+
 @end

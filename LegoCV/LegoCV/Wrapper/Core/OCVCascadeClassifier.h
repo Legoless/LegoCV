@@ -11,7 +11,12 @@
 @interface OCVCascadeClassifier : OCVPointerObject
 
 - (instancetype)initWithURL:(NSURL *)url;
+- (instancetype)initWithPath:(NSString *)path;
 
+/*!
+ *  Needs to be absolute path to the XML model for classifier: Bundle.main.bundlePath
+ */
+- (void)loadPath:(NSString *)path;
 - (void)loadURL:(NSURL *)url;
 
 @end
