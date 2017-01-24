@@ -1,5 +1,5 @@
 //
-//  OCVInputOutputArray.h
+//  OCVOutputArrayable.h
 //  LegoCV
 //
 //  Created by Dal Rupnik on 24/01/2017.
@@ -8,6 +8,8 @@
 
 #import "OCVOutputArray.h"
 
-@interface OCVInputOutputArray : OCVOutputArray
+@protocol OCVOutputArrayable <NSObject>
+
+@property (nonatomic, readonly) OCVOutputArray *output;
 
 @end

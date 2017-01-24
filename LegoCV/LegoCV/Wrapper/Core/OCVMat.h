@@ -11,7 +11,7 @@
 #import "OCVTypes.h"
 #import "OCVSize.h"
 #import "OCVMatExpr.h"
-#import "OCVInputArray.h"
+#import "OCVInputArrayable.h"
 
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
@@ -67,12 +67,12 @@
 - (OCVMat *)inverse;
 - (OCVMat *)inverseWithMethod:(NSInteger)method;
 
-- (OCVMat *)multiplyWithArray:(id<OCVInputArray>)inputArray;
-- (OCVMat *)multiplyWithArray:(id<OCVInputArray>)inputArray scale:(double)scale;
+- (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray;
+- (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray scale:(double)scale;
 
-- (OCVMat *)crossWithArray:(id<OCVInputArray>)inputArray;
+- (OCVMat *)crossWithArray:(id<OCVInputArrayable>)inputArray;
 
-- (double)dotWithArray:(id<OCVInputArray>)inputArray;
+- (double)dotWithArray:(id<OCVInputArrayable>)inputArray;
 
 //
 // MARK: Factory Methods

@@ -7,12 +7,14 @@
 //
 
 #import "OCVObject.h"
-#import "OCVInputArray.h"
-#import "OCVOutputArray.h"
+#import "OCVInputArrayable.h"
+#import "OCVOutputArrayable.h"
+
+#import "OCVColorConversionType.h"
 
 @interface OCVOperation : OCVObject
 
-+ (void)convertColorFromSource:(id<OCVInputArray>)source toDestination:(id<OCVOutputArray>)destination withCode:(NSInteger)code;
-+ (void)convertColorFromSource:(id<OCVInputArray>)source toDestination:(id<OCVOutputArray>)destination withCode:(NSInteger)code withDestinationCn:(NSInteger)destinationCn;
++ (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type;
++ (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn;
 
 @end

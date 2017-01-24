@@ -10,8 +10,8 @@
 
 @implementation OCVOperation
 
-+ (void)convertColorFromSource:(id<OCVInputArray>)source toDestination:(id<OCVOutputArray>)destination withCode:(NSInteger)code {
-    [self convertColorFromSource:source toDestination:destination withCode:code withDestinationCn:0];
++ (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type {
+    [self convertColorFromSource:source toDestination:destination withType:type withDestinationCn:0];
 }
 
 @end
