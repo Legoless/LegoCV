@@ -8,9 +8,13 @@
 
 #import "OCVPointerObject.h"
 #import "OCVInputArrayable.h"
+#import "OCVSize.h"
 #import "OCVRect.h"
 
 @interface OCVCascadeClassifier : OCVPointerObject
+
+@property (nonatomic, readonly) BOOL isOldFormatCascade;
+@property (nonatomic, readonly) OCVSize originalWindowSize;
 
 - (instancetype)initWithURL:(NSURL *)url;
 - (instancetype)initWithPath:(NSString *)path;
