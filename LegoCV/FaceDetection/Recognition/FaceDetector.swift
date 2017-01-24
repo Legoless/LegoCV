@@ -15,6 +15,8 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     private var faceRects : [OCVRect] = []
     private var faceImgs : [OCVMat] = []
     
+    private var faceDetector = OCVCascadeClassifier()
+    
     var videoCamera : OCVVideoCamera!
     
     init(imageView: UIImageView, scale: CGFloat) {
@@ -24,6 +26,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         super.init()
         
         setupCamera()
+        setupClassifier()
     }
     
     func startCapture () {
@@ -55,7 +58,9 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     func processImage(_ image: OCVMat!) {
+        let faces = detectFaces(on: image, with: Double(scale))
         
+        draw(faces: faces, on: image)
     }
     
     private func setupCamera () {
@@ -68,4 +73,23 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         videoCamera.delegate = self
     }
     
+    private func setupClassifier () {
+        let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: nil)
+        
+        faceDetector.loadPath(path)
+    }
+    
+    private func detectFaces (on mat: OCVMat, with scale: Double) -> [OCVRect] {
+        let scaleFactor = 1.1
+        let minRects = 2
+        var minSize = OCVSize()
+        minSize.width = 30
+        minSize.height = 30
+        
+        return faceDetector.detectMultiscale(with: mat, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }
+    }
+    
+    private func draw(faces: [OCVRect], on image: OCVMat) {
+        
+    }
 }
