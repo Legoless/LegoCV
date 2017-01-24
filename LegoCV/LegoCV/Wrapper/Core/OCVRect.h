@@ -17,3 +17,15 @@ typedef struct OCVRect
     OCVSize size;
 }
 OCVRect;
+
+
+/*!
+ *  Objective-C class immutable wrapper for OCVRect struct
+ */
+@interface OCVRectValue : NSObject
+
+@property (nonatomic, readonly) OCVRect rect;
+
+- (instancetype)initWithRect:(OCVRect)rect;
+
+@end

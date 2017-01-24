@@ -7,6 +7,8 @@
 //
 
 #import "OCVPointerObject.h"
+#import "OCVInputArrayable.h"
+#import "OCVRect.h"
 
 @interface OCVCascadeClassifier : OCVPointerObject
 
@@ -18,5 +20,15 @@
  */
 - (void)loadPath:(NSString *)path;
 - (void)loadURL:(NSURL *)url;
+
+//
+// TODO: Add Swift wrapper method to return OCVRect directly.
+//
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image;
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor;
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours;
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags;
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize;
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize;
 
 @end
