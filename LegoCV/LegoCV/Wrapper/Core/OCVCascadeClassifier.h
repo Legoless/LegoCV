@@ -6,8 +6,12 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVObject.h"
+#import "OCVPointerObject.h"
 
-@interface OCVCascadeClassifier : OCVObject
+@interface OCVCascadeClassifier : OCVPointerObject
+
+- (instancetype)initWithURL:(NSURL *)url;
+
+- (void)loadURL:(NSURL *)url;
 
 @end
