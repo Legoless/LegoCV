@@ -9,9 +9,11 @@
 #import "OCVObject.h"
 
 @interface OCVPointerObject : OCVObject {
+   
+@public
     void *pointer;
 }
 
-- (instancetype)initWithUnsafePointer:(void *)pointer;
+- (instancetype)initWithPointer:(void *)unsafePointer;
 
 @end

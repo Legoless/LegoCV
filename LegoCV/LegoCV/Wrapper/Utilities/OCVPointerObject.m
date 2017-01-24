@@ -10,7 +10,7 @@
 
 @implementation OCVPointerObject
 
-- (instancetype)initWithUnsafePointer:(void *)unsafePointer {
+- (instancetype)initWithPointer:(void *)unsafePointer {
     self = [super init];
     
     if (self) {
