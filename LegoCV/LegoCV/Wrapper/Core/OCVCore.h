@@ -11,5 +11,9 @@
 
 #import "OCVRect.h"
 #import "OCVMat.h"
+#import "OCVInputArrayable.h"
+#import "OCVOutputArrayable.h"
+#import "OCVInputOutputArray.h"
+#import "OCVInputOutputArrayable.h"
 
 #endif /* OCVCore_h */
