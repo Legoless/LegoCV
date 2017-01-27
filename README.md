@@ -4,4 +4,6 @@ Fully functional OpenCV wrapper for Objective-C and Swift to eliminate the need 
 
 # Mission
 
+Swift is one of the fastest evolving languages, but cannot use C++ frameworks directly, as it could be with Objective-C/C++.
+
 # License
