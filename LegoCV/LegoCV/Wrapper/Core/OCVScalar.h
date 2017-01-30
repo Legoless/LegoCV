@@ -9,3 +9,11 @@
 typedef struct OCVScalar {
     double value[4];
 };
+
+OCVScalar OCVScalarRGB(double r, double g, double b) {
+    OCVScalar scalar;
+    scalar.value[0] = r;
+    scalar.value[1] = g;
+    scalar.value[2] = b;
+    scalar.value[3] = 0.0;
+}
