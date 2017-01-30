@@ -274,7 +274,7 @@
 		38B4D4DD1E2AA111008AAAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4DB1E2AA111008AAAB0 /* LaunchScreen.storyboard */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; };
+		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F21E367B1F00822472 /* OCVOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38DB13F01E367B1F00822472 /* OCVOperation.mm */; };
 		38DB13F41E367C1800822472 /* OCVColorConversionType.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13F31E367C1800822472 /* OCVColorConversionType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E7259A1E37B77C007DBC1F /* OCVRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E725991E37B77C007DBC1F /* OCVRect.m */; };

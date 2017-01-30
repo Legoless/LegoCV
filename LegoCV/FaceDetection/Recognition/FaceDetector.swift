@@ -79,14 +79,20 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         faceDetector.loadPath(path)
     }
     
-    private func detectFaces (on mat: OCVMat, with scale: Double) -> [OCVRect] {
+    private func detectFaces (on image: OCVMat, with scale: Double) -> [OCVRect] {
         let scaleFactor = 1.1
         let minRects = 2
         var minSize = OCVSize()
         minSize.width = 30
         minSize.height = 30
         
-        return faceDetector.detectMultiscale(with: mat, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }
+        let gray = OCVMat()
+        let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8S, channels: 1)
+        
+        OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
+        OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
+        
+        return faceDetector.detectMultiscale(with: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }
     }
     
     private func draw(faces: [OCVRect], on image: OCVMat) {
@@ -103,8 +109,10 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         ]
         
         
-        /*OCVScalar
         
-        let colors = [ ]*/
+        for face in faces {
+            
+        }
+        
     }
 }

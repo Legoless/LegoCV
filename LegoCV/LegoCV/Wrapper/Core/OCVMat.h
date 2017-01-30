@@ -24,6 +24,8 @@ typedef NS_ENUM(NSInteger, OCVMatDecompositionType) {
     OCVMatDecompositionTypeNormal   = 16
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
  */
@@ -90,6 +92,8 @@ typedef NS_ENUM(NSInteger, OCVMatDecompositionType) {
 
 @end
 
+NS_ASSUME_NONNULL_END
+
 #pragma mark - iOS Extensions
 
 #import <UIKit/UIKit.h>
@@ -122,3 +126,4 @@ typedef NS_ENUM(NSInteger, OCVMatDecompositionType) {
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
 
 @end
+

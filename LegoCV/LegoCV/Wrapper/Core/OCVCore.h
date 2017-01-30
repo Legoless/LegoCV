@@ -12,6 +12,7 @@
 #import "OCVScalar.h"
 #import "OCVRect.h"
 #import "OCVMat.h"
+#import "OCVOperation.h"
 #import "OCVInputArrayable.h"
 #import "OCVOutputArrayable.h"
 #import "OCVInputOutputArray.h"

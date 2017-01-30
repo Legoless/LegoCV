@@ -32,9 +32,9 @@
 #pragma mark - Initialization
 
 - (instancetype)init {
-    [NSException raise:@"InitNotImplemented" format:@"Use another initializer instead of default one."];
+    cv::Mat mat;
     
-    return nil;
+    return [super initWithMatInstance:&mat];
 }
 
 - (instancetype)initWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
