@@ -60,12 +60,12 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     func processImage(_ image: OCVMat) {
         let faces = detectFaces(on: image, with: Double(scale))
         
-        draw(faces: faces.0, on: image, with: faces.1)
+        //draw(faces: faces.0, on: image, with: faces.1)
     }
     
     private func setupCamera () {
         videoCamera = OCVVideoCamera(parentView: imageView)
-        videoCamera.defaultAVCaptureDevicePosition = .back
+        videoCamera.defaultAVCaptureDevicePosition = .front
         videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset640x480
         videoCamera.defaultAVCaptureVideoOrientation = .portrait
         videoCamera.defaultFPS = 30

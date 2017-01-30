@@ -163,7 +163,7 @@
 #pragma mark - OCVInputArrayable
 
 - (OCVInputArray *)input {
-    cv::_InputArray array = cv::_InputOutputArray(*(self.source));
+    cv::_InputArray array = cv::_InputArray(*(self.source));
     
     return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
 }
@@ -171,7 +171,7 @@
 #pragma mark - OCVOutputArrayable
 
 - (OCVOutputArray *)output {
-    cv::_InputOutputArray array = cv::_InputOutputArray(*(self.source));
+    cv::_OutputArray array = cv::_OutputArray(*(self.source));
     
     return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
 }
