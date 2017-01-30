@@ -9,11 +9,12 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 #import "OCVCamera.h"
-#import "OCVMat.h"
+
+@class OCVMat;
 
 @protocol OCVVideoCameraDelegate <NSObject>
 
-- (void)processImage:(OCVMat *)image;
+- (void)processImage:(OCVMat * _Nonnull)image;
 
 @end
 

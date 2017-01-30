@@ -9,7 +9,6 @@
 #ifndef OCVCore_h
 #define OCVCore_h
 
-#import "OCVGeometry.h"
 #import "OCVMat.h"
 #import "OCVOperation.h"
 #import "OCVInputArrayable.h"

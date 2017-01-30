@@ -9,7 +9,7 @@
 #import "OCVMatDataAllocator.h"
 
 #import "OCVTypes.h"
-#import "OCVSize.h"
+#import "OCVGeometry.h"
 #import "OCVMatExpr.h"
 #import "OCVInputArrayable.h"
 #import "OCVOutputArrayable.h"
@@ -62,8 +62,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Public Methods
 
-// TODO: Should replace with NSCopying
+// TODO: Should replace with NSCopying, but keep for consistency with OpenCV framework
 - (OCVMat *)clone;
+
+- (OCVMat *)matWithRect:(OCVRect)rect;
 
 #pragma mark - Operations
 

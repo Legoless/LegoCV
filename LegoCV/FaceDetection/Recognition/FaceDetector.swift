@@ -60,7 +60,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     func processImage(_ image: OCVMat!) {
         let faces = detectFaces(on: image, with: Double(scale))
         
-        draw(faces: faces, on: image)
+        draw(faces: faces.0, on: image, with: faces.1)
     }
     
     private func setupCamera () {
@@ -79,7 +79,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         faceDetector.loadPath(path)
     }
     
-    private func detectFaces (on image: OCVMat, with scale: Double) -> [OCVRect] {
+    private func detectFaces (on image: OCVMat, with scale: Double) -> ([OCVRect], OCVMat) {
         let scaleFactor = 1.1
         let minRects = 2
         var minSize = OCVSize()
@@ -93,10 +93,10 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
         OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
         
-        return faceDetector.detectMultiscale(with: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }
+        return (faceDetector.detectMultiscale(with: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }, smallImage)
     }
     
-    private func draw(faces: [OCVRect], on image: OCVMat) {
+    private func draw(faces: [OCVRect], on image: OCVMat, with smallImage: OCVMat) {
         
         let colors : [OCVScalar] = [
             OCVScalarRGB(0, 0, 255),
@@ -114,10 +114,24 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         var i = 0
         
         for face in faces {
-            let smallImageROI = OCVMat()
+            
             let center = OCVPoint()
             
-            let scalar = colors[i % colors.count]
+            let color = colors[i % colors.count]
+            
+            var point1 = OCVPoint()
+            point1.x = Int(CGFloat(face.origin.x) * scale)
+            point1.y = Int(CGFloat(face.origin.y) * scale)
+            
+            var point2 = OCVPoint()
+            
+            OCVOperation.rectangle(onSource: image, from: point1, to: point2, withColor: color, thickness: 1, lineType: 8, shift: 0)
+            
+            //let smallImageROI = smallImage.mat(with: face)
+            
+            //faceImages.append(smallImageROI)
+            
+            i += 1
         }
         
         self.faceImgs = faceImages

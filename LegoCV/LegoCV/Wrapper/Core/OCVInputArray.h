@@ -8,7 +8,7 @@
 
 #import "OCVObject.h"
 
-#import "OCVSize.h"
+#import "OCVGeometry.h"
 
 typedef NS_ENUM(NSInteger, OCVInputArrayType) {
     OCVInputArrayTypeMat        = 65536,
