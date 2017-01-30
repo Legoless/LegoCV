@@ -15,6 +15,8 @@
 		382F37761E3F8C1200A6F783 /* OCVScalar.m in Sources */ = {isa = PBXBuildFile; fileRef = 382F37751E3F8C1200A6F783 /* OCVScalar.m */; };
 		382F37781E3F8E7E00A6F783 /* OCVSize+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 382F37771E3F8E7E00A6F783 /* OCVSize+Private.mm */; };
 		382F377A1E3F8EB600A6F783 /* OCVRect+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */; };
+		382F377D1E3F905B00A6F783 /* OCVPoint+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 382F377B1E3F905B00A6F783 /* OCVPoint+Private.h */; };
+		382F377E1E3F905B00A6F783 /* OCVPoint+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 382F377C1E3F905B00A6F783 /* OCVPoint+Private.mm */; };
 		383BC4101E2FF974002EA7A1 /* OCVObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC40E1E2FF974002EA7A1 /* OCVObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		383BC4111E2FF974002EA7A1 /* OCVObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC40F1E2FF974002EA7A1 /* OCVObject.m */; };
 		383BC4181E2FFAC2002EA7A1 /* OCVBlob.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC4161E2FFAC2002EA7A1 /* OCVBlob.h */; };
@@ -335,6 +337,9 @@
 		382F37751E3F8C1200A6F783 /* OCVScalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVScalar.m; sourceTree = "<group>"; };
 		382F37771E3F8E7E00A6F783 /* OCVSize+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVSize+Private.mm"; sourceTree = "<group>"; };
 		382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVRect+Private.mm"; sourceTree = "<group>"; };
+		382F377B1E3F905B00A6F783 /* OCVPoint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVPoint+Private.h"; sourceTree = "<group>"; };
+		382F377C1E3F905B00A6F783 /* OCVPoint+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVPoint+Private.mm"; sourceTree = "<group>"; };
+		382F377F1E3F912700A6F783 /* OCVGeometry+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCVGeometry+Private.h"; sourceTree = "<group>"; };
 		383BC40E1E2FF974002EA7A1 /* OCVObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVObject.h; sourceTree = "<group>"; };
 		383BC40F1E2FF974002EA7A1 /* OCVObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVObject.m; sourceTree = "<group>"; };
 		383BC4161E2FFAC2002EA7A1 /* OCVBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVBlob.h; sourceTree = "<group>"; };
@@ -1227,8 +1232,11 @@
 			children = (
 				38DB13ED1E366FD500822472 /* OCVCore.h */,
 				382F37731E3F873B00A6F783 /* OCVGeometry.h */,
+				382F377F1E3F912700A6F783 /* OCVGeometry+Private.h */,
 				67E64AE2C47B7C63D77B8226 /* OCVImage.h */,
 				67E6409D184D6D07E50BFEBB /* OCVImage.m */,
+				382F377B1E3F905B00A6F783 /* OCVPoint+Private.h */,
+				382F377C1E3F905B00A6F783 /* OCVPoint+Private.mm */,
 				38A74FFA1E3755DA0036091A /* OCVPoint.h */,
 				38E7259D1E37BB43007DBC1F /* OCVSize+Private.h */,
 				382F37771E3F8E7E00A6F783 /* OCVSize+Private.mm */,
@@ -1411,6 +1419,7 @@
 				38A74FED1E3750350036091A /* OCVInputOutputArrayable.h in Headers */,
 				383BC5801E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.h in Headers */,
 				383BC45C1E2FFC5C002EA7A1 /* OCVLSDDetector.h in Headers */,
+				382F377D1E3F905B00A6F783 /* OCVPoint+Private.h in Headers */,
 				38A750071E37736D0036091A /* OCVOutputArray+Private.h in Headers */,
 				38A74FFF1E3762CF0036091A /* OCVInputArray+Private.h in Headers */,
 				383BC55C1E300078002EA7A1 /* OCVMultiTracker.h in Headers */,
@@ -1699,6 +1708,7 @@
 				67E64811635CCB4F774C409D /* OCVMat.mm in Sources */,
 				383BC42D1E2FFB56002EA7A1 /* OCVBackgroundSubtractorMOG.m in Sources */,
 				383BC4F91E2FFF39002EA7A1 /* OCVShapeDistanceExtractor.m in Sources */,
+				382F377E1E3F905B00A6F783 /* OCVPoint+Private.mm in Sources */,
 				383BC4A91E2FFDE5002EA7A1 /* OCVQueue.m in Sources */,
 				383BC5AD1E300165002EA7A1 /* OCVStarDetector.m in Sources */,
 				383BC5711E3000B6002EA7A1 /* OCVOnePassStabilizer.m in Sources */,
