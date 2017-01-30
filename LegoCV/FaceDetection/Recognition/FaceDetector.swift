@@ -74,9 +74,9 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     private func setupClassifier () {
-        let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: "data")
-        
-        faceDetector.loadPath(path)
+        if let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: nil) {
+            faceDetector.loadPath(path)
+        }
     }
     
     private func detectFaces (on image: OCVMat, with scale: Double) -> ([OCVRect], OCVMat) {
