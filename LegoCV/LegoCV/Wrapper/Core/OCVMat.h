@@ -100,6 +100,8 @@ NS_ASSUME_NONNULL_END
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface OCVMat (UIKit)
 
 - (instancetype)initWithImage:(UIImage *)image;
@@ -107,7 +109,11 @@ NS_ASSUME_NONNULL_END
 
 @end
 
+NS_ASSUME_NONNULL_END
+
 #import <CoreGraphics/CoreGraphics.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface OCVMat (CoreGraphics)
 - (instancetype)initWithImageRef:(CGImageRef)imageRef;
@@ -119,13 +125,19 @@ NS_ASSUME_NONNULL_END
  */
 - (CGImageRef)imageRef;
 
+NS_ASSUME_NONNULL_END
+
 @end
 
 #import <CoreVideo/CoreVideo.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @interface OCVMat (CoreVideo)
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
