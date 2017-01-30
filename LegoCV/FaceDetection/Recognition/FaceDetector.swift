@@ -57,7 +57,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         return faceImgs[index].image()
     }
     
-    func processImage(_ image: OCVMat!) {
+    func processImage(_ image: OCVMat) {
         let faces = detectFaces(on: image, with: Double(scale))
         
         draw(faces: faces.0, on: image, with: faces.1)
