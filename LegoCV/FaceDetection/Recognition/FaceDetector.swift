@@ -91,5 +91,20 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     
     private func draw(faces: [OCVRect], on image: OCVMat) {
         
+        let colors : [OCVScalar] = [
+            OCVScalarRGB(0, 0, 255),
+            OCVScalarRGB(0, 128, 255),
+            OCVScalarRGB(0, 255, 255),
+            OCVScalarRGB(0, 255, 0),
+            OCVScalarRGB(255, 128, 0),
+            OCVScalarRGB(255, 255, 0),
+            OCVScalarRGB(255, 0, 0),
+            OCVScalarRGB(255, 0, 255)
+        ]
+        
+        
+        /*OCVScalar
+        
+        let colors = [ ]*/
     }
 }

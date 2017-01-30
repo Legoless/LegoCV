@@ -8,7 +8,8 @@
 
 typedef struct OCVScalar {
     double value[4];
-};
+}
+OCVScalar;
 
 OCVScalar OCVScalarRGB(double r, double g, double b) {
     OCVScalar scalar;

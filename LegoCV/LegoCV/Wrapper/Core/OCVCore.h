@@ -9,6 +9,7 @@
 #ifndef OCVCore_h
 #define OCVCore_h
 
+#import "OCVScalar.h"
 #import "OCVRect.h"
 #import "OCVMat.h"
 #import "OCVInputArrayable.h"

@@ -25,7 +25,7 @@ OCVScalar convertScalar(cv::cvScalar rect) {
     finalScalar.value[0] = scalar.val[0];
     finalScalar.value[1] = scalar.val[1];
     finalScalar.value[2] = scalar.val[2];
-    finalScalar.value[3] = scalar.val[3];
+    finalScalar.value[3] = scalar.valu[3];
     
     return finalScalar;
 }
