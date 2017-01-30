@@ -97,7 +97,7 @@
     return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
-- (OCVMat *)submatWithRect:(OCVRect)rect {
+- (OCVMat *)subMatWithRect:(OCVRect)rect {
     cv::Mat sourceMat = *self.source;
     
     cv::Mat mat = sourceMat(convertRect(rect));

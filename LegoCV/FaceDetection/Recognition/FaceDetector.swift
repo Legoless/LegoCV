@@ -124,10 +124,12 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
             point1.y = Int(CGFloat(face.origin.y) * scale)
             
             var point2 = OCVPoint()
+            point1.x = Int(CGFloat(face.origin.x + face.size.width - 1) * scale)
+            point1.y = Int(CGFloat(face.origin.y + face.size.height - 1) * scale)
             
             OCVOperation.rectangle(onSource: image, from: point1, to: point2, withColor: color, thickness: 1, lineType: 8, shift: 0)
             
-            let smallImageROI = smallImage.submat(with: face)
+            let smallImageROI = smallImage.subMat(with: face)
             
             faceImages.append(smallImageROI.clone())
             
