@@ -227,6 +227,8 @@
 		383BC5B81E30018A002EA7A1 /* OCVXPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC5B61E30018A002EA7A1 /* OCVXPhoto.h */; };
 		383BC5B91E30018A002EA7A1 /* OCVXPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC5B71E30018A002EA7A1 /* OCVXPhoto.m */; };
 		3848D3361E3F95F500379F4F /* OCVScalar+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 3848D3351E3F95F500379F4F /* OCVScalar+Private.h */; };
+		3848D3371E3F973A00379F4F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; };
+		3848D3381E3F973A00379F4F /* opencv2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		386F2B7D1E35228F00320AEB /* OCVRect.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B7B1E35228F00320AEB /* OCVRect.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		386F2B821E3524D300320AEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B7F1E3524D300320AEB /* CoreGraphics.framework */; };
 		386F2B831E3524D300320AEB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B801E3524D300320AEB /* CoreVideo.framework */; };
@@ -324,6 +326,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3848D3381E3F973A00379F4F /* opencv2.framework in Embed Frameworks */,
 				381F150C1E2AA22A0072F870 /* LegoCV.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -658,6 +661,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3848D3371E3F973A00379F4F /* opencv2.framework in Frameworks */,
 				389718701E361A3600CB02B4 /* opencv2.framework in Frameworks */,
 				381F150B1E2AA22A0072F870 /* LegoCV.framework in Frameworks */,
 			);
