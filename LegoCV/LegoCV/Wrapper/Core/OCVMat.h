@@ -65,7 +65,7 @@ NS_ASSUME_NONNULL_BEGIN
 // TODO: Should replace with NSCopying, but keep for consistency with OpenCV framework
 - (OCVMat *)clone;
 
-- (OCVMat *)matWithRect:(OCVRect)rect;
+- (OCVMat *)submatWithRect:(OCVRect)rect;
 
 #pragma mark - Operations
 

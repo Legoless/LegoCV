@@ -10,23 +10,5 @@
 
 #import <opencv2/core/core.hpp>
 
-cv::Rect convertRect(OCVRect rect) {
-    cv::Rect finalRect;
-    
-    finalRect.x = (int)rect.origin.x;
-    finalRect.y = (int)rect.origin.y;
-    finalRect.width = (int)rect.size.width;
-    finalRect.height = (int)rect.size.height;
-    
-    return finalRect;
-}
-
-OCVRect convertRect(cv::Rect rect) {
-    OCVRect finalRect;
-    finalRect.origin.x = rect.x;
-    finalRect.origin.y = rect.y;
-    finalRect.size.width = rect.width;
-    finalRect.size.height = rect.height;
-    
-    return finalRect;
-}
+cv::Rect convertRect(OCVRect rect);
+OCVRect convertRect(cv::Rect rect);

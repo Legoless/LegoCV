@@ -6,6 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
+#import "OCVRect+Private.h"
 #import "OCVMatDataAllocator+Private.h"
 #import "OCVInputArray+Private.h"
 #import "OCVOutputArray.h"
@@ -92,6 +93,14 @@
 
 - (OCVMat *)clone {
     cv::Mat mat = self.source->clone();
+    
+    return [[OCVMat alloc] initWithMatInstance:&mat];
+}
+
+- (OCVMat *)submatWithRect:(OCVRect)rect {
+    cv::Mat sourceMat = *self.source;
+    
+    cv::Mat mat = sourceMat(convertRect(rect));
     
     return [[OCVMat alloc] initWithMatInstance:&mat];
 }

@@ -13,6 +13,8 @@
 		382F37711E3F74A900A6F783 /* OCVScalar.h in Headers */ = {isa = PBXBuildFile; fileRef = 382F37701E3F747E00A6F783 /* OCVScalar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382F37741E3F873B00A6F783 /* OCVGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 382F37731E3F873B00A6F783 /* OCVGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382F37761E3F8C1200A6F783 /* OCVScalar.m in Sources */ = {isa = PBXBuildFile; fileRef = 382F37751E3F8C1200A6F783 /* OCVScalar.m */; };
+		382F37781E3F8E7E00A6F783 /* OCVSize+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 382F37771E3F8E7E00A6F783 /* OCVSize+Private.mm */; };
+		382F377A1E3F8EB600A6F783 /* OCVRect+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */; };
 		383BC4101E2FF974002EA7A1 /* OCVObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC40E1E2FF974002EA7A1 /* OCVObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		383BC4111E2FF974002EA7A1 /* OCVObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 383BC40F1E2FF974002EA7A1 /* OCVObject.m */; };
 		383BC4181E2FFAC2002EA7A1 /* OCVBlob.h in Headers */ = {isa = PBXBuildFile; fileRef = 383BC4161E2FFAC2002EA7A1 /* OCVBlob.h */; };
@@ -331,6 +333,8 @@
 		382F37721E3F781F00A6F783 /* OCVScalar+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCVScalar+Private.h"; sourceTree = "<group>"; };
 		382F37731E3F873B00A6F783 /* OCVGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVGeometry.h; sourceTree = "<group>"; };
 		382F37751E3F8C1200A6F783 /* OCVScalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVScalar.m; sourceTree = "<group>"; };
+		382F37771E3F8E7E00A6F783 /* OCVSize+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVSize+Private.mm"; sourceTree = "<group>"; };
+		382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVRect+Private.mm"; sourceTree = "<group>"; };
 		383BC40E1E2FF974002EA7A1 /* OCVObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVObject.h; sourceTree = "<group>"; };
 		383BC40F1E2FF974002EA7A1 /* OCVObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVObject.m; sourceTree = "<group>"; };
 		383BC4161E2FFAC2002EA7A1 /* OCVBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVBlob.h; sourceTree = "<group>"; };
@@ -1227,6 +1231,7 @@
 				67E6409D184D6D07E50BFEBB /* OCVImage.m */,
 				38A74FFA1E3755DA0036091A /* OCVPoint.h */,
 				38E7259D1E37BB43007DBC1F /* OCVSize+Private.h */,
+				382F37771E3F8E7E00A6F783 /* OCVSize+Private.mm */,
 				67E6442EFD2D3DF5ABC0A0E7 /* OCVSize.h */,
 				67E64AE62B89D99AFF5B7ED1 /* OCVMatExpr.h */,
 				67E6485684255E43DB2CA592 /* OCVMatExpr.mm */,
@@ -1245,6 +1250,7 @@
 				67E647669347DEDB0F2128DA /* OCVComplex.m */,
 				67E646287C3C3D415F1D7019 /* OCVTypes.h */,
 				38E7259B1E37B9B6007DBC1F /* OCVRect+Private.h */,
+				382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */,
 				386F2B7B1E35228F00320AEB /* OCVRect.h */,
 				38E725991E37B77C007DBC1F /* OCVRect.m */,
 				38DB13F31E367C1800822472 /* OCVColorConversionType.h */,
@@ -1659,6 +1665,7 @@
 				383BC4811E2FFCE1002EA7A1 /* OCVStatModelExtensions.m in Sources */,
 				383BC44D1E2FFBE4002EA7A1 /* OCVIndex.m in Sources */,
 				383BC4991E2FFD39002EA7A1 /* OCVMCvDTreeSplit.m in Sources */,
+				382F37781E3F8E7E00A6F783 /* OCVSize+Private.mm in Sources */,
 				383BC50D1E2FFF77002EA7A1 /* OCVMercatorWarper.m in Sources */,
 				383BC4951E2FFD2C002EA7A1 /* OCVMCvDTreeNode.m in Sources */,
 				383BC4AD1E2FFDEC002EA7A1 /* OCVKernel.m in Sources */,
@@ -1717,6 +1724,7 @@
 				383BC5911E300134002EA7A1 /* OCVBriefDescriptorExtractor.m in Sources */,
 				383BC4BD1E2FFE1C002EA7A1 /* OCVProgramSource.m in Sources */,
 				383BC4A11E2FFD56002EA7A1 /* OCVMCvParamGrid.m in Sources */,
+				382F377A1E3F8EB600A6F783 /* OCVRect+Private.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
