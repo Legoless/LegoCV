@@ -74,7 +74,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     private func setupClassifier () {
-        let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: nil)
+        let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: "data")
         
         faceDetector.loadPath(path)
     }
@@ -91,6 +91,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         
         OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
         OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
+        OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
         
         return faceDetector.detectMultiscale(with: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }
     }
@@ -108,11 +109,18 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
             OCVScalarRGB(255, 0, 255)
         ]
         
+        var faceImages : [OCVMat] = []
         
+        var i = 0
         
         for face in faces {
+            let smallImageROI = OCVMat()
+            let center = OCVPoint()
             
+            let scalar = colors[i % colors.count]
         }
+        
+        self.faceImgs = faceImages
         
     }
 }

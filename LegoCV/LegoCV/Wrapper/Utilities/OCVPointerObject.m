@@ -20,4 +20,10 @@
     return self;
 }
 
+- (void)dealloc {
+    if (pointer != NULL) {
+        free(pointer);
+    }
+}
+
 @end
