@@ -8,4 +8,4 @@ Swift is one of the fastest evolving languages, but cannot use C++ frameworks di
 
 # License
 
-BSD license, respect OpenCV license as well.
+BSD license, respect [OpenCV](https://github.com/opencv/opencv) license as well.
