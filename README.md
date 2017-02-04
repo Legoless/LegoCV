@@ -10,6 +10,8 @@ Swift is one of the fastest evolving languages, but cannot use C++ frameworks di
 
 # Installation
 
+LegoCV can be installed with CocoaPods or Carthage.
+
 # License
 
 BSD license, respect [OpenCV](https://github.com/opencv/opencv) license as well.
