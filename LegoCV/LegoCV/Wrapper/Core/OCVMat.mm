@@ -186,7 +186,6 @@
     return self.source->dot(*inputArray.input._input);
 }
 
-
 #pragma mark - OCVInputOutputArrayable
 
 - (OCVInputOutputArray *)inputOutput {
@@ -220,7 +219,7 @@
     
     cv::Mat mat = cv::Mat::zeros((int)rows, (int)cols, cvType);
     
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 + (instancetype)onesWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
@@ -232,7 +231,7 @@
     
     cv::Mat mat = cv::Mat::ones((int)rows, (int)cols, cvType);
     
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 #pragma mark - Private Utility Methods
