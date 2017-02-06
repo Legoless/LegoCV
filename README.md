@@ -6,4 +6,12 @@ Fully functional OpenCV wrapper for Objective-C and Swift to eliminate the need 
 
 Swift is one of the fastest evolving languages, but cannot use C++ frameworks directly, as it could be with Objective-C/C++.
 
+# Examples
+
+# Installation
+
+LegoCV can be installed with CocoaPods or Carthage.
+
 # License
+
+BSD license, respect [OpenCV](https://github.com/opencv/opencv) license as well.
