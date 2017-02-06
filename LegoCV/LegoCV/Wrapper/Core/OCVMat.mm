@@ -78,9 +78,9 @@
 #pragma mark - Convenience Initialization
 
 - (instancetype)initWithMat:(OCVMat *)mat {
-    cv::Mat sourceMat = mat.source->clone();
+    cv::Mat *matSource = new cv::Mat(mat.source->clone());
     
-    return [self initWithMatInstance:&sourceMat];
+    return [self initWithMatInstance:matSource];
 }
 
 - (instancetype)initWithPixelBuffer:(CVPixelBufferRef)buffer {
@@ -107,6 +107,12 @@
 
 - (instancetype)initWithCGSize:(CGSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
     return [self initWithRows:(NSInteger)size.height cols:(NSInteger)size.width type:type channels:channels];
+}
+
+#pragma mark - NSCopying
+
+- (instancetype)copyWithZone:(NSZone *)zone {
+    return [[[self class] alloc] initWithMat:self];
 }
 
 #pragma mark - Public Methods

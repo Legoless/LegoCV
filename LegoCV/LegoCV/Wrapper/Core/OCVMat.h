@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  OCVMat is a simple Objective-C wrapper around cv::Mat instance.
  */
-@interface OCVMat : OCVMatDataAllocator <OCVInputArrayable, OCVOutputArrayable, OCVInputOutputArrayable>
+@interface OCVMat : OCVMatDataAllocator <NSCopying, OCVInputArrayable, OCVOutputArrayable, OCVInputOutputArrayable>
 
 #pragma mark - Public Properties
 
@@ -62,7 +62,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Public Methods
 
-// TODO: Should replace with NSCopying, but keep for consistency with OpenCV framework
+/*!
+ *  Creates a deep copy of the OCVMat underlying matrix, same as [self copy], as supported by NSCoding.
+ */
 - (OCVMat *)clone;
 
 /*!
