@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVRect+Private.h"
+#import "OCVGeometry+Private.h"
 #import "OCVMatDataAllocator+Private.h"
 #import "OCVInputArray+Private.h"
 #import "OCVOutputArray.h"
@@ -41,6 +41,10 @@
 
 - (OCVDepthType)type {
     return (OCVDepthType)self.source->depth();
+}
+
+- (OCVSize)size {
+    return convertSize(self.source->size());
 }
 
 - (NSString *)description {
