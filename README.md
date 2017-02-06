@@ -6,7 +6,7 @@ Fully functional OpenCV wrapper for Objective-C and Swift to eliminate the need 
 
 Swift is one of the fastest evolving languages, but there is no way to use C++ frameworks directly, as it could be with Objective-C/C++.
 
-This project's purpose is to create a simple, easy to use native Swift framework for OpenCV.
+This project's purpose is to create a simple, easy to use native Swift framework for OpenCV. The project adds Swift and Objective-C convenience methods, but translates to OpenCV API entirely.
 
 The idea is to simply wrap OpenCV native C++ classes into Objective-C classes, which are then natively bridged to Swift, providing a thin layer on top of native OpenCV. [Realm]() and [EmguCV]() in C# use similar framework structure.
 
