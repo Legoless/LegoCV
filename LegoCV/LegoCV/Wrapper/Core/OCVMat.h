@@ -63,7 +63,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Public Methods
 
 /*!
- *  Creates a deep copy of the OCVMat underlying matrix, same as [self copy], as supported by NSCoding.
+ *  Creates a deep copy of the OCVMat underlying matrix, same as [self copy], as supported by NSCopying.
  */
 - (OCVMat *)clone;
 
