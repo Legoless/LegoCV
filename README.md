@@ -47,6 +47,22 @@ Objective-C (LegoCV with Objective-C):
 }
 
 - (void)processImage:(OCVMat *)image {
+    double scale = 2.0;
+
+    OCVSize minSize;
+    minSize.width = 30;
+    minSize.height = 30;
+        
+    OCVMat* gray = [[OCVMat alloc] init];
+    let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
+        
+    OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
+    OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
+    OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
+    
+    // Faces are returned as OCVRect instances, so they are mapped in Swift, as they are structs.
+    let faces : [OCVRect] = faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
+
 }
 ```
 
