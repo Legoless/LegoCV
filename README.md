@@ -17,7 +17,23 @@ The example is extracted from Face detection sample code, shipped with LegoCV. O
 
 Swift (LegoCV):
 ```swift
+let faceDetector = OCVCascadeClassifier();
+faceDetector.load(path: "haarcascade_frontalface_alt2.xml")
+
 func process(image: OCVMat) {
+    var minSize = OCVSize()
+    minSize.width = 30
+    minSize.height = 30
+        
+    let gray = OCVMat()
+    let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
+        
+    OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
+    OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
+    OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
+    
+    // Faces are returned as OCVRect instances
+    faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
 }
 ```
 
