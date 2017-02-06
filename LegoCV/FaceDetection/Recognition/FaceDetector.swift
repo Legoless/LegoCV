@@ -59,8 +59,8 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     
     func processImage(_ image: OCVMat) {
         let faces = detectFaces(on: image, with: Double(scale))
-        
-        //draw(faces: faces.0, on: image, with: faces.1)
+
+        draw(faces: faces.0, on: image, with: faces.1)
     }
     
     private func setupCamera () {
@@ -74,7 +74,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     private func setupClassifier () {
-        if let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: nil) {
+        if let path = Bundle.main.path(forResource: "haarcascade_frontalface_alt2", ofType: "xml", inDirectory: "data/haarcascades") {
             faceDetector.loadPath(path)
         }
     }
@@ -114,9 +114,6 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         var i = 0
         
         for face in faces {
-            
-            let center = OCVPoint()
-            
             let color = colors[i % colors.count]
             
             var point1 = OCVPoint()
@@ -124,14 +121,14 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
             point1.y = Int(CGFloat(face.origin.y) * scale)
             
             var point2 = OCVPoint()
-            point1.x = Int(CGFloat(face.origin.x + face.size.width - 1) * scale)
-            point1.y = Int(CGFloat(face.origin.y + face.size.height - 1) * scale)
+            point2.x = Int(CGFloat(face.origin.x + face.size.width - 1) * scale)
+            point2.y = Int(CGFloat(face.origin.y + face.size.height - 1) * scale)
             
             OCVOperation.rectangle(onSource: image, from: point1, to: point2, withColor: color, thickness: 1, lineType: 8, shift: 0)
             
             let smallImageROI = smallImage.subMat(with: face)
             
-            faceImages.append(smallImageROI.clone())
+            //faceImages.append(smallImageROI.clone())
             
             i += 1
         }

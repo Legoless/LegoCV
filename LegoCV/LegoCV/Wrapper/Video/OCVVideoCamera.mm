@@ -113,8 +113,6 @@
 #pragma mark - CvVideoCameraDelegate
 
 - (void)processImage:(cv::Mat &)image {
-    NSLog(@"Processing ORIGINAL MAT: %d", image.type());
-    
     [self.delegate processImage:[[OCVMat alloc] initWithMatInstance:&image]];
 }
 
