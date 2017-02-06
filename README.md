@@ -84,7 +84,11 @@ There is a smaller performance impact compared to pure native C++ code of OpenCV
 
 ## Installation
 
-LegoCV can be installed with CocoaPods or Carthage.
+LegoCV can be installed with [CocoaPods]() or [Carthage]().
+
+```ruby
+pod 'LegoCV'
+```
 
 # License
 
