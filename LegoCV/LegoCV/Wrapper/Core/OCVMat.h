@@ -65,7 +65,10 @@ NS_ASSUME_NONNULL_BEGIN
 // TODO: Should replace with NSCopying, but keep for consistency with OpenCV framework
 - (OCVMat *)clone;
 
-- (OCVMat *)subMatWithRect:(OCVRect)rect;
+/*!
+ *  Returns OCVMat with submatrix (data is not copied and remains in original matrix)
+ */
+- (OCVMat *)submatrixWithRect:(OCVRect)rect;
 
 #pragma mark - Operations
 

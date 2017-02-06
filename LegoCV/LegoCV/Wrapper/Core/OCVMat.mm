@@ -26,6 +26,9 @@
 #pragma mark - Private Properties
 
 #pragma mark - Public Properties
+- (BOOL)isSubmatrix {
+    return self.source->isSubmatrix();
+}
 
 - (NSInteger)rows {
     return self.source->rows;
@@ -114,7 +117,7 @@
     return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
-- (OCVMat *)subMatWithRect:(OCVRect)rect {
+- (OCVMat *)submatrixWithRect:(OCVRect)rect {
     cv::Mat sourceMat = *self.source;
     
     cv::Mat mat = sourceMat(convertRect(rect));
