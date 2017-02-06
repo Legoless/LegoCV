@@ -35,7 +35,7 @@ func process(image: OCVMat) {
     OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
     
     // Faces are returned as OCVRect instances, so they are mapped in Swift, as they are structs.
-    faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
+    let faces : [OCVRect] = faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
 }
 ```
 
