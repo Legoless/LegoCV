@@ -87,7 +87,7 @@ void processImage(cv::Mat img) {
     vector<cv::Rect> faceRects;
 
     // Faces are returned in provided faceRects vector
-    ->_faceDetector->detectMultiScale(smallImg, faceRects, 1.1, 2, 0, minSize);
+    _faceDetector->detectMultiScale(smallImg, faceRects, 1.1, 2, 0, minSize);
 }
 ```
 
