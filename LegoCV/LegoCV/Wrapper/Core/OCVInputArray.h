@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVObject.h"
+#import "OCVReferenceObject.h"
 
 #import "OCVGeometry.h"
 
@@ -17,7 +17,7 @@ typedef NS_ENUM(NSInteger, OCVInputArrayType) {
 
 @class OCVMat;
 
-@interface OCVInputArray : OCVObject
+@interface OCVInputArray : OCVReferenceObject
 
 #pragma mark - Public Properties
 
@@ -34,7 +34,6 @@ typedef NS_ENUM(NSInteger, OCVInputArrayType) {
 
 #pragma mark - Initialization
 
-
 #pragma mark - Public Methods
 
 - (NSInteger)channelsWithIndex:(NSInteger)index;
@@ -47,7 +46,5 @@ typedef NS_ENUM(NSInteger, OCVInputArrayType) {
 - (OCVMat *)matWithIndex:(NSInteger)index;
 
 #pragma mark - Static Factory Methods
-
-+ (OCVInputArray *)empty;
 
 @end

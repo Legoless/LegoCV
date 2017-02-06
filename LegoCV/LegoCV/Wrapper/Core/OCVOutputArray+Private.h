@@ -11,6 +11,6 @@
 
 @interface OCVOutputArray (OpenCV)
 
-@property (nonatomic, readonly) cv::_OutputArray _output;
+@property (nonatomic, readonly) cv::OutputArray _output;
 
 @end

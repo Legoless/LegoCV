@@ -13,20 +13,19 @@
 #import "OCVMatDataAllocator+Private.h"
 #import "OCVMat.h"
 
-@interface OCVInputArray () {
-    cv::_InputArray *source;
-}
-
+@interface OCVInputArray ()
 @end
 
 @implementation OCVInputArray
 
-- (cv::_InputArray *)source {
-    return source;
-}
-
-- (cv::_InputArray)_input {
-    return *(source);
+- (cv::InputArray)_input {
+    if ([self.object isKindOfClass:[OCVMatDataAllocator class]]) {
+        OCVMatDataAllocator *mat = self.object;
+        
+        return *(mat.source);
+    }
+    
+    return cv::noArray();
 }
 
 - (NSInteger)channels {
@@ -49,28 +48,18 @@
     return nil;
 }
 
-- (instancetype)initWithArrayInstance:(cv::_InputArray *)array {
-    self = [super init];
-    
-    if (self) {
-        self->source = array;
-    }
-    
-    return self;
-}
-
 #pragma mark - Public Methods
 
 - (NSInteger)channelsWithIndex:(NSInteger)index {
-    return source->channels((int)index);
+    return self._input.channels((int)index);
 }
 
 - (NSInteger)depthWithIndex:(NSInteger)index {
-    return source->depth((int)index);
+    return self._input.depth((int)index);
 }
 
 - (NSInteger)dimsWithIndex:(NSInteger)index {
-    return source->dims((int)index);
+    return self._input.dims((int)index);
 }
 
 - (OCVMat *)mat {
@@ -79,15 +68,11 @@
 
 - (OCVMat *)matWithIndex:(NSInteger)index {
     
-    cv::Mat mat = source->getMat((int)index);
+    cv::Mat mat = self._input.getMat((int)index);
     return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 #pragma mark - Factory Methods
 
-+ (OCVInputArray *)empty {
-    cv::_InputArray array = cv::_InputArray();
-    return [[OCVInputArray alloc] initWithArrayInstance:&array];
-}
 
 @end

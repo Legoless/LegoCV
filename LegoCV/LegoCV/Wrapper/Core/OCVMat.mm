@@ -163,25 +163,19 @@
 #pragma mark - OCVInputArrayable
 
 - (OCVInputArray *)input {
-    cv::_InputArray array = cv::_InputArray(*(self.source));
-    
-    return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
+    return [[OCVInputOutputArray alloc] initWithObject:self];
 }
 
 #pragma mark - OCVOutputArrayable
 
 - (OCVOutputArray *)output {
-    cv::_OutputArray array = cv::_OutputArray(*(self.source));
-    
-    return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
+    return [[OCVInputOutputArray alloc] initWithObject:self];
 }
 
-#pragma mark -OCVInputOutputArrayable
+#pragma mark - OCVInputOutputArrayable
 
 - (OCVInputOutputArray *)inputOutput {
-    cv::_InputOutputArray array = cv::_InputOutputArray(*(self.source));
-    
-    return [[OCVInputOutputArray alloc] initWithArrayInstance:&array];
+    return [[OCVInputOutputArray alloc] initWithObject:self];
 }
 
 #pragma mark - Public Factory Methods

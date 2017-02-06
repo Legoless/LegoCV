@@ -6,13 +6,21 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
+#import "OCVMatDataAllocator+Private.h"
+
 #import "OCVOutputArray.h"
 #import "OCVInputArray+Private.h"
 
 @implementation OCVOutputArray
 
-- (cv::_OutputArray)_output {
-    return *((cv::_OutputArray *)self.source);
+- (cv::OutputArray)_output {
+    if ([self.object isKindOfClass:[OCVMatDataAllocator class]]) {
+        OCVMatDataAllocator *mat = self.object;
+        
+        return *(mat.source);
+    }
+    
+    return cv::noArray();
 }
 
 @end
