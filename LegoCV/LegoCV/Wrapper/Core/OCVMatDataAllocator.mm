@@ -32,4 +32,12 @@
     return self;
 }
 
+- (void)dealloc {
+    if (source) {
+        free(source);
+    }
+    
+    source = NULL;
+}
+
 @end

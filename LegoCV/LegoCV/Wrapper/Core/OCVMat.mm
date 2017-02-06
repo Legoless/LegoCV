@@ -112,9 +112,9 @@
 #pragma mark - Public Methods
 
 - (OCVMat *)clone {
-    cv::Mat mat = self.source->clone();
+    cv::Mat *mat = new cv::Mat(self.source->clone());
     
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:mat];
 }
 
 - (OCVMat *)submatrixWithRect:(OCVRect)rect {
@@ -122,7 +122,7 @@
     
     cv::Mat mat = sourceMat(convertRect(rect));
     
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 - (CGImageRef)imageRef {
@@ -145,12 +145,12 @@
 
 - (OCVMat *)reshapeWithChannels:(NSInteger)channels rows:(NSInteger)rows {
     cv::Mat mat = self.source->reshape((int)channels, (int)rows);
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 - (OCVMat *)transpose {
     cv::Mat mat = self.source->t();
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 - (OCVMat *)inverse {
@@ -159,7 +159,7 @@
 
 - (OCVMat *)inverseWithMethod:(OCVMatDecompositionType)method {
     cv::Mat mat = self.source->inv((int)method);
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray {
@@ -168,12 +168,12 @@
 
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray scale:(double)scale {
     cv::Mat mat = self.source->mul(*inputArray.input._input, scale);
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 - (OCVMat *)crossWithArray:(id<OCVInputArrayable>)inputArray {
     cv::Mat mat = self.source->cross(*inputArray.input._input);
-    return [[OCVMat alloc] initWithMatInstance:&mat];
+    return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }
 
 - (double)dotWithArray:(id<OCVInputArrayable>)inputArray {

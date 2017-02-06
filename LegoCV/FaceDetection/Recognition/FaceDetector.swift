@@ -125,14 +125,10 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
             point2.y = Int(CGFloat(face.origin.y + face.size.height - 1) * scale)
             
             OCVOperation.rectangle(onSource: image, from: point1, to: point2, withColor: color, thickness: 1, lineType: 8, shift: 0)
-            
-            print("Is SmallIamge submatrix: \(smallImage.isSubmatrix)")
-            
+
             let smallImageROI = smallImage.submatrix(with: face)
             
-            print("Is ROI submatrix: \(smallImageROI.isSubmatrix)")
-            
-            //faceImages.append(smallImageROI.clone())
+            faceImages.append(smallImageROI.clone())
             
             i += 1
         }
