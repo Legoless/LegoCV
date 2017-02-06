@@ -69,7 +69,7 @@
     
     std::vector<cv::Rect> faceRects;
     
-    //self.classifier->detectMultiScale(image.input._input, faceRects, scaleFactor, (int)minNeighbours, (int)flags, convertSize(minSize), convertSize(maxSize));
+    self.classifier->detectMultiScale(*image.input._input, faceRects, scaleFactor, (int)minNeighbours, (int)flags, convertSize(minSize), convertSize(maxSize));
     
     return [self convertRects:faceRects];
 }

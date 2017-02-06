@@ -50,9 +50,7 @@
 #pragma mark - Initialization
 
 - (instancetype)init {
-    cv::Mat mat;
-    
-    return [super initWithMatInstance:&mat];
+    return [super initWithMatInstance:new cv::Mat()];
 }
 
 - (instancetype)initWithSize:(OCVSize)size type:(OCVDepthType)type channels:(NSInteger)channels {
@@ -66,10 +64,8 @@
 - (instancetype)initWithRows:(NSInteger)rows cols:(NSInteger)cols type:(OCVDepthType)type channels:(NSInteger)channels {
     // Convert type to OpenCV type
     int cvType = (int)CV_MAKETYPE(type, channels);
-    
-    cv::Mat mat = cv::Mat((int)rows, (int)cols, cvType);
-    
-    return [super initWithMatInstance:&mat];
+
+    return [super initWithMatInstance:new cv::Mat((int)rows, (int)cols, cvType)];
 }
 
 #pragma mark - Convenience Initialization

@@ -27,35 +27,21 @@
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn {
     
-    //NSLog(@"INPUT MAT TYPE: %d", ((OCVMatDataAllocator *)source).source->type());
-    
-    //NSLog(@"INPUT MAT TYPE: %d", ((OCVMatDataAllocator *)source).source->type());
-
-    
-   //
-    
-    OCVMatDataAllocator* mat = source;
-    
-    cv::_InputArray* array = source.input._input;
-
-    NSLog(@"Input depth: %d", array->type());
-    
-    NSLog(@"Input depth: %d", array->type());
-    NSLog(@"Input depth: %d", array->type());
-    
-    
-    
     cv::cvtColor(*source.input._input, *destination.output._output, (int)type, (int)destinationCn);
 }
 
 + (void)equalizeHistogramFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination {
-    //cv::equalizeHist(source.input._input, destination.output._output);
+    cv::equalizeHist(*source.input._input, *destination.output._output);
+}
+
++ (void)resizeFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(OCVSize)size fx:(double)fx fy:(double)fy interpolation:(OCVInterpolationType)interpolation {
+    cv::resize(*source.input._input, *destination.output._output, convertSize(size), fx, fy, (int)interpolation);
 }
 
 #pragma mark - Drawing
 
 + (void)rectangleOnSource:(id<OCVInputOutputArrayable>)source fromPoint:(OCVPoint)point1 toPoint:(OCVPoint)point2 withColor:(OCVScalar)color thickness:(NSInteger)thickness lineType:(NSInteger)lineType shift:(NSInteger)shift {
-    
+    cv::rectangle(*source.inputOutput._inputOutput, convertPoint(point1), convertPoint(point2), convertScalar(color), (int)thickness, (int)lineType, (int)shift);
 }
 
 + (void)rectangleOnSource:(id<OCVInputOutputArrayable>)source fromRect:(OCVRect)rect withColor:(OCVScalar)color thickness:(NSInteger)thickness lineType:(NSInteger)lineType shift:(NSInteger)shift {
