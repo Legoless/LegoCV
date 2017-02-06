@@ -58,6 +58,8 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
     }
     
     func processImage(_ image: OCVMat) {
+        print("Processing mat: \(image)")
+        
         let faces = detectFaces(on: image, with: Double(scale))
         
         //draw(faces: faces.0, on: image, with: faces.1)
@@ -87,9 +89,9 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         minSize.height = 30
         
         let gray = OCVMat()
-        let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8S, channels: 1)
+        let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
         
-        OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
+        OCVOperation.convertColor(fromSource: image, toDestination: image, with: .typeBGR2GRAY)
         OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
         OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
         

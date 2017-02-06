@@ -10,6 +10,10 @@
 
 @implementation OCVReferenceObject
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"[OCVReferencedObject]: %@", [self.object description]];
+}
+
 - (instancetype)initWithObject:(id)object {
     self = [super init];
     

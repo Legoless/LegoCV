@@ -24,6 +24,8 @@
 }
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn {
+
+    NSLog(@"Input depth: %d Output depth: %d", source.input._input.depth(), destination.output._output.depth());
     
     cv::cvtColor(source.input._input, destination.output._output, (int)type, (int)destinationCn);
 }

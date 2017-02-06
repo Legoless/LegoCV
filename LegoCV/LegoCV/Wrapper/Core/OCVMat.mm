@@ -29,6 +29,17 @@
     return self.source->cols;
 }
 
+- (NSInteger)channels {
+    return self.source->channels();
+}
+
+- (OCVDepthType)type {
+    return (OCVDepthType)self.source->depth();
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"OCVMat: [%ld, %ld], channels: %ld, type: %ld]", (long)self.rows, (long)self.cols, (long)self.channels, (long)self.type];
+}
 
 #pragma mark - Initialization
 
@@ -163,13 +174,13 @@
 #pragma mark - OCVInputArrayable
 
 - (OCVInputArray *)input {
-    return [[OCVInputOutputArray alloc] initWithObject:self];
+    return [[OCVInputArray alloc] initWithObject:self];
 }
 
 #pragma mark - OCVOutputArrayable
 
 - (OCVOutputArray *)output {
-    return [[OCVInputOutputArray alloc] initWithObject:self];
+    return [[OCVOutputArray alloc] initWithObject:self];
 }
 
 #pragma mark - OCVInputOutputArrayable
