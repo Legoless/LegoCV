@@ -52,6 +52,11 @@ Objective-C (LegoCV with Objective-C):
 
 C++ (OpenCV):
 ```cpp
+void setup () {
+    _faceDetector = new CascadeClassifier();
+    _faceDetector->load("haarcascade_frontalface_alt2.xml");
+}
+
 void processImage(cv::Mat img) {
     double scale = 2.0;
     Mat gray, smallImg( cvRound (img.rows/scale), cvRound(img.cols/scale), CV_8UC1 );
@@ -59,18 +64,13 @@ void processImage(cv::Mat img) {
     cvtColor( img, gray, COLOR_BGR2GRAY );
     resize( gray, smallImg, smallImg.size(), 0, 0, INTER_LINEAR );
     equalizeHist( smallImg, smallImg );
-    
 
-
-    t = (double)cvGetTickCount();
-    double scalingFactor = 1.1;
-    int minRects = 2;
     cv::Size minSize(30,30);
 
-    self->_faceDetector.detectMultiScale( smallImg, self->_faceRects,
-                             scalingFactor, minRects, 0,
-                             minSize );
+    vector<cv::Rect> faceRects;
 
+    // Faces are returned in provided faceRects vector
+    self->_faceDetector->detectMultiScale(smallImg, faceRects, 1.1, 2, 0, minSize);
 }
 ```
 
