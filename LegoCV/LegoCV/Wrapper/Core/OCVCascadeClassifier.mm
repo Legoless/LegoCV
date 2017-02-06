@@ -57,12 +57,34 @@
     return [self initWithPath:[self.class convertUrlToPath:url]];
 }
 
+#pragma mark - Public Methods
+
 - (void)loadURL:(NSURL *)url {
     [self loadPath:[self.class convertUrlToPath:url]];
 }
 
 - (void)loadPath:(NSString *)path {
     self.classifier->load(path.UTF8String);
+}
+
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image {
+    return [self detectMultiscaleWith:image scaleFactor:1.1];
+}
+
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor {
+    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:3];
+}
+
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours {
+    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:0];
+}
+
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags {
+    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:flags minSize:OCVSize()];
+}
+
+- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize {
+    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:flags minSize:minSize maxSize:OCVSize()];
 }
 
 - (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize {
