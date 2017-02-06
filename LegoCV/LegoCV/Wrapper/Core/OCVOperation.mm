@@ -15,6 +15,8 @@
 #import "OCVOutputArray+Private.h"
 #import "OCVInputOutputArray+Private.h"
 
+#import "OCVMatDataAllocator+Private.h"
+
 #import "OCVOperation.h"
 
 @implementation OCVOperation
@@ -24,14 +26,30 @@
 }
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn {
-
-    NSLog(@"Input depth: %d Output depth: %d", source.input._input.depth(), destination.output._output.depth());
     
-    cv::cvtColor(source.input._input, destination.output._output, (int)type, (int)destinationCn);
+    //NSLog(@"INPUT MAT TYPE: %d", ((OCVMatDataAllocator *)source).source->type());
+    
+    //NSLog(@"INPUT MAT TYPE: %d", ((OCVMatDataAllocator *)source).source->type());
+
+    
+   //
+    
+    OCVMatDataAllocator* mat = source;
+    
+    cv::_InputArray* array = source.input._input;
+
+    NSLog(@"Input depth: %d", array->type());
+    
+    NSLog(@"Input depth: %d", array->type());
+    NSLog(@"Input depth: %d", array->type());
+    
+    
+    
+    cv::cvtColor(*source.input._input, *destination.output._output, (int)type, (int)destinationCn);
 }
 
 + (void)equalizeHistogramFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination {
-    cv::equalizeHist(source.input._input, destination.output._output);
+    //cv::equalizeHist(source.input._input, destination.output._output);
 }
 
 #pragma mark - Drawing
@@ -50,7 +68,7 @@
     point2.x = rect.origin.x + rect.size.width;
     point2.y = rect.origin.y + rect.size.height;
     
-    cv::rectangle(source.inputOutput._inputOutput, convertPoint(point1), convertPoint(point2), convertScalar(color), (int)thickness, (int)lineType, (int)shift);
+    cv::rectangle(*source.inputOutput._inputOutput, convertPoint(point1), convertPoint(point2), convertScalar(color), (int)thickness, (int)lineType, (int)shift);
 }
 
 @end

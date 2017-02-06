@@ -34,6 +34,8 @@ typedef NS_ENUM(NSInteger, OCVInputArrayType) {
 
 #pragma mark - Initialization
 
+- (void)setup;
+
 #pragma mark - Public Methods
 
 - (NSInteger)channelsWithIndex:(NSInteger)index;

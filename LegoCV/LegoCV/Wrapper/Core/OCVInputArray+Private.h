@@ -11,6 +11,8 @@
 
 @interface OCVInputArray (OpenCV)
 
-@property (nonatomic, readonly) cv::InputArray _input;
+@property (nonatomic, assign) cv::_InputArray *arrayReference;
+
+@property (nonatomic, readonly) cv::_InputArray *_input;
 
 @end

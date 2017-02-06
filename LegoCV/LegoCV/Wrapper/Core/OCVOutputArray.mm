@@ -13,14 +13,18 @@
 
 @implementation OCVOutputArray
 
-- (cv::OutputArray)_output {
-    if ([self.object isKindOfClass:[OCVMatDataAllocator class]]) {
-        OCVMatDataAllocator *mat = self.object;
-        
-        return *(mat.source);
-    }
+- (cv::_OutputArray *)_output {
+    [self setup];
     
-    return cv::noArray();
+    return (cv::_OutputArray *)self.arrayReference;
+}
+
+- (void)setup {
+    if ([self.object isKindOfClass:[OCVMatDataAllocator class]]) {
+        cv::Mat *mat = [self.object source];
+        
+        self.arrayReference = new cv::_OutputArray(*mat);
+    }
 }
 
 @end

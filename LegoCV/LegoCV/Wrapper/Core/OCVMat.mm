@@ -15,9 +15,15 @@
 #import "OCVMat.h"
 
 @interface OCVMat ()
+
+// A reference to output array proxy, to guarantee a single one is passed.
+@property (nonatomic, strong) OCVInputOutputArray* inputOutput;
+
 @end
 
 @implementation OCVMat
+
+#pragma mark - Private Properties
 
 #pragma mark - Public Properties
 
@@ -158,35 +164,40 @@
 }
 
 - (OCVMat *)multiplyWithArray:(id<OCVInputArrayable>)inputArray scale:(double)scale {
-    cv::Mat mat = self.source->mul(inputArray.input._input, scale);
+    cv::Mat mat = self.source->mul(*inputArray.input._input, scale);
     return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (OCVMat *)crossWithArray:(id<OCVInputArrayable>)inputArray {
-    cv::Mat mat = self.source->cross(inputArray.input._input);
+    cv::Mat mat = self.source->cross(*inputArray.input._input);
     return [[OCVMat alloc] initWithMatInstance:&mat];
 }
 
 - (double)dotWithArray:(id<OCVInputArrayable>)inputArray {
-    return self.source->dot(inputArray.input._input);
+    return self.source->dot(*inputArray.input._input);
+}
+
+
+#pragma mark - OCVInputOutputArrayable
+
+- (OCVInputOutputArray *)inputOutput {
+    if (!_inputOutput) {
+        _inputOutput = [[OCVInputOutputArray alloc] initWithObject:self];
+    }
+    
+    return _inputOutput;
 }
 
 #pragma mark - OCVInputArrayable
 
 - (OCVInputArray *)input {
-    return [[OCVInputArray alloc] initWithObject:self];
+    return self.inputOutput;
 }
 
 #pragma mark - OCVOutputArrayable
 
 - (OCVOutputArray *)output {
-    return [[OCVOutputArray alloc] initWithObject:self];
-}
-
-#pragma mark - OCVInputOutputArrayable
-
-- (OCVInputOutputArray *)inputOutput {
-    return [[OCVInputOutputArray alloc] initWithObject:self];
+    return self.inputOutput;
 }
 
 #pragma mark - Public Factory Methods
