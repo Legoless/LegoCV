@@ -2,7 +2,7 @@
 
 Fully functional OpenCV wrapper for Objective-C and Swift to eliminate the need to use Objective-C++ and allow full compatibility with Swift projects.
 
-# Mission
+## Mission
 
 Swift is one of the fastest evolving languages, but there is no way to use C++ frameworks directly, as it could be with Objective-C/C++.
 
@@ -10,7 +10,7 @@ This project's purpose is to create a simple, easy to use native Swift framework
 
 The idea is to simply wrap OpenCV native C++ classes into Objective-C classes, which are then natively bridged to Swift, providing a thin layer on top of native OpenCV. [Realm]() and [EmguCV]() in C# use similar framework structure.
 
-# Example
+## Example
 
 The following examples display the difference in using LegoCV in Swift and Objective-C versus vanilla OpenCV in C++.
 The example is extracted from Face detection sample code, shipped with LegoCV. On iOS it uses `OCVVideoCamera` class to get image stream from camera (wraps original `CvVideoCamera`, to keep backward compatibiliy).
@@ -74,15 +74,15 @@ void processImage(cv::Mat img) {
 }
 ```
 
-# Documentation
+## Documentation
 
 As this is a project in progress, documentation will be added to [Wiki]().
 
-# Performance
+## Performance
 
 There is a smaller performance impact compared to pure native C++ code of OpenCV, due to Objective-C messaging system. If you need a high performance code, it is still recommended to write the algorithm in C++ and add bridges to LegoCV or Objective-C.
 
-# Installation
+## Installation
 
 LegoCV can be installed with CocoaPods or Carthage.
 
