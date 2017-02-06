@@ -21,6 +21,8 @@ let faceDetector = OCVCascadeClassifier();
 faceDetector.load(path: "haarcascade_frontalface_alt2.xml")
 
 func process(image: OCVMat) {
+    let scale = 2.0
+
     var minSize = OCVSize()
     minSize.width = 30
     minSize.height = 30
@@ -32,26 +34,53 @@ func process(image: OCVMat) {
     OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
     OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
     
-    // Faces are returned as OCVRect instances
+    // Faces are returned as OCVRect instances, so they are mapped in Swift, as they are structs.
     faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
 }
 ```
 
 Objective-C (LegoCV with Objective-C):
 ```objectivec
+- (void)setupClassifier {
+    self.faceDetector = [[OCVCascadeClassifier alloc] init];
+    [self.faceDetector loadPath:@"haarcascade_frontalface_alt2.xml"];
+}
+
 - (void)processImage:(OCVMat *)image {
 }
 ```
 
 C++ (OpenCV):
 ```cpp
-void processImage(cv::Mat image) {
+void processImage(cv::Mat img) {
+    double scale = 2.0;
+    Mat gray, smallImg( cvRound (img.rows/scale), cvRound(img.cols/scale), CV_8UC1 );
+    
+    cvtColor( img, gray, COLOR_BGR2GRAY );
+    resize( gray, smallImg, smallImg.size(), 0, 0, INTER_LINEAR );
+    equalizeHist( smallImg, smallImg );
+    
+
+
+    t = (double)cvGetTickCount();
+    double scalingFactor = 1.1;
+    int minRects = 2;
+    cv::Size minSize(30,30);
+
+    self->_faceDetector.detectMultiScale( smallImg, self->_faceRects,
+                             scalingFactor, minRects, 0,
+                             minSize );
+
 }
 ```
 
 # Documentation
 
 As this is a project in progress, documentation will be added to [Wiki]().
+
+# Performance
+
+There is a smaller performance impact compared to pure native C++ code of OpenCV, due to Objective-C messaging system. If you need a high performance code, it is still recommended to write the algorithm in C++ and add bridges to LegoCV or Objective-C.
 
 # Installation
 
