@@ -8,7 +8,10 @@ Swift is one of the fastest evolving languages, but there is no way to use C++ f
 
 The idea is simply wrap OpenCV classes into Objective-C native classes, which are then bridged to Swift, similar as [Realm]()  and [EmguCV]() in C#.
 
-# Examples
+# Example
+
+The following examples display the difference in using LegoCV in Swift and Objective-C versus vanilla OpenCV in C++.
+The example is extracted from Face detection sample code, shipped with LegoCV.
 
 Swift (LegoCV):
 ```swift
@@ -18,9 +21,13 @@ Objective-C (LegoCV with Objective-C):
 ```objectivec
 ```
 
-C++ (original OpenCV):
+C++ (OpenCV):
 ```cpp
 ```
+
+# Documentation
+
+As this is a project in progress, documentation will be added to [Wiki]().
 
 # Installation
 
