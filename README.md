@@ -30,9 +30,9 @@ func process(image: OCVMat) {
     let gray = OCVMat()
     let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
         
-    OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
-    OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
-    OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
+    OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
+    OCVOperation.resize(from: gray, to: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
+    OCVOperation.equalizeHistogram(from: smallImage, to: smallImage)
     
     // Faces are returned as OCVRect instances, so they are mapped in Swift, as they are structs.
     let faces : [OCVRect] = faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
@@ -54,15 +54,14 @@ Objective-C (LegoCV with Objective-C):
     minSize.height = 30;
         
     OCVMat* gray = [[OCVMat alloc] init];
-    let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
-        
-    OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
-    OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
-    OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
+    OCVMat* smallImage = [[OCVMat alloc] initWithRows:round(image.rows / scale) cols:round(image.cols / scale) type: OCVDepthTypeCv8U, channels: 1)
     
-    // Faces are returned as OCVRect instances, so they are mapped in Swift, as they are structs.
-    let faces : [OCVRect] = faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
-
+    [OCVOperation convertColorFromSource:image toDestination:gray with:OCVColorConversionTypeBGR2GRAY];
+    [OCVOperation resizeFromSource:gray toDestination:smallImage size:smallImage.size fx:0 fy:0 interpolation:OCVInterpolationTypeLinear];
+    [OCVOperation equalizeHistogramFromSource:smallImage toDestination:smallImage];
+    
+    // Faces are returned as OCVRectValue instances, which wrap OCVRect structs.
+    NSArray<OCVRectValue *>* faces = [self.faceDetector detectMultiscaleWith:smallImage scaleFactor:1.1 minNeighbours:2 flags: 0 minSize:minSize];
 }
 ```
 
