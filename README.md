@@ -67,6 +67,8 @@ Objective-C (LegoCV with Objective-C):
 
 C++ (OpenCV):
 ```cpp
+using namespace cv;
+
 void setup () {
     _faceDetector = new CascadeClassifier();
     _faceDetector->load("haarcascade_frontalface_alt2.xml");
