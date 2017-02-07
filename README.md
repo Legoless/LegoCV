@@ -107,7 +107,7 @@ pod 'LegoCV'
 
 # Building
 
-Building LegoCV project
+To build LegoCV project you need `cmake`. Install it with `brew install cmake` and make sure you have Xcode Command Line tools installed. Trigger with `xcode-select --install` to check. Also make sure you use latest Xcode version and not Beta for master branch.
 
 # License
 
