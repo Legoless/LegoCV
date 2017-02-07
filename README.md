@@ -1,6 +1,6 @@
 # LegoCV
 
-LegoCV is a simple, lightweight OpenCV framework for Swift and Objective-C. It eliminates the need to use Objective-C++ and allows full compatibility with native Swift projects. The only dependency is native OpenCV framework.
+LegoCV is a simple, lightweight OpenCV framework for Swift and Objective-C. It eliminates the need to use Objective-C++ and allows full compatibility with native Swift projects. The only dependency is native [OpenCV framework](http://opencv.org).
 
 ## Mission
 
