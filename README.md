@@ -23,9 +23,7 @@ faceDetector.load(path: "haarcascade_frontalface_alt2.xml")
 func process(image: OCVMat) {
     let scale = 2.0
 
-    var minSize = OCVSize()
-    minSize.width = 30
-    minSize.height = 30
+    let minSize = OCVSize(width: 30, height: 30)
         
     let gray = OCVMat()
     let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
@@ -93,7 +91,7 @@ void processImage(cv::Mat img) {
 
 ## Documentation
 
-As this is a project in progress, documentation will be added to [Wiki]().
+As this is a project in progress, documentation will be added to [Wiki]() as development progresses.
 
 ## Performance
 
@@ -101,11 +99,15 @@ There is a smaller performance impact compared to pure native C++ code of OpenCV
 
 ## Installation
 
-LegoCV can be installed with [CocoaPods]() or [Carthage]().
+LegoCV can be installed with [CocoaPods]() or [Carthage](). It's only dependency is OpenCV framework, which can be downloaded from their website.
 
 ```ruby
 pod 'LegoCV'
 ```
+
+# Building
+
+Building LegoCV project
 
 # License
 
