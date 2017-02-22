@@ -15,7 +15,7 @@ The idea is to simply wrap OpenCV native C++ classes into Objective-C classes, w
 The following examples display the difference in using LegoCV in Swift and Objective-C versus vanilla OpenCV in C++.
 The example is extracted from Face detection sample code, shipped with LegoCV. On iOS it uses `OCVVideoCamera` class to get image stream from camera (wraps OpenCV's `CvVideoCamera`, to keep backward compatibiliy).
 
-Swift (LegoCV):
+#### Swift (LegoCV):
 ```swift
 let faceDetector = OCVCascadeClassifier();
 faceDetector.load(path: "haarcascade_frontalface_alt2.xml")
@@ -37,7 +37,7 @@ func process(image: OCVMat) {
 }
 ```
 
-Objective-C (LegoCV with Objective-C):
+#### Objective-C (LegoCV with Objective-C):
 ```objectivec
 - (void)setupClassifier {
     self.faceDetector = [[OCVCascadeClassifier alloc] init];
@@ -63,7 +63,7 @@ Objective-C (LegoCV with Objective-C):
 }
 ```
 
-C++ (OpenCV):
+#### C++ (OpenCV):
 ```cpp
 using namespace cv;
 
