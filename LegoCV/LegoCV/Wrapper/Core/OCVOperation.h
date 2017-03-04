@@ -229,7 +229,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  cv::rotate()
  */
-+ (void)rotateWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withRotateFlag:(OCVRotateFlag)rotateFlag;
++ (void)rotateWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTypes:(OCVRotationTypes)types;
 
 /*!
  *  cv::repeat()
@@ -346,7 +346,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  cv::gemm()
  */
 + (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination;
-+ (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination withFlag:(OCVGemmFlag)flag;
++ (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination withFlags:(OCVGemmFlags)flags;
 
 /*!
  *  cv::mulTransposed()
@@ -396,8 +396,24 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  cv::invert()
  */
-+ (void)invertWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
-+ (void)invertWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVDecompositionType)type;
++ (void)invertSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
++ (void)invertSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVDecompositionType)type;
+
+/*!
+ *  cv::solve()
+ */
++ (void)solveSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
++ (void)solveSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination withType:(OCVDecompositionType)type;
+
+/*!
+ *  cv::sort()
+ */
++ (void)sortSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTypes:(OCVSortTypes)types;
+
+/*!
+ *  cv::sortIdx()
+ */
++ (void)sortIndexSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTypes:(OCVSortTypes)types;
 
 @end
 

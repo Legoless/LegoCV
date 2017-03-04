@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, OCVCompareType) {
 /*!
  *  Reference type: cv::GemmFlags
  */
-typedef NS_ENUM(NSInteger, OCVGemmFlag) {
+typedef NS_OPTIONS(NSInteger, OCVGemmFlags) {
     OCVGemmFlag1T = 1, //!< transposes src1
     OCVGemmFlag2T = 2, //!< transposes src2
     OCVGemmFlag3T = 4  //!< transposes src3
@@ -132,9 +132,24 @@ typedef NS_ENUM(NSInteger, OCVFlipCode) {
 /*!
  *  Reference type: cv::RotateFlags
  */
-typedef NS_ENUM(NSInteger, OCVRotateFlag) {
-    OCVRotateFlag90Clockwise            = 0, //Rotate 90 degrees clockwise
-    OCVRotateFlag180                    = 1, //Rotate 180 degrees clockwise
-    OCVRotateFlag90CounterClockwise     = 2, //Rotate 270 degrees clockwise
+typedef NS_OPTIONS(NSInteger, OCVRotationTypes) {
+    OCVRotationType90Clockwise            = 0, //Rotate 90 degrees clockwise
+    OCVRotationType180                    = 1, //Rotate 180 degrees clockwise
+    OCVRotationType90CounterClockwise     = 2, //Rotate 270 degrees clockwise
+};
+
+/*!
+ *  Reference type: cv::SortFlags
+ */
+typedef NS_OPTIONS(NSInteger, OCVSortTypes) {
+    OCVSortTypeEveryRow     = 0, //!< each matrix row is sorted independently
+    OCVSortTypeEveryColumn  = 1, //!< each matrix column is sorted
+    //!< independently; this flag and the previous one are
+    //!< mutually exclusive.
+    OCVSortTypeAscending    = 0, //!< each matrix row is sorted in the ascending
+    //!< order.
+    OCVSortTypeDescending   = 16 //!< each matrix row is sorted in the
+    //!< descending order; this flag and the previous one are also
+    //!< mutually exclusive.
 };
 
