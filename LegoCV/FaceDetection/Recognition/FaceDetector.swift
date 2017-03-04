@@ -89,9 +89,9 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         let gray = OCVMat()
         let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
         
-        OCVOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
-        OCVOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
-        OCVOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
+        OCVImageOperation.convertColor(fromSource: image, toDestination: gray, with: .typeBGR2GRAY)
+        OCVImageOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
+        OCVImageOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
         
         return (faceDetector.detectMultiscale(with: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }, smallImage)
     }
@@ -124,7 +124,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
             point2.x = Int(CGFloat(face.origin.x + face.size.width - 1) * scale)
             point2.y = Int(CGFloat(face.origin.y + face.size.height - 1) * scale)
             
-            OCVOperation.rectangle(onSource: image, from: point1, to: point2, withColor: color, thickness: 1, lineType: 8, shift: 0)
+            OCVImageOperation.rectangle(onSource: image, from: point1, to: point2, withColor: color, thickness: 1, lineType: 8, shift: 0)
 
             let smallImageROI = smallImage.submatrix(with: face)
             

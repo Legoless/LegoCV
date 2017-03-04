@@ -291,6 +291,8 @@
 		38E7259C1E37B9B6007DBC1F /* OCVRect+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E7259B1E37B9B6007DBC1F /* OCVRect+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		38E7259E1E37BB43007DBC1F /* OCVSize+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E7259D1E37BB43007DBC1F /* OCVSize+Private.h */; };
 		38E725A01E37C4F9007DBC1F /* OCVInterpolationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E7259F1E37C4F9007DBC1F /* OCVInterpolationType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38FBE9231E6B08500034D646 /* OCVImageOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38FBE9211E6B08500034D646 /* OCVImageOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38FBE9241E6B08500034D646 /* OCVImageOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38FBE9221E6B08500034D646 /* OCVImageOperation.mm */; };
 		67E640484491E8713097DEB2 /* OCVComplex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E647669347DEDB0F2128DA /* OCVComplex.m */; };
 		67E644A83A079FB7EFF64636 /* OCVMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E64B597AADF642B92A4FF4 /* OCVMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67E644B5E56E5349F6453B3E /* OCVMatExpr.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E64AE62B89D99AFF5B7ED1 /* OCVMatExpr.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -619,6 +621,8 @@
 		38E7259B1E37B9B6007DBC1F /* OCVRect+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVRect+Private.h"; sourceTree = "<group>"; };
 		38E7259D1E37BB43007DBC1F /* OCVSize+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVSize+Private.h"; sourceTree = "<group>"; };
 		38E7259F1E37C4F9007DBC1F /* OCVInterpolationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInterpolationType.h; sourceTree = "<group>"; };
+		38FBE9211E6B08500034D646 /* OCVImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVImageOperation.h; sourceTree = "<group>"; };
+		38FBE9221E6B08500034D646 /* OCVImageOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVImageOperation.mm; sourceTree = "<group>"; };
 		67E6409D184D6D07E50BFEBB /* OCVImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVImage.m; sourceTree = "<group>"; };
 		67E6429531419EE64501EFC2 /* OCVComplex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVComplex.h; sourceTree = "<group>"; };
 		67E6442EFD2D3DF5ABC0A0E7 /* OCVSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSize.h; sourceTree = "<group>"; };
@@ -1262,6 +1266,8 @@
 				382F37751E3F8C1200A6F783 /* OCVScalar.m */,
 				38DB13EF1E367B1F00822472 /* OCVOperation.h */,
 				38DB13F01E367B1F00822472 /* OCVOperation.mm */,
+				38FBE9211E6B08500034D646 /* OCVImageOperation.h */,
+				38FBE9221E6B08500034D646 /* OCVImageOperation.mm */,
 				67E6429531419EE64501EFC2 /* OCVComplex.h */,
 				67E647669347DEDB0F2128DA /* OCVComplex.m */,
 				67E646287C3C3D415F1D7019 /* OCVTypes.h */,
@@ -1349,6 +1355,7 @@
 				383BC4FC1E2FFF44002EA7A1 /* OCVThinPlateSplineShapeTransformer.h in Headers */,
 				383BC4801E2FFCE1002EA7A1 /* OCVStatModelExtensions.h in Headers */,
 				38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */,
+				38FBE9231E6B08500034D646 /* OCVImageOperation.h in Headers */,
 				383BC5401E30001E002EA7A1 /* OCVSuperResolution.h in Headers */,
 				383BC4841E2FFCEA002EA7A1 /* OCVSVM.h in Headers */,
 				383BC46C1E2FFCA2002EA7A1 /* OCVEM.h in Headers */,
@@ -1702,6 +1709,7 @@
 				383BC4C91E2FFE6C002EA7A1 /* OCVTesseractResult.m in Sources */,
 				383BC4611E2FFC6F002EA7A1 /* OCVBoost.m in Sources */,
 				383BC5391E2FFFFC002EA7A1 /* OCVRgba.m in Sources */,
+				38FBE9241E6B08500034D646 /* OCVImageOperation.mm in Sources */,
 				383BC4B11E2FFDF6002EA7A1 /* OCVImage2D.m in Sources */,
 				383BC5451E300033002EA7A1 /* OCVERFilter.m in Sources */,
 				383BC4FD1E2FFF44002EA7A1 /* OCVThinPlateSplineShapeTransformer.m in Sources */,

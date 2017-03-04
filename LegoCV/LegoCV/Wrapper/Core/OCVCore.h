@@ -11,6 +11,7 @@
 
 #import "OCVMat.h"
 #import "OCVOperation.h"
+#import "OCVImageOperation.h"
 #import "OCVInputArrayable.h"
 #import "OCVOutputArrayable.h"
 #import "OCVInputOutputArray.h"
