@@ -17,6 +17,10 @@
 #import "OCVUMat.h"
 #import "OCVSparseMat.h"
 
+#import "OCVMinimumMaximumResult.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  Wraps operations defined in core.hpp
  */
@@ -84,8 +88,9 @@
 /*!
  *  cv::convertScaleAbs()
  */
-+ (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination;
-+ (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType;
++ (void)convertScaleAbsoluteWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
++ (void)convertScaleAbsoluteWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withAlpha:(double)alpha;
++ (void)convertScaleAbsoluteWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withAlpha:(double)alpha withBeta:(double)beta;
 
 /*!
  *  cv::convertFp16()
@@ -158,4 +163,14 @@
 
 + (void)normalizeWithSource:(OCVSparseMat *)source toDestination:(OCVSparseMat *)destination withAlpha:(double)alpha withNormType:(OCVNormType)normType;
 
+/*!
+ *  cv::minMaxLoc()
+ */
++ (void)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source withMinVal:(double *)minVal withMaxVal:(double *)maxVal atMinPoint:(OCVPoint *)minLoc atMaxPoint:(OCVPoint *)maxLoc withMask:(id<OCVInputArrayable>)mask;
+
++ (OCVMinimumMaximumResult *)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source;
++ (OCVMinimumMaximumResult *)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
+
 @end
+
+NS_ASSUME_NONNULL_END

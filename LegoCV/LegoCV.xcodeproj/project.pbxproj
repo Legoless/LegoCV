@@ -287,6 +287,8 @@
 		38BF37FE1E6B14B100C336EB /* OCVUMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF37FC1E6B14B100C336EB /* OCVUMat.m */; };
 		38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38021E6B1E0A00C336EB /* OCVSparseMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */; };
+		38BF38051E6B20DF00C336EB /* OCVMinimumMaximumResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38031E6B20DF00C336EB /* OCVMinimumMaximumResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BF38061E6B20DF00C336EB /* OCVMinimumMaximumResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38041E6B20DF00C336EB /* OCVMinimumMaximumResult.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -622,6 +624,8 @@
 		38BF37FC1E6B14B100C336EB /* OCVUMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVUMat.m; sourceTree = "<group>"; };
 		38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSparseMat.h; sourceTree = "<group>"; };
 		38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVSparseMat.m; sourceTree = "<group>"; };
+		38BF38031E6B20DF00C336EB /* OCVMinimumMaximumResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVMinimumMaximumResult.h; sourceTree = "<group>"; };
+		38BF38041E6B20DF00C336EB /* OCVMinimumMaximumResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVMinimumMaximumResult.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
@@ -1282,6 +1286,8 @@
 				38A750041E37667E0036091A /* OCVMatDataAllocator+Private.h */,
 				38A750001E3766530036091A /* OCVMatDataAllocator.h */,
 				38A750011E3766530036091A /* OCVMatDataAllocator.mm */,
+				38BF38031E6B20DF00C336EB /* OCVMinimumMaximumResult.h */,
+				38BF38041E6B20DF00C336EB /* OCVMinimumMaximumResult.m */,
 				3848D3351E3F95F500379F4F /* OCVScalar+Private.h */,
 				382F37801E3F952400A6F783 /* OCVScalar+Private.mm */,
 				382F37701E3F747E00A6F783 /* OCVScalar.h */,
@@ -1457,6 +1463,7 @@
 				383BC5801E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.h in Headers */,
 				3848D3361E3F95F500379F4F /* OCVScalar+Private.h in Headers */,
 				38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */,
+				38BF38051E6B20DF00C336EB /* OCVMinimumMaximumResult.h in Headers */,
 				383BC45C1E2FFC5C002EA7A1 /* OCVLSDDetector.h in Headers */,
 				382F377D1E3F905B00A6F783 /* OCVPoint+Private.h in Headers */,
 				38A750071E37736D0036091A /* OCVOutputArray+Private.h in Headers */,
@@ -1711,6 +1718,7 @@
 				383BC56D1E3000AD002EA7A1 /* OCVGaussianMotionFilter.m in Sources */,
 				383BC4251E2FFB32002EA7A1 /* OCVCharucoBoard.m in Sources */,
 				383BC4D51E2FFEAE002EA7A1 /* OCVReflectImage.m in Sources */,
+				38BF38061E6B20DF00C336EB /* OCVMinimumMaximumResult.m in Sources */,
 				38A74FF51E3750790036091A /* OCVOutputArray.mm in Sources */,
 				383BC59D1E300149002EA7A1 /* OCVFreak.m in Sources */,
 				383BC4811E2FFCE1002EA7A1 /* OCVStatModelExtensions.m in Sources */,
