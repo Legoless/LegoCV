@@ -251,6 +251,22 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)verticalConcatenationWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
 + (void)verticalConcatenationWithSource:(NSArray<OCVInputArrayable> *)source toDestination:(id<OCVOutputArrayable>)destination;
 
+#pragma mark - Other operations
+
+/*!
+ *  cv::absdiff()
+ */
++ (void)absoluteDifferenceWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::inRange()
+ */
++ (void)absoluteDifferenceWithSource:(id<OCVInputArrayable>)source1 withLowerBoundary:(id<OCVInputArrayable>)lowerBoundary withUpperBoundary:(id<OCVInputArrayable>)upperBoundary toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::compare()
+ */
++ (void)compareSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination withType:(OCVCompareType)type;
 @end
 
 NS_ASSUME_NONNULL_END

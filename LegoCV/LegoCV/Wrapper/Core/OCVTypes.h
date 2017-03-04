@@ -50,13 +50,25 @@ typedef NS_ENUM(NSInteger, OCVNormType) {
     OCVNormTypeMinMax    = 32 //!< flag
 };
 
+/*!
+ *  Reference type: cv::CmpTypes
+ */
+typedef NS_ENUM(NSInteger, OCVCompareType) {
+    OCVCompareTypeEqual             = 0, //!< src1 is equal to src2.
+    OCVCompareTypeGreater           = 1, //!< src1 is greater than src2.
+    OCVCompareTypeGreaterOrEqual    = 2, //!< src1 is greater than or equal to src2.
+    OCVCompareTypeLess              = 3, //!< src1 is less than src2.
+    OCVCompareTypeLessOrEqual       = 4, //!< src1 is less than or equal to src2.
+    OCVCompareTypeNotEqual          = 5  //!< src1 is unequal to src2.
+};
+
 #pragma mark - Types from core.hpp
 
 /*!
  *  Reference type: cv::LineTypes
  */
 typedef NS_ENUM(NSInteger, OCVLineType) {
-    OCVLineTypeFileed  = -1,
+    OCVLineTypeFilled = -1,
     OCVLineTypeLine4  = 4, //!< 4-connected line
     OCVLineTypeLine8  = 8, //!< 8-connected line
     OCVLineTypeLineAA = 16 //!< antialiased line
