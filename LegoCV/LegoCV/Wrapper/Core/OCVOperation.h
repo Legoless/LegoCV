@@ -12,11 +12,17 @@
 #import "OCVInputOutputArrayable.h"
 
 #import "OCVGeometry.h"
+#import "OCVTypes.h"
 
 @interface OCVOperation : OCVObject
 
 + (void)swapMat:(OCVMat *)a toMat:(OCVMat *)b;
 
-+ (void)copyMakeBorderFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
++ (OCVScalar)copyMakeBorderFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTop:(NSInteger)top withBottom:(NSInteger)bottom withLeft:(NSInteger)left withRight:(NSInteger)right withBorderType:(OCVBorderType)borderType;
+
+/*!
+ *  Convenience method with custom struct
+ */
++ (OCVScalar)copyMakeBorderFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withEdges:(OCVEdges)edges withBorderType:(OCVBorderType)borderType;
 
 @end
