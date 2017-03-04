@@ -348,6 +348,19 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination;
 + (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination withFlag:(OCVGemmFlag)flag;
 
+/*!
+ *  cv::mulTransposed()
+ */
++ (void)multiplyTransposeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withOrdering:(BOOL)ordering;
++ (void)multiplyTransposeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withOrdering:(BOOL)ordering withDelta:(id<OCVInputArrayable>)delta;
++ (void)multiplyTransposeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withOrdering:(BOOL)ordering withDelta:(id<OCVInputArrayable>)delta withScale:(double)scale;
++ (void)multiplyTransposeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withOrdering:(BOOL)ordering withDelta:(id<OCVInputArrayable>)delta withScale:(double)scale ofDepthType:(NSInteger)depthType;
+
+/*!
+ *  cv::transpose()
+ */
++ (void)transposeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
+
 @end
 
 NS_ASSUME_NONNULL_END
