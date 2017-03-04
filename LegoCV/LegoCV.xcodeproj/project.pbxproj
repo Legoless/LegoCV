@@ -285,7 +285,7 @@
 		38BF37FA1E6B13D500C336EB /* OCVEdges.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37F91E6B13D500C336EB /* OCVEdges.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF37FD1E6B14B100C336EB /* OCVUMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FB1E6B14B100C336EB /* OCVUMat.h */; };
 		38BF37FE1E6B14B100C336EB /* OCVUMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF37FC1E6B14B100C336EB /* OCVUMat.m */; };
-		38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */; };
+		38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38021E6B1E0A00C336EB /* OCVSparseMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };

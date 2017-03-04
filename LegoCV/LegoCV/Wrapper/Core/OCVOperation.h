@@ -15,6 +15,7 @@
 #import "OCVTypes.h"
 
 #import "OCVUMat.h"
+#import "OCVSparseMat.h"
 
 /*!
  *  Wraps operations defined in core.hpp
@@ -148,5 +149,13 @@
 /*!
  *  cv::normalize()
  */
++ (void)normalizeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination;
++ (void)normalizeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination withAlpha:(double)alpha;
++ (void)normalizeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination withAlpha:(double)alpha withBeta:(double)beta;
++ (void)normalizeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination withAlpha:(double)alpha withBeta:(double)beta withNormType:(OCVNormType)normType;
++ (void)normalizeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination withAlpha:(double)alpha withBeta:(double)beta withNormType:(OCVNormType)normType ofDepthType:(NSInteger)depthType;
++ (void)normalizeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination withAlpha:(double)alpha withBeta:(double)beta withNormType:(OCVNormType)normType ofDepthType:(NSInteger)depthType withMask:(id<OCVInputArrayable>)mask;
+
++ (void)normalizeWithSource:(OCVSparseMat *)source toDestination:(OCVSparseMat *)destination withAlpha:(double)alpha withNormType:(OCVNormType)normType;
 
 @end
