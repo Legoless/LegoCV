@@ -183,6 +183,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (OCVMinimumMaximumIndex *)minimumMaximumIndexInSource:(id<OCVInputArrayable>)source;
 + (OCVMinimumMaximumIndex *)minimumMaximumIndexInSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
 
+/*!
+ *  cv::reduce()
+ */
++ (void)reduceWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withDimenstion:(NSInteger)dimension withReduceType:(OCVReduceType)reduceType;
++ (void)reduceWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withDimenstion:(NSInteger)dimension withReduceType:(OCVReduceType)reduceType ofDepthType:(NSInteger)depthType;
+
 @end
 
 NS_ASSUME_NONNULL_END
