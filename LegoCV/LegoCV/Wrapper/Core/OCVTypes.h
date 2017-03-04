@@ -62,6 +62,15 @@ typedef NS_ENUM(NSInteger, OCVCompareType) {
     OCVCompareTypeNotEqual          = 5  //!< src1 is unequal to src2.
 };
 
+/*!
+ *  Reference type: cv::GemmFlags
+ */
+typedef NS_ENUM(NSInteger, OCVGemmFlag) {
+    OCVGemmFlag1T = 1, //!< transposes src1
+    OCVGemmFlag2T = 2, //!< transposes src2
+    OCVGemmFlag3T = 4  //!< transposes src3
+};
+
 #pragma mark - Types from core.hpp
 
 /*!

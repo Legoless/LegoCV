@@ -325,6 +325,29 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)magnitudeWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toMagnitude:(id<OCVOutputArrayable>)magnitude;
 
+/*!
+ *  cv::checkRange()
+ *
+ *  TODO: Should we add a result wrapper class?
+ */
++ (BOOL)checkRangeInSource:(id<OCVInputArrayable>)source;
++ (BOOL)checkRangeInSource:(id<OCVInputArrayable>)source quiet:(BOOL)quiet;
++ (BOOL)checkRangeInSource:(id<OCVInputArrayable>)source quiet:(BOOL)quiet withPosition:(OCVPoint *)position;
++ (BOOL)checkRangeInSource:(id<OCVInputArrayable>)source quiet:(BOOL)quiet withPosition:(OCVPoint *)position withMinValue:(double)minValue;
++ (BOOL)checkRangeInSource:(id<OCVInputArrayable>)source quiet:(BOOL)quiet withPosition:(OCVPoint *)position withMinValue:(double)minValue withMaxValue:(double)maxValue;
+
+/*!
+ *  cv::magnitude()
+ */
++ (void)patchNansInSource:(id<OCVInputOutputArrayable>)source;
++ (void)patchNansInSource:(id<OCVInputOutputArrayable>)source withValue:(double)value;
+
+/*!
+ *  cv::gemm()
+ */
++ (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination;
++ (void)gemmWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source3 withBeta:(double)beta toDestination:(id<OCVOutputArrayable>)destination withFlag:(OCVGemmFlag)flag;
+
 @end
 
 NS_ASSUME_NONNULL_END
