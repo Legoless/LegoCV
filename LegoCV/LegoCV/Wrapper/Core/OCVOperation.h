@@ -432,6 +432,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)eigenWithSource:(id<OCVInputArrayable>)source toEigenValues:(id<OCVOutputArrayable>)eigenValues;
 + (BOOL)eigenWithSource:(id<OCVInputArrayable>)source toEigenValues:(id<OCVOutputArrayable>)eigenValues withEigenVectors:(id<OCVOutputArrayable>)eigenValues;
 
+/*!
+ *  cv::calcCovarMatrix()
+ */
++ (void)calcCovarMatrixWithSamples:(OCVMat *)samples numberOfSamples:(NSInteger)numberOfSamples covar:(OCVMat *)covar mean:(OCVMat *)mean flags:(OCVCovarTypes)flags;
++ (void)calcCovarMatrixWithSamples:(OCVMat *)samples numberOfSamples:(NSInteger)numberOfSamples covar:(OCVMat *)covar mean:(OCVMat *)mean flags:(OCVCovarTypes)flags depthType:(OCVDepthType)depthType;
+
++ (void)calcCovarMatrixWithSamples:(id<OCVInputArrayable>)samples toCovar:(id<OCVOutputArrayable>)covar mean:(id<OCVInputOutputArrayable>)mean flags:(OCVCovarTypes)flags;
++ (void)calcCovarMatrixWithSamples:(id<OCVInputArrayable>)samples toCovar:(id<OCVOutputArrayable>)covar mean:(id<OCVInputOutputArrayable>)mean flags:(OCVCovarTypes)flags depthType:(OCVDepthType)depthType;
+
 @end
 
 NS_ASSUME_NONNULL_END

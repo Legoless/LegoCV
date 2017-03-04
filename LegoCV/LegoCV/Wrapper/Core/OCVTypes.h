@@ -153,3 +153,15 @@ typedef NS_OPTIONS(NSInteger, OCVSortTypes) {
     //!< mutually exclusive.
 };
 
+/*!
+ *  Reference type: cv::CovarFlags
+ */
+typedef NS_OPTIONS(NSInteger, OCVCovarTypes) {
+    OCVCovarTypeScrambled = 0,
+    OCVCovarTypeNormal    = 1,
+    OCVCovarTypeUseAvg    = 2,
+    OCVCovarTypeScale     = 4,
+    OCVCovarTypeRows      = 8,
+    OCVCovarTypeCols      = 16
+};
+
