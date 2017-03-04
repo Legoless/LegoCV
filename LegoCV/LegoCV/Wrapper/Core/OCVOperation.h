@@ -14,9 +14,12 @@
 #import "OCVGeometry.h"
 #import "OCVTypes.h"
 
+#import "OCVUMat.h"
+
 @interface OCVOperation : OCVObject
 
 + (void)swapMat:(OCVMat *)a toMat:(OCVMat *)b;
++ (void)swapUMat:(OCVUMat *)a toUMat:(OCVUMat *)b;
 
 + (OCVScalar)copyMakeBorderFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTop:(NSInteger)top withBottom:(NSInteger)bottom withLeft:(NSInteger)left withRight:(NSInteger)right withBorderType:(OCVBorderType)borderType;
 
