@@ -273,14 +273,46 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @note: OpenCV has separate methods for Mat and UMat classes, but this is handled in the implementation.
  */
-+ (void)minimumWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
++ (void)minWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
 
 /*!
  *  cv::max()
  *
  *  @note: OpenCV has separate methods for Mat and UMat classes, but this is handled in the implementation.
  */
-+ (void)maximumWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
++ (void)maxWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::sqrt()
+ */
++ (void)sqrtWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::pow()
+ */
++ (void)powWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withPower:(double)power;
+
+/*!
+ *  cv::exp()
+ */
++ (void)expWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::log()
+ */
++ (void)logWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::polarToCart()
+ */
++ (void)polarToCartWithMagnitude:(id<OCVInputArrayable>)magintude withAngle:(id<OCVInputArrayable>)angle toX:(id<OCVOutputArrayable>)x toY:(id<OCVOutputArrayable>)y;
++ (void)polarToCartWithMagnitude:(id<OCVInputArrayable>)magintude withAngle:(id<OCVInputArrayable>)angle toX:(id<OCVOutputArrayable>)x toY:(id<OCVOutputArrayable>)y withAngleInDegrees:(BOOL)angleInDegrees;
+
+/*!
+ *  cv::cartToPolar()
+ */
++ (void)cartToPolarWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toMagnitude:(id<OCVOutputArrayable>)magnitude toAngle:(id<OCVOutputArrayable>)angle;
++ (void)cartToPolarWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toMagnitude:(id<OCVOutputArrayable>)magnitude toAngle:(id<OCVOutputArrayable>)angle withAngleInDegrees:(BOOL)angleInDegrees;
 
 @end
 
