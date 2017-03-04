@@ -1,5 +1,5 @@
 //
-//  OCVBitOperation.h
+//  OCVBitwiseOperation.h
 //  LegoCV
 //
 //  Created by Dal Rupnik on 04/03/2017.
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  Wraps bitwise operations defined in core.hpp
  */
-@interface OCVBitOperation : OCVObject
+@interface OCVBitwiseOperation : OCVObject
 
 /*!
  *  cv::bitwise_and()

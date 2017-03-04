@@ -83,6 +83,17 @@ typedef NS_OPTIONS(NSInteger, OCVGemmFlags) {
     OCVGemmFlag3T = 4  //!< transposes src3
 };
 
+/*!
+ *  Reference type: cv::DftFlags
+ */
+typedef NS_OPTIONS(NSInteger, OCVTransformFlags) {
+    OCVTransformInverse        = 1,
+    OCVTransformScale          = 2,
+    OCVTransformRows           = 4,
+    OCVTransformComplexOutput  = 16,
+    OCVTransformRealOutput     = 32,
+};
+
 #pragma mark - Types from core.hpp
 
 /*!

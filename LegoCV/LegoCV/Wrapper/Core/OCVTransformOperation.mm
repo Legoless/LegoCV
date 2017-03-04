@@ -1,13 +1,13 @@
 //
-//  OCVBitOperation.mm
+//  OCVTransformOperation.mm
 //  LegoCV
 //
 //  Created by Dal Rupnik on 04/03/2017.
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVBitOperation.h"
+#import "OCVTransformOperation.h"
 
-@implementation OCVBitOperation
+@implementation OCVTransformOperation
 
 @end

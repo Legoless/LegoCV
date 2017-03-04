@@ -28,6 +28,46 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface OCVTransformOperation : OCVObject
 
+/*!
+ *  cv::dft()
+ */
++ (BOOL)dftWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destinatio;
++ (BOOL)dftWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags;
++ (BOOL)dftWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags nonZeroRows:(NSInteger)nonZeroRows;
+
+/*!
+ *  cv::idft()
+ */
++ (BOOL)idftWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destinatio;
++ (BOOL)idftWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags;
++ (BOOL)idftWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags nonZeroRows:(NSInteger)nonZeroRows;
+
+/*!
+ *  cv::dct()
+ */
++ (BOOL)dctWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destinatio;
++ (BOOL)dctWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags;
++ (BOOL)dctWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags nonZeroRows:(NSInteger)nonZeroRows;
+
+/*!
+ *  cv::idct()
+ */
++ (BOOL)idctWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destinatio;
++ (BOOL)idctWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags;
++ (BOOL)idctWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags nonZeroRows:(NSInteger)nonZeroRows;
+
+/*!
+ *  cv::mulSpectrums()
+ */
++ (BOOL)multiplySpectrumsWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destinatio;
++ (BOOL)multiplySpectrumsWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags;
++ (BOOL)multiplySpectrumsWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination flags:(OCVTransformFlags)flags conjugateSecond:(BOOL)conjugateSecond;
+
+/*!
+ *  cv::getOptimalDFTSize()
+ */
++ (NSInteger)optimalDFTSizeForVectorSize:(NSInteger)vectorSize;
+
 @end
 
 NS_ASSUME_NONNULL_END
