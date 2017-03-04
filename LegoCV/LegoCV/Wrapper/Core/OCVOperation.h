@@ -320,6 +320,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)phaseWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toAngle:(id<OCVOutputArrayable>)angle;
 + (void)phaseWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toAngle:(id<OCVOutputArrayable>)angle withAngleInDegrees:(BOOL)angleInDegrees;
 
+/*!
+ *  cv::magnitude()
+ */
++ (void)magnitudeWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toMagnitude:(id<OCVOutputArrayable>)magnitude;
+
 @end
 
 NS_ASSUME_NONNULL_END
