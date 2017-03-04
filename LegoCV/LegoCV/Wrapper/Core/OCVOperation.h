@@ -267,6 +267,21 @@ NS_ASSUME_NONNULL_BEGIN
  *  cv::compare()
  */
 + (void)compareSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination withType:(OCVCompareType)type;
+
+/*!
+ *  cv::min()
+ *
+ *  @note: OpenCV has separate methods for Mat and UMat classes, but this is handled in the implementation.
+ */
++ (void)minimumWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::max()
+ *
+ *  @note: OpenCV has separate methods for Mat and UMat classes, but this is handled in the implementation.
+ */
++ (void)maximumWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
+
 @end
 
 NS_ASSUME_NONNULL_END
