@@ -13,11 +13,8 @@
 
 #import "OCVGeometry.h"
 
-#import "OCVColorConversionType.h"
-#import "OCVInterpolationType.h"
-
 @interface OCVOperation : OCVObject
 
-
++ (void)copyMakeBorderFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
 
 @end
