@@ -314,6 +314,12 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cartToPolarWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toMagnitude:(id<OCVOutputArrayable>)magnitude toAngle:(id<OCVOutputArrayable>)angle;
 + (void)cartToPolarWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toMagnitude:(id<OCVOutputArrayable>)magnitude toAngle:(id<OCVOutputArrayable>)angle withAngleInDegrees:(BOOL)angleInDegrees;
 
+/*!
+ *  cv::phase()
+ */
++ (void)phaseWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toAngle:(id<OCVOutputArrayable>)angle;
++ (void)phaseWithX:(id<OCVInputArrayable>)x withY:(id<OCVInputArrayable>)y toAngle:(id<OCVOutputArrayable>)angle withAngleInDegrees:(BOOL)angleInDegrees;
+
 @end
 
 NS_ASSUME_NONNULL_END
