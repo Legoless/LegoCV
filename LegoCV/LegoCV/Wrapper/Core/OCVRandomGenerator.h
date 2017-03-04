@@ -20,6 +20,9 @@ typedef NS_ENUM(NSInteger, OCVRandomType) {
     OCVRandomTypeNormal = 1,
 };
 
+/*!
+ *  cv::RNG
+ */
 @interface OCVRandomGenerator : OCVObject
 
 @property (nonatomic, assign) unsigned long long state;
@@ -39,12 +42,10 @@ typedef NS_ENUM(NSInteger, OCVRandomType) {
 - (int)nextInt;
 - (unsigned int)nextUnsignedInt;
 
+- (unsigned long long)nextUnsignedLong;
+
 - (float)nextFloat;
 - (double)nextDouble;
-
-//
-// TODO: Check if more public methods need to be added.
-//
 
 - (int)uniformWithLower:(int)lower upper:(int)upper;
 - (float)uniformFloatWithLower:(float)lower upper:(float)upper;
@@ -87,3 +88,13 @@ typedef NS_ENUM(NSInteger, OCVRandomType) {
 + (void)randNormallyToDestination:(id<OCVInputOutputArrayable>)destination mean:(id<OCVInputArrayable>)mean standardDeviation:(id<OCVInputArrayable>)standardDeviation;
 
 @end
+
+/*!
+ *  cv::RNG_MT19937
+ */
+@interface OCVMersenneTwisterRandomGenerator : OCVRandomGenerator
+
+- (void)seedWithState:(unsigned long long)state;
+
+@end
+

@@ -1,5 +1,5 @@
 //
-//  OCVRandomGenerator.m
+//  OCVRandomGenerator.mm
 //  LegoCV
 //
 //  Created by Dal Rupnik on 04/03/2017.

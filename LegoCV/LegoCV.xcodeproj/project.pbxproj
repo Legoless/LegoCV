@@ -297,11 +297,11 @@
 		38BF38121E6B408100C336EB /* OCVTransformOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38101E6B408100C336EB /* OCVTransformOperation.mm */; };
 		38BF38151E6B43FE00C336EB /* OCVAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38131E6B43FE00C336EB /* OCVAlgorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38161E6B43FE00C336EB /* OCVAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */; };
-		38BF38191E6B447000C336EB /* OCVRandomGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38171E6B447000C336EB /* OCVRandomGenerator.h */; };
-		38BF381A1E6B447000C336EB /* OCVRandomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38181E6B447000C336EB /* OCVRandomGenerator.m */; };
-		38BF381D1E6B44A600C336EB /* OCVFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF381B1E6B44A600C336EB /* OCVFormatter.h */; };
+		38BF38191E6B447000C336EB /* OCVRandomGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38171E6B447000C336EB /* OCVRandomGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BF381A1E6B447000C336EB /* OCVRandomGenerator.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38181E6B447000C336EB /* OCVRandomGenerator.mm */; };
+		38BF381D1E6B44A600C336EB /* OCVFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF381B1E6B44A600C336EB /* OCVFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF381E1E6B44A600C336EB /* OCVFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF381C1E6B44A600C336EB /* OCVFormatter.m */; };
-		38BF38211E6B44D600C336EB /* OCVTermCriteria.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF381F1E6B44D600C336EB /* OCVTermCriteria.h */; };
+		38BF38211E6B44D600C336EB /* OCVTermCriteria.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF381F1E6B44D600C336EB /* OCVTermCriteria.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38221E6B44D600C336EB /* OCVTermCriteria.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38201E6B44D600C336EB /* OCVTermCriteria.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -649,7 +649,7 @@
 		38BF38131E6B43FE00C336EB /* OCVAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVAlgorithm.h; sourceTree = "<group>"; };
 		38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVAlgorithm.m; sourceTree = "<group>"; };
 		38BF38171E6B447000C336EB /* OCVRandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVRandomGenerator.h; sourceTree = "<group>"; };
-		38BF38181E6B447000C336EB /* OCVRandomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRandomGenerator.m; sourceTree = "<group>"; };
+		38BF38181E6B447000C336EB /* OCVRandomGenerator.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVRandomGenerator.mm; sourceTree = "<group>"; };
 		38BF381B1E6B44A600C336EB /* OCVFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFormatter.h; sourceTree = "<group>"; };
 		38BF381C1E6B44A600C336EB /* OCVFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFormatter.m; sourceTree = "<group>"; };
 		38BF381F1E6B44D600C336EB /* OCVTermCriteria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVTermCriteria.h; sourceTree = "<group>"; };
@@ -1332,7 +1332,7 @@
 				67E647669347DEDB0F2128DA /* OCVComplex.m */,
 				67E646287C3C3D415F1D7019 /* OCVTypes.h */,
 				38BF38171E6B447000C336EB /* OCVRandomGenerator.h */,
-				38BF38181E6B447000C336EB /* OCVRandomGenerator.m */,
+				38BF38181E6B447000C336EB /* OCVRandomGenerator.mm */,
 				38E7259B1E37B9B6007DBC1F /* OCVRect+Private.h */,
 				382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */,
 				386F2B7B1E35228F00320AEB /* OCVRect.h */,
@@ -1842,7 +1842,7 @@
 				383BC4BD1E2FFE1C002EA7A1 /* OCVProgramSource.m in Sources */,
 				383BC4A11E2FFD56002EA7A1 /* OCVMCvParamGrid.m in Sources */,
 				382F377A1E3F8EB600A6F783 /* OCVRect+Private.mm in Sources */,
-				38BF381A1E6B447000C336EB /* OCVRandomGenerator.m in Sources */,
+				38BF381A1E6B447000C336EB /* OCVRandomGenerator.mm in Sources */,
 				67E64E06B0FC8DB79DF8354F /* OCVImageOperation.mm in Sources */,
 				67E6471FA02CAAF362060F84 /* OCVImage.m in Sources */,
 			);
