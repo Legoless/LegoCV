@@ -283,7 +283,7 @@
 		38B4D4DA1E2AA111008AAAB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4D91E2AA111008AAAB0 /* Assets.xcassets */; };
 		38B4D4DD1E2AA111008AAAB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4DB1E2AA111008AAAB0 /* LaunchScreen.storyboard */; };
 		38BF37FA1E6B13D500C336EB /* OCVEdges.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37F91E6B13D500C336EB /* OCVEdges.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		38BF37FD1E6B14B100C336EB /* OCVUMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FB1E6B14B100C336EB /* OCVUMat.h */; };
+		38BF37FD1E6B14B100C336EB /* OCVUMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FB1E6B14B100C336EB /* OCVUMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF37FE1E6B14B100C336EB /* OCVUMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF37FC1E6B14B100C336EB /* OCVUMat.m */; };
 		38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38021E6B1E0A00C336EB /* OCVSparseMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */; };
