@@ -211,6 +211,27 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)mixChannelsWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVInputOutputArrayOfArrayables>)destination fromTo:(NSInteger *)fromTo withNumberOfPairs:(NSInteger)pairs;
 + (void)mixChannelsWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVInputOutputArrayOfArrayables>)destination fromToIndexes:(OCVVector *)fromToIndexes;
 
+/*!
+ *  cv::extractChannel()
+ */
++ (void)extractChannelFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination atIndexOfChannel:(NSInteger)indexOfChannel;
+
+/*!
+ *  cv::insertChannel()
+ */
++ (void)insertChannelFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVInputOutputArrayable>)destination atIndexOfChannel:(NSInteger)indexOfChannel;
+
+/*!
+ *  cv::flip()
+ */
++ (void)flipWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withFlipCode:(OCVFlipCode)flipCode;
+
+/*!
+ *  cv::rotate()
+ */
++ (void)rotateWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withRotateFlag:(OCVRotateFlag)rotateFlag;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

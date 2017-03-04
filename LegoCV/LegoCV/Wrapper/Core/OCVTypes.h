@@ -86,3 +86,22 @@ typedef NS_ENUM(NSInteger, OCVReduceType) {
     OCVReduceTypeMax = 2, //!< the output is the maximum (column/row-wise) of all rows/columns of the matrix.
     OCVReduceTypeMin = 3  //!< the output is the minimum (column/row-wise) of all rows/columns of the matrix.
 };
+
+/*!
+ *  Reference type: core.hpp cv::flip() function codes
+ */
+typedef NS_ENUM(NSInteger, OCVFlipCode) {
+    OCVFlipCodeXAxis = 0,
+    OCVFlipCodeYAxis = 1,
+    OCVFlipCodeBoth = -1
+};
+
+/*!
+ *  Reference type: cv::RotateFlags
+ */
+typedef NS_ENUM(NSInteger, OCVRotateFlag) {
+    OCVRotateFlag90Clockwise            = 0, //Rotate 90 degrees clockwise
+    OCVRotateFlag180                    = 1, //Rotate 180 degrees clockwise
+    OCVRotateFlag90CounterClockwise     = 2, //Rotate 270 degrees clockwise
+};
+
