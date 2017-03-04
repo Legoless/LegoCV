@@ -130,4 +130,20 @@
 + (double)normOfSource:(id<OCVInputArrayable>)source withType:(OCVNormType)normType;
 + (double)normOfSource:(id<OCVInputArrayable>)source withType:(OCVNormType)normType withMask:(id<OCVInputArrayable>)mask;
 
+/*!
+ *  cv::PSNR()
+ */
++ (double)PSNROfSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2;
+
+/*!
+ *  cv::batchDistance()
+ */
+
++ (void)batchDistanceOfSource:(id<OCVInputArrayable>)source1 toSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType toIndex:(id<OCVOutputArrayable>)index;
++ (void)batchDistanceOfSource:(id<OCVInputArrayable>)source1 toSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType toIndex:(id<OCVOutputArrayable>)index withNormType:(OCVNormType)normType;
++ (void)batchDistanceOfSource:(id<OCVInputArrayable>)source1 toSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType toIndex:(id<OCVOutputArrayable>)index withNormType:(OCVNormType)normType withK:(NSInteger)k;
++ (void)batchDistanceOfSource:(id<OCVInputArrayable>)source1 toSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType toIndex:(id<OCVOutputArrayable>)index withNormType:(OCVNormType)normType withK:(NSInteger)k withMask:(id<OCVInputArrayable>)mask;
++ (void)batchDistanceOfSource:(id<OCVInputArrayable>)source1 toSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType toIndex:(id<OCVOutputArrayable>)index withNormType:(OCVNormType)normType withK:(NSInteger)k withMask:(id<OCVInputArrayable>)mask withUpdate:(NSInteger)update;
++ (void)batchDistanceOfSource:(id<OCVInputArrayable>)source1 toSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType toIndex:(id<OCVOutputArrayable>)index withNormType:(OCVNormType)normType withK:(NSInteger)k withMask:(id<OCVInputArrayable>)mask withUpdate:(NSInteger)update withCrosscheck:(BOOL)crosscheck;
+
 @end
