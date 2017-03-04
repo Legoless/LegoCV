@@ -1,6 +1,6 @@
 # LegoCV
 
-LegoCV is OpenCV framework built for Swift and Objective-C projects. It eliminates the need to use Objective-C++ and allows for full compatibility with native Swift projects. The only dependency is native [OpenCV framework](http://opencv.org).
+LegoCV is OpenCV framework built for Swift and Objective-C projects. It eliminates the need to use Objective-C++ and allows for full compatibility with native Swift projects. The only dependency is native [OpenCV framework](http://opencv.org) for iOS.
 
 ## Mission
 
@@ -8,14 +8,14 @@ Swift is one of the fastest evolving languages, but there is no way to use C++ f
 
 This project's purpose is to create a simple, easy to use native Swift framework for OpenCV. The project adds Swift and Objective-C convenience methods, but translates to OpenCV API entirely.
 
-The idea is to simply wrap OpenCV native C++ classes into Objective-C classes, which are then natively bridged to Swift, providing a thin layer on top of native OpenCV. [Realm]() and [EmguCV]() in C# use similar framework structure.
+The idea is to simply wrap OpenCV native C++ classes into Objective-C classes, which are then natively bridged to Swift, providing a thin layer on top of native OpenCV. [Realm](https://realm.io) and [EmguCV]() in C# use similar framework structure.
 
 ## Example
 
 The following examples display the difference in using LegoCV in Swift and Objective-C versus vanilla OpenCV in C++.
 The example is extracted from Face detection sample code, shipped with LegoCV. On iOS it uses `OCVVideoCamera` class to get image stream from camera (wraps OpenCV's `CvVideoCamera`, to keep backward compatibiliy).
 
-Swift (LegoCV):
+#### Swift (LegoCV):
 ```swift
 let faceDetector = OCVCascadeClassifier();
 faceDetector.load(path: "haarcascade_frontalface_alt2.xml")
@@ -37,7 +37,7 @@ func process(image: OCVMat) {
 }
 ```
 
-Objective-C (LegoCV with Objective-C):
+#### Objective-C (LegoCV with Objective-C):
 ```objectivec
 - (void)setupClassifier {
     self.faceDetector = [[OCVCascadeClassifier alloc] init];
@@ -63,7 +63,7 @@ Objective-C (LegoCV with Objective-C):
 }
 ```
 
-C++ (OpenCV):
+#### C++ (OpenCV):
 ```cpp
 using namespace cv;
 
