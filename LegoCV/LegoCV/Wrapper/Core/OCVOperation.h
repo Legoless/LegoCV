@@ -17,7 +17,7 @@
 #import "OCVUMat.h"
 #import "OCVSparseMat.h"
 
-#import "OCVMinimumMaximumResult.h"
+#import "OCVMinimumMaximum.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -166,10 +166,22 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  cv::minMaxLoc()
  */
-+ (void)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source withMinVal:(double *)minVal withMaxVal:(double *)maxVal atMinPoint:(OCVPoint *)minLoc atMaxPoint:(OCVPoint *)maxLoc withMask:(id<OCVInputArrayable>)mask;
++ (void)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source withMinValue:(double *)minValue withMaxValue:(double *)maxValue withMinLocation:(OCVPoint *)minLocation withMaxLocation:(OCVPoint *)maxLocation withMask:(id<OCVInputArrayable>)mask;
 
-+ (OCVMinimumMaximumResult *)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source;
-+ (OCVMinimumMaximumResult *)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
++ (void)minimumMaximumLocationInSource:(OCVSparseMat *)mat withMinValue:(double *)minValue withMaxValue:(double *)maxValue withMinIndex:(NSInteger *)minIndex withMaxIndex:(NSInteger *)maxIndex;
+
+// Convenience of LegoCV
++ (OCVMinimumMaximumLocation *)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source;
++ (OCVMinimumMaximumLocation *)minimumMaximumLocationInSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
+
+/*!
+ *  cv::minMaxIdx()
+ */
++ (void)minimumMaximumIndexInSource:(id<OCVInputArrayable>)source withMinValue:(double *)minValue withMaxValue:(double *)maxValue  withMaxValue:(double *)maxValue withMinIndex:(NSInteger *)minIndex withMaxIndex:(NSInteger *)maxIndex withMask:(id<OCVInputArrayable>)mask;
+
+// Convenience of LegoCV
++ (OCVMinimumMaximumIndex *)minimumMaximumIndexInSource:(id<OCVInputArrayable>)source;
++ (OCVMinimumMaximumIndex *)minimumMaximumIndexInSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
 
 @end
 

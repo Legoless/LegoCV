@@ -1,5 +1,5 @@
 //
-//  OCVMinimumMaximumResult.h
+//  OCVMinimumMaximum.h
 //  LegoCV
 //
 //  Created by Dal Rupnik on 04/03/2017.
@@ -10,11 +10,20 @@
 
 #import "OCVObject.h"
 
-@interface OCVMinimumMaximumResult : OCVObject
+@interface OCVMinimumMaximumLocation : OCVObject
 
 @property (nonatomic, assign) double minimumValue;
 @property (nonatomic, assign) double maximumValue;
 @property (nonatomic, assign) OCVPoint minimumLocation;
 @property (nonatomic, assign) OCVPoint maximumLocation;
+
+@end
+
+@interface OCVMinimumMaximumIndex : OCVObject
+
+@property (nonatomic, assign) double minimumValue;
+@property (nonatomic, assign) double maximumValue;
+@property (nonatomic, assign) NSInteger minimumIndex;
+@property (nonatomic, assign) NSInteger maximumIndex;
 
 @end

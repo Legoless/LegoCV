@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ *  Represents cv::Point, cv::Point2i, cv::Point_<int>
+ */
 typedef struct OCVPoint
 {
     NSInteger x;
