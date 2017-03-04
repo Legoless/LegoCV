@@ -189,6 +189,11 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)reduceWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withDimenstion:(NSInteger)dimension withReduceType:(OCVReduceType)reduceType;
 + (void)reduceWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withDimenstion:(NSInteger)dimension withReduceType:(OCVReduceType)reduceType ofDepthType:(NSInteger)depthType;
 
+/*!
+ *  cv::merge()
+ */
++ (void)mergeWithSource:(OCVMat *)source withCount:(NSInteger)count toDestination:(id<OCVOutputArrayable>)destination;
+
 @end
 
 NS_ASSUME_NONNULL_END
