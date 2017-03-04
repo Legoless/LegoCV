@@ -193,6 +193,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  cv::merge()
  */
 + (void)mergeWithSource:(OCVMat *)source withCount:(NSInteger)count toDestination:(id<OCVOutputArrayable>)destination;
++ (void)mergeWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::split()
+ */
++ (void)splitWithSource:(OCVMat *)source toDestination:(OCVMat *)destination;
++ (void)splitWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayOfArrayables>)destination;
 
 @end
 
