@@ -19,6 +19,7 @@
 #import "OCVSparseMat.h"
 
 #import "OCVMinimumMaximum.h"
+#import "OCVTermCriteria.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -456,6 +457,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  cv::Mahalanobis()
  */
 + (double)mahalanobisWithVector:(id<OCVInputArrayable>)vector1 vector2:(id<OCVInputArrayable>)vector2 inverseCovar:(id<OCVInputArrayable>)inverseCovar;
+
+/*!
+ *  cv::kmeans()
+ */
++ (double)kmeansWithData:(id<OCVInputArrayable>)data k:(NSInteger)k bestLabels:(id<OCVInputOutputArrayable>)bestLabels termCriteria:(OCVTermCriteria *)termCriteria attempts:(NSInteger)attempts flags:(OCVKMeansTypes)flags centers:(id<OCVOutputArrayable>)centers;
+
 @end
 
 NS_ASSUME_NONNULL_END

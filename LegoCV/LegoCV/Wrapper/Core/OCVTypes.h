@@ -97,6 +97,15 @@ typedef NS_OPTIONS(NSInteger, OCVTransformFlags) {
 #pragma mark - Types from core.hpp
 
 /*!
+ *  Reference type: cv::KmeansFlags
+ */
+typedef NS_OPTIONS(NSInteger, OCVKMeansTypes) {
+    OCVKMeansTypeRandomCenters = 0,
+    OCVKMeansPPCenters         = 2,
+    OCVKMeansUseInitialLabels  = 1
+};
+
+/*!
  *  Reference type: cv::LineTypes
  */
 typedef NS_ENUM(NSInteger, OCVLineType) {
