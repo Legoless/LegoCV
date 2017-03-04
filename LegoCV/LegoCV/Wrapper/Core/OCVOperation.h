@@ -361,6 +361,22 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)transposeWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
 
+/*!
+ *  cv::transform()
+ */
++ (void)transformWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTransformation:(id<OCVInputArrayable>)transformation;
+
+/*!
+ *  cv::perspectiveTransform()
+ */
++ (void)perspectiveTransformWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTransformation:(id<OCVInputArrayable>)transformation;
+
+/*!
+ *  cv::completeSymm()
+ */
++ (void)completeSymmWithSource:(id<OCVInputOutputArrayable>)source;
++ (void)completeSymmWithSource:(id<OCVInputOutputArrayable>)source withLowerToUpper:(BOOL)lowerToUpper;
+
 @end
 
 NS_ASSUME_NONNULL_END
