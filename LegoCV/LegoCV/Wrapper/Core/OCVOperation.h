@@ -452,6 +452,10 @@ NS_ASSUME_NONNULL_BEGIN
   CV_EXPORTS_W void SVBackSubst( InputArray w, InputArray u, InputArray vt, nputArray rhs, OutputArray dst );
  */
 
+/*!
+ *  cv::Mahalanobis()
+ */
++ (double)mahalanobisWithVector:(id<OCVInputArrayable>)vector1 vector2:(id<OCVInputArrayable>)vector2 inverseCovar:(id<OCVInputArrayable>)inverseCovar;
 @end
 
 NS_ASSUME_NONNULL_END
