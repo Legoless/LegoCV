@@ -69,5 +69,21 @@
 + (void)divideScale:(double)scale withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
 + (void)divideScale:(double)scale withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType;
 
+/*!
+ *  cv::scaleAdd()
+ */
++ (void)scaleAddSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::addWeighted()
+ */
++ (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination;
++ (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType;
+
+/*!
+ *  cv::convertScaleAbs()
+ */
++ (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination;
++ (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType;
 
 @end
