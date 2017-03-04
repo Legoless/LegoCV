@@ -285,6 +285,8 @@
 		38BF37FA1E6B13D500C336EB /* OCVEdges.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37F91E6B13D500C336EB /* OCVEdges.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF37FD1E6B14B100C336EB /* OCVUMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FB1E6B14B100C336EB /* OCVUMat.h */; };
 		38BF37FE1E6B14B100C336EB /* OCVUMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF37FC1E6B14B100C336EB /* OCVUMat.m */; };
+		38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */; };
+		38BF38021E6B1E0A00C336EB /* OCVSparseMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -618,6 +620,8 @@
 		38BF37F91E6B13D500C336EB /* OCVEdges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVEdges.h; sourceTree = "<group>"; };
 		38BF37FB1E6B14B100C336EB /* OCVUMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVUMat.h; sourceTree = "<group>"; };
 		38BF37FC1E6B14B100C336EB /* OCVUMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVUMat.m; sourceTree = "<group>"; };
+		38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSparseMat.h; sourceTree = "<group>"; };
+		38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVSparseMat.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
@@ -1291,6 +1295,8 @@
 				382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */,
 				386F2B7B1E35228F00320AEB /* OCVRect.h */,
 				38E725991E37B77C007DBC1F /* OCVRect.m */,
+				38BF37FF1E6B1E0A00C336EB /* OCVSparseMat.h */,
+				38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */,
 				38A74FE81E374FC10036091A /* OCVInputArrayable.h */,
 				38A74FEA1E374FF80036091A /* OCVOutputArrayable.h */,
 				38A74FEC1E3750350036091A /* OCVInputOutputArrayable.h */,
@@ -1450,6 +1456,7 @@
 				38BF37FD1E6B14B100C336EB /* OCVUMat.h in Headers */,
 				383BC5801E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.h in Headers */,
 				3848D3361E3F95F500379F4F /* OCVScalar+Private.h in Headers */,
+				38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */,
 				383BC45C1E2FFC5C002EA7A1 /* OCVLSDDetector.h in Headers */,
 				382F377D1E3F905B00A6F783 /* OCVPoint+Private.h in Headers */,
 				38A750071E37736D0036091A /* OCVOutputArray+Private.h in Headers */,
@@ -1679,6 +1686,7 @@
 				383BC5411E30001E002EA7A1 /* OCVSuperResolution.m in Sources */,
 				383BC4D91E2FFEC0002EA7A1 /* OCVAffineTransformer.m in Sources */,
 				383BC4F11E2FFF14002EA7A1 /* OCVNormHistogramCostExtractor.m in Sources */,
+				38BF38021E6B1E0A00C336EB /* OCVSparseMat.m in Sources */,
 				383BC4451E2FFBBF002EA7A1 /* OCVLBPHFaceRecognizer.m in Sources */,
 				386F2B881E352A4800320AEB /* OCVPointerObject.m in Sources */,
 				383BC46D1E2FFCA2002EA7A1 /* OCVEM.m in Sources */,
