@@ -7,7 +7,7 @@
 //
 
 #import "OCVSize.h"
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 cv::Size convertSize(OCVSize size);
 OCVSize convertSize(cv::Size size);

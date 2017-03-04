@@ -8,7 +8,7 @@
 
 #import "OCVRect.h"
 
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 cv::Rect convertRect(OCVRect rect);
 OCVRect convertRect(cv::Rect rect);

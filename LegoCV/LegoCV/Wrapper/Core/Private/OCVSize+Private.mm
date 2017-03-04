@@ -7,7 +7,7 @@
 //
 
 #import "OCVSize+Private.h"
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 cv::Size convertSize(OCVSize size) {
     cv::Size finalSize;

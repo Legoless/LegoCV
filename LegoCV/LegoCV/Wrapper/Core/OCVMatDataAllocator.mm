@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 #import "OCVMatDataAllocator.h"
 

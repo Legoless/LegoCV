@@ -8,7 +8,7 @@
 
 #import "OCVPoint.h"
 
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 cv::Point convertPoint(OCVPoint point);
 OCVPoint convertPoint(cv::Point point);

@@ -8,7 +8,7 @@
 
 #import "OCVScalar.h"
 
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 CvScalar convertScalar(OCVScalar scalar);
 

@@ -8,7 +8,7 @@
 
 #import "OCVRect+Private.h"
 
-#import <opencv2/core/core.hpp>
+#import <opencv2/core.hpp>
 
 cv::Rect convertRect(OCVRect rect) {
     cv::Rect finalRect;
