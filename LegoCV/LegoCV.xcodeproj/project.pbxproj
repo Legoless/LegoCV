@@ -297,6 +297,8 @@
 		38BF38121E6B408100C336EB /* OCVTransformOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38101E6B408100C336EB /* OCVTransformOperation.mm */; };
 		38BF38151E6B43FE00C336EB /* OCVAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38131E6B43FE00C336EB /* OCVAlgorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38161E6B43FE00C336EB /* OCVAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */; };
+		38BF38191E6B447000C336EB /* OCVRandomGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38171E6B447000C336EB /* OCVRandomGenerator.h */; };
+		38BF381A1E6B447000C336EB /* OCVRandomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38181E6B447000C336EB /* OCVRandomGenerator.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -642,6 +644,8 @@
 		38BF38101E6B408100C336EB /* OCVTransformOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVTransformOperation.mm; sourceTree = "<group>"; };
 		38BF38131E6B43FE00C336EB /* OCVAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVAlgorithm.h; sourceTree = "<group>"; };
 		38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVAlgorithm.m; sourceTree = "<group>"; };
+		38BF38171E6B447000C336EB /* OCVRandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVRandomGenerator.h; sourceTree = "<group>"; };
+		38BF38181E6B447000C336EB /* OCVRandomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRandomGenerator.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
@@ -1319,6 +1323,8 @@
 				67E6429531419EE64501EFC2 /* OCVComplex.h */,
 				67E647669347DEDB0F2128DA /* OCVComplex.m */,
 				67E646287C3C3D415F1D7019 /* OCVTypes.h */,
+				38BF38171E6B447000C336EB /* OCVRandomGenerator.h */,
+				38BF38181E6B447000C336EB /* OCVRandomGenerator.m */,
 				38E7259B1E37B9B6007DBC1F /* OCVRect+Private.h */,
 				382F37791E3F8EB600A6F783 /* OCVRect+Private.mm */,
 				386F2B7B1E35228F00320AEB /* OCVRect.h */,
@@ -1534,6 +1540,7 @@
 				383BC5601E30007F002EA7A1 /* OCVTracker.h in Headers */,
 				38DB13EE1E366FE700822472 /* OCVCore.h in Headers */,
 				383BC4DC1E2FFED0002EA7A1 /* OCVChiHistogramCostExtractor.h in Headers */,
+				38BF38191E6B447000C336EB /* OCVRandomGenerator.h in Headers */,
 				67E644A83A079FB7EFF64636 /* OCVMat.h in Headers */,
 				383BC4A81E2FFDE5002EA7A1 /* OCVQueue.h in Headers */,
 				38BF380D1E6B2D0800C336EB /* OCVBitwiseOperation.h in Headers */,
@@ -1819,6 +1826,7 @@
 				383BC4BD1E2FFE1C002EA7A1 /* OCVProgramSource.m in Sources */,
 				383BC4A11E2FFD56002EA7A1 /* OCVMCvParamGrid.m in Sources */,
 				382F377A1E3F8EB600A6F783 /* OCVRect+Private.mm in Sources */,
+				38BF381A1E6B447000C336EB /* OCVRandomGenerator.m in Sources */,
 				67E64E06B0FC8DB79DF8354F /* OCVImageOperation.mm in Sources */,
 				67E6471FA02CAAF362060F84 /* OCVImage.m in Sources */,
 			);
