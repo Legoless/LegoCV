@@ -35,6 +35,21 @@ typedef NS_ENUM(NSInteger, OCVBorderType) {
     OCVBorderTypeIsolated    = 16 //!< do not look outside of ROI
 };
 
+/*!
+ *  Reference type: cv::NormTypes
+ */
+typedef NS_ENUM(NSInteger, OCVNormType) {
+    OCVNormTypeINF       = 1,
+    OCVNormTypeL1        = 2,
+    OCVNormTypeL2        = 4,
+    OCVNormTypeL2SQR     = 5,
+    OCVNormTypeHamming   = 6,
+    OCVNormTypeHamming2  = 7,
+    OCVNormTypeMask      = 7,
+    OCVNormTypeRelative  = 8, //!< flag
+    OCVNormTypeMinMax    = 32 //!< flag
+};
+
 #pragma mark - Types from core.hpp
 
 /*!

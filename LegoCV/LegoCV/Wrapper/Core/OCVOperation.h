@@ -117,4 +117,17 @@
 + (OCVScalar)meanOfSource:(id<OCVInputArrayable>)source;
 + (OCVScalar)meanOfSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
 
+/*!
+ *  cv::meanStdDev()
+ */
++ (void)meanStandardDeviationOfSource:(id<OCVInputArrayable>)source withMean:(id<OCVOutputArrayable>)mean withStandardDeviation:(id<OCVOutputArrayable>)standardDeviation;
++ (void)meanStandardDeviationOfSource:(id<OCVInputArrayable>)source withMean:(id<OCVOutputArrayable>)mean withStandardDeviation:(id<OCVOutputArrayable>)standardDeviation withMask:(id<OCVInputArrayable>)mask;
+
+/*!
+ *  cv::norm()
+ */
++ (double)normOfSource:(id<OCVInputArrayable>)source;
++ (double)normOfSource:(id<OCVInputArrayable>)source withType:(OCVNormType)normType;
++ (double)normOfSource:(id<OCVInputArrayable>)source withType:(OCVNormType)normType withMask:(id<OCVInputArrayable>)mask;
+
 @end
