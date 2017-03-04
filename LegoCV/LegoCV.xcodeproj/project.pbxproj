@@ -299,6 +299,8 @@
 		38BF38161E6B43FE00C336EB /* OCVAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */; };
 		38BF38191E6B447000C336EB /* OCVRandomGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38171E6B447000C336EB /* OCVRandomGenerator.h */; };
 		38BF381A1E6B447000C336EB /* OCVRandomGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38181E6B447000C336EB /* OCVRandomGenerator.m */; };
+		38BF381D1E6B44A600C336EB /* OCVFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF381B1E6B44A600C336EB /* OCVFormatter.h */; };
+		38BF381E1E6B44A600C336EB /* OCVFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF381C1E6B44A600C336EB /* OCVFormatter.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -646,6 +648,8 @@
 		38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVAlgorithm.m; sourceTree = "<group>"; };
 		38BF38171E6B447000C336EB /* OCVRandomGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVRandomGenerator.h; sourceTree = "<group>"; };
 		38BF38181E6B447000C336EB /* OCVRandomGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRandomGenerator.m; sourceTree = "<group>"; };
+		38BF381B1E6B44A600C336EB /* OCVFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFormatter.h; sourceTree = "<group>"; };
+		38BF381C1E6B44A600C336EB /* OCVFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFormatter.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
@@ -1349,6 +1353,8 @@
 				38BF37FC1E6B14B100C336EB /* OCVUMat.m */,
 				38BF38071E6B291900C336EB /* OCVVector.h */,
 				38BF38081E6B291900C336EB /* OCVVector.m */,
+				38BF381B1E6B44A600C336EB /* OCVFormatter.h */,
+				38BF381C1E6B44A600C336EB /* OCVFormatter.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1472,6 +1478,7 @@
 				67E645AFE0D4053E62EF9C20 /* OCVSize.h in Headers */,
 				383BC5241E2FFFB5002EA7A1 /* OCVStereographicWarper.h in Headers */,
 				383BC4681E2FFC8F002EA7A1 /* OCVDTree.h in Headers */,
+				38BF381D1E6B44A600C336EB /* OCVFormatter.h in Headers */,
 				67E644B5E56E5349F6453B3E /* OCVMatExpr.h in Headers */,
 				38A750051E37667E0036091A /* OCVMatDataAllocator+Private.h in Headers */,
 				383BC4441E2FFBBF002EA7A1 /* OCVLBPHFaceRecognizer.h in Headers */,
@@ -1700,6 +1707,7 @@
 				383BC5591E30006B002EA7A1 /* OCVTileTiffWriter.m in Sources */,
 				383BC4291E2FFB47002EA7A1 /* OCVBackgroundSubtractorGMG.m in Sources */,
 				383BC5B11E30016B002EA7A1 /* OCVSURF.m in Sources */,
+				38BF381E1E6B44A600C336EB /* OCVFormatter.m in Sources */,
 				383BC5291E2FFFBD002EA7A1 /* OCVSticher.m in Sources */,
 				383BC5791E3000D0002EA7A1 /* OCVBackgroundSubtractor.m in Sources */,
 				383BC4891E2FFCF2002EA7A1 /* OCVTrainData.m in Sources */,
