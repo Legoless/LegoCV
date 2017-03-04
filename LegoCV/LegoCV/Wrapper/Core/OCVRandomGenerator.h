@@ -15,7 +15,56 @@
 #import "OCVGeometry.h"
 #import "OCVTypes.h"
 
+typedef NS_ENUM(NSInteger, OCVRandomType) {
+    OCVRandomTypeUniform = 0,
+    OCVRandomTypeNormal = 1,
+};
+
 @interface OCVRandomGenerator : OCVObject
+
+@property (nonatomic, assign) unsigned long long state;
+
+#pragma mark - Initialization
+
+- (instancetype)initWithState:(unsigned long long)state;
+
+#pragma mark - Public Methods
+
+- (char)nextChar;
+- (unsigned char)nextUnsignedChar;
+
+- (short)nextShort;
+- (unsigned short)nextUnsignedShort;
+
+- (int)nextInt;
+- (unsigned int)nextUnsignedInt;
+
+- (float)nextFloat;
+- (double)nextDouble;
+
+//
+// TODO: Check if more public methods need to be added.
+//
+
+- (int)uniformWithLower:(int)lower upper:(int)upper;
+- (float)uniformFloatWithLower:(float)lower upper:(float)upper;
+- (double)uniformDoubleWithLower:(double)lower upper:(double)upper;
+
+
+- (void)fillSource:(id<OCVInputOutputArrayable>)source type:(OCVRandomType)type distributionA:(id<OCVInputArrayable>)distributionA distributionB:(id<OCVInputArrayable>)distributionB;
+- (void)fillSource:(id<OCVInputOutputArrayable>)source type:(OCVRandomType)type distributionA:(id<OCVInputArrayable>)distributionA distributionB:(id<OCVInputArrayable>)distributionB saturateRange:(BOOL)saturateRange;
+
+- (double)gaussianForSigma:(double)sigma;
+
+/*!
+ *  cv::randShuffle()
+ *
+ *  @note: While OpenCV provides a static method here for randShuffle, this is an instance method, since it requires random generator object.
+ */
+- (void)randShuffleToDestination:(id<OCVInputOutputArrayable>)destination;
+- (void)randShuffleToDestination:(id<OCVInputOutputArrayable>)destination iterationFactor:(double)iterationFactor;
+
+#pragma mark - Class Methods
 
 /*!
  *  cv::theRNG()
@@ -37,9 +86,4 @@
  */
 + (void)randNormallyToDestination:(id<OCVInputOutputArrayable>)destination mean:(id<OCVInputArrayable>)mean standardDeviation:(id<OCVInputArrayable>)standardDeviation;
 
-/*!
- *  cv::randShuffle()
- */
-- (void)randShuffleToDestination:(id<OCVInputOutputArrayable>)destination;
-- (void)randShuffleToDestination:(id<OCVInputOutputArrayable>)destination iterationFactor:(double)iterationFactor;
 @end

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVFormatter.h"
+#import "OCVObject.h"
 
 @interface OCVFormatter : OCVObject
 
