@@ -86,4 +86,35 @@
 + (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination;
 + (void)addWeightedSource:(id<OCVInputArrayable>)source1 withAlpha:(double)alpha withSource:(id<OCVInputArrayable>)source2 withBeta:(double)beta withGamma:(double)gamma toDestination:(id<OCVOutputArrayable>)destination ofDepthType:(NSInteger)depthType;
 
+/*!
+ *  cv::convertFp16()
+ */
++ (void)convertFp16Source:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::LUT()
+ */
++ (void)lookupTableTransformWithSource:(id<OCVInputArrayable>)source withLookupTable:(id<OCVInputArrayable>)lookupTable toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::sum()
+ */
++ (OCVScalar)sumOfSource:(id<OCVInputArrayable>)source;
+
+/*!
+ *  cv::countNonZero()
+ */
++ (NSInteger)countNonZeroInSource:(id<OCVInputArrayable>)source;
+
+/*!
+ *  cv::findNonZero()
+ */
++ (void)findNonZeroInSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::mean()
+ */
++ (OCVScalar)meanOfSource:(id<OCVInputArrayable>)source;
++ (OCVScalar)meanOfSource:(id<OCVInputArrayable>)source withMask:(id<OCVInputArrayable>)mask;
+
 @end
