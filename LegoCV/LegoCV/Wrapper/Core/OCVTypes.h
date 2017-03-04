@@ -22,6 +22,18 @@ typedef NS_ENUM(NSInteger, OCVDepthType) {
 #pragma mark - Types from base.hpp
 
 /*!
+ *  Reference type: cv::DecompTypes
+ */
+typedef NS_ENUM(NSInteger, OCVDecompositionType) {
+    OCVDecompositionTypeLU       = 0,
+    OCVDecompositionTypeSVD      = 1,
+    OCVDecompositionTypeEIG      = 2,
+    OCVDecompositionTypeCholesky = 3,
+    OCVDecompositionTypeQR       = 4,
+    OCVDecompositionTypeNormal   = 16
+};
+
+/*!
  *  Reference type: cv::BorderTypes
  */
 typedef NS_ENUM(NSInteger, OCVBorderType) {

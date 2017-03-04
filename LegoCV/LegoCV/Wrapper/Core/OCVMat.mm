@@ -160,10 +160,10 @@
 }
 
 - (OCVMat *)inverse {
-    return [self inverseWithMethod:OCVMatDecompositionTypeLU];
+    return [self inverseWithMethod:OCVDecompositionTypeLU];
 }
 
-- (OCVMat *)inverseWithMethod:(OCVMatDecompositionType)method {
+- (OCVMat *)inverseWithMethod:(OCVDecompositionType)method {
     cv::Mat mat = self.source->inv((int)method);
     return [[OCVMat alloc] initWithMatInstance:new cv::Mat(mat)];
 }

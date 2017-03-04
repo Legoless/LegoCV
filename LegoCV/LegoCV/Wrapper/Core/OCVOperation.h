@@ -374,8 +374,30 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  cv::completeSymm()
  */
-+ (void)completeSymmWithSource:(id<OCVInputOutputArrayable>)source;
-+ (void)completeSymmWithSource:(id<OCVInputOutputArrayable>)source withLowerToUpper:(BOOL)lowerToUpper;
++ (void)completeSymmOfSource:(id<OCVInputOutputArrayable>)source;
++ (void)completeSymmOfSource:(id<OCVInputOutputArrayable>)source withLowerToUpper:(BOOL)lowerToUpper;
+
+/*!
+ *  cv::setIdentity()
+ */
++ (void)setIdentityOfSource:(id<OCVInputOutputArrayable>)source;
++ (void)setIdentityOfSource:(id<OCVInputOutputArrayable>)source withScalar:(OCVScalar)scalar;
+
+/*!
+ *  cv::determinant()
+ */
++ (double)determinantOfSource:(id<OCVInputArrayable>)source;
+
+/*!
+ *  cv::trace()
+ */
++ (OCVScalar)traceOfSource:(id<OCVInputArrayable>)source;
+
+/*!
+ *  cv::invert()
+ */
++ (void)invertWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
++ (void)invertWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVDecompositionType)type;
 
 @end
 
