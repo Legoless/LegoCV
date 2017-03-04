@@ -15,6 +15,8 @@
 
 @interface OCVOperation : OCVObject
 
++ (void)swapMat:(OCVMat *)a toMat:(OCVMat *)b;
+
 + (void)copyMakeBorderFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
 
 @end
