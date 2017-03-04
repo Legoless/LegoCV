@@ -194,13 +194,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  cv::merge()
  */
 + (void)mergeWithSource:(OCVMat *)source withCount:(NSInteger)count toDestination:(id<OCVOutputArrayable>)destination;
-+ (void)mergeWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVOutputArrayable>)destination;
++ (void)mergeWithSource:(NSArray<OCVInputArrayable> *)source toDestination:(id<OCVOutputArrayable>)destination;
 
 /*!
  *  cv::split()
  */
 + (void)splitWithMat:(OCVMat *)source toMat:(OCVMat *)destination;
-+ (void)splitWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayOfArrayables>)destination;
++ (void)splitWithSource:(id<OCVInputArrayable>)source toDestination:(NSArray<OCVInputOutputArrayable> *)destination;
 
 /*!
  *  cv::mixChannels()
@@ -208,8 +208,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  TODO: Maybe implement an options class as a parameter instead of passing pointers and also a Swift compatible replacement for std::vector.
  */
 + (void)mixChannelsWithSource:(OCVMat *)mat withNumberOfSources:(NSInteger)numberOfSources toMat:(OCVMat *)destination withNumberOfDestinations:(NSInteger)numberOfDestinations fromTo:(NSInteger *)fromTo withNumberOfPairs:(NSInteger)pairs;
-+ (void)mixChannelsWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVInputOutputArrayOfArrayables>)destination fromTo:(NSInteger *)fromTo withNumberOfPairs:(NSInteger)pairs;
-+ (void)mixChannelsWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVInputOutputArrayOfArrayables>)destination fromToIndexes:(OCVVector *)fromToIndexes;
++ (void)mixChannelsWithSource:(NSArray <OCVInputArrayable> *)source toDestination:(NSArray<OCVInputOutputArrayable> *)destination fromTo:(NSInteger *)fromTo withNumberOfPairs:(NSInteger)pairs;
++ (void)mixChannelsWithSource:(NSArray <OCVInputArrayable> *)source toDestination:(NSArray<OCVInputOutputArrayable> *)destination fromToIndexes:(OCVVector *)fromToIndexes;
 
 /*!
  *  cv::extractChannel()
@@ -231,6 +231,25 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)rotateWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withRotateFlag:(OCVRotateFlag)rotateFlag;
 
+/*!
+ *  cv::repeat()
+ */
++ (void)repeatWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withNumberOfYAxis:(NSInteger)ny withNumberOfXAxis:(NSInteger)nx;
++ (OCVMat *)repeatWithSource:(OCVMat *)source withNumberOfYAxis:(NSInteger)ny withNumberOfXAxis:(NSInteger)nx;
+
+/*!
+ *  cv::hconcat()
+ */
++ (void)horizontalConcatenationWithSource:(OCVMat *)mat withNumberOfSources:(NSInteger)numberOfSources toDestination:(id<OCVOutputArrayable>)destination;
++ (void)horizontalConcatenationWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
++ (void)horizontalConcatenationWithSource:(NSArray<OCVInputArrayable> *)source toDestination:(id<OCVOutputArrayable>)destination;
+
+/*!
+ *  cv::vconcat()
+ */
++ (void)verticalConcatenationWithSource:(OCVMat *)mat withNumberOfSources:(NSInteger)numberOfSources toDestination:(id<OCVOutputArrayable>)destination;
++ (void)verticalConcatenationWithSource:(id<OCVInputArrayable>)source1 withSource:(id<OCVInputArrayable>)source2 toDestination:(id<OCVOutputArrayable>)destination;
++ (void)verticalConcatenationWithSource:(NSArray<OCVInputArrayable> *)source toDestination:(id<OCVOutputArrayable>)destination;
 
 @end
 
