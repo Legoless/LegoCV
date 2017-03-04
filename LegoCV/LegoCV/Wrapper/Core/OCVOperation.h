@@ -14,6 +14,7 @@
 #import "OCVGeometry.h"
 #import "OCVTypes.h"
 
+#import "OCVVector.h"
 #import "OCVUMat.h"
 #import "OCVSparseMat.h"
 
@@ -198,8 +199,17 @@ NS_ASSUME_NONNULL_BEGIN
 /*!
  *  cv::split()
  */
-+ (void)splitWithSource:(OCVMat *)source toDestination:(OCVMat *)destination;
++ (void)splitWithMat:(OCVMat *)source toMat:(OCVMat *)destination;
 + (void)splitWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayOfArrayables>)destination;
+
+/*!
+ *  cv::mixChannels()
+ *
+ *  TODO: Maybe implement an options class as a parameter instead of passing pointers and also a Swift compatible replacement for std::vector.
+ */
++ (void)mixChannelsWithSource:(OCVMat *)mat withNumberOfSources:(NSInteger)numberOfSources toMat:(OCVMat *)destination withNumberOfDestinations:(NSInteger)numberOfDestinations fromTo:(NSInteger *)fromTo withNumberOfPairs:(NSInteger)pairs;
++ (void)mixChannelsWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVInputOutputArrayOfArrayables>)destination fromTo:(NSInteger *)fromTo withNumberOfPairs:(NSInteger)pairs;
++ (void)mixChannelsWithSource:(id<OCVInputArrayOfArrayables>)source toDestination:(id<OCVInputOutputArrayOfArrayables>)destination fromToIndexes:(OCVVector *)fromToIndexes;
 
 @end
 

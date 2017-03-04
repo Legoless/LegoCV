@@ -13,3 +13,7 @@
 @property (nonatomic, readonly) OCVInputOutputArray *inputOutput;
 
 @end
+
+@protocol OCVInputOutputArrayOfArrayables <OCVInputOutputArrayable>
+
+@end

@@ -289,6 +289,8 @@
 		38BF38021E6B1E0A00C336EB /* OCVSparseMat.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */; };
 		38BF38051E6B20DF00C336EB /* OCVMinimumMaximum.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38031E6B20DF00C336EB /* OCVMinimumMaximum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF38061E6B20DF00C336EB /* OCVMinimumMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38041E6B20DF00C336EB /* OCVMinimumMaximum.m */; };
+		38BF38091E6B291900C336EB /* OCVVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38071E6B291900C336EB /* OCVVector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BF380A1E6B291900C336EB /* OCVVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38081E6B291900C336EB /* OCVVector.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -626,6 +628,8 @@
 		38BF38001E6B1E0A00C336EB /* OCVSparseMat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVSparseMat.m; sourceTree = "<group>"; };
 		38BF38031E6B20DF00C336EB /* OCVMinimumMaximum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVMinimumMaximum.h; sourceTree = "<group>"; };
 		38BF38041E6B20DF00C336EB /* OCVMinimumMaximum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVMinimumMaximum.m; sourceTree = "<group>"; };
+		38BF38071E6B291900C336EB /* OCVVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVector.h; sourceTree = "<group>"; };
+		38BF38081E6B291900C336EB /* OCVVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVVector.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
@@ -1319,6 +1323,8 @@
 				38A7500B1E3792D20036091A /* OCVCascadeClassifier.mm */,
 				38BF37FB1E6B14B100C336EB /* OCVUMat.h */,
 				38BF37FC1E6B14B100C336EB /* OCVUMat.m */,
+				38BF38071E6B291900C336EB /* OCVVector.h */,
+				38BF38081E6B291900C336EB /* OCVVector.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -1408,6 +1414,7 @@
 				383BC5141E2FFF8F002EA7A1 /* OCVPaniniPortraitWarper.h in Headers */,
 				383BC4E01E2FFEDE002EA7A1 /* OCVEMDHistogramCostExtractor.h in Headers */,
 				383BC5A81E30015E002EA7A1 /* OCVSIFT.h in Headers */,
+				38BF38091E6B291900C336EB /* OCVVector.h in Headers */,
 				383BC5701E3000B6002EA7A1 /* OCVOnePassStabilizer.h in Headers */,
 				3897187B1E361F0600CB02B4 /* OCVPhotoCamera.h in Headers */,
 				383BC4F41E2FFF23002EA7A1 /* OCVShapeContextDistanceExtractor.h in Headers */,
@@ -1781,6 +1788,7 @@
 				383BC5491E30003C002EA7A1 /* OCVERFilterNM1.m in Sources */,
 				383BC5A91E30015E002EA7A1 /* OCVSIFT.m in Sources */,
 				383BC4791E2FFCC9002EA7A1 /* OCVNormalBayesClassifier.m in Sources */,
+				38BF380A1E6B291900C336EB /* OCVVector.m in Sources */,
 				383BC55D1E300078002EA7A1 /* OCVMultiTracker.m in Sources */,
 				38DB13F21E367B1F00822472 /* OCVOperation.mm in Sources */,
 				383BC5911E300134002EA7A1 /* OCVBriefDescriptorExtractor.m in Sources */,
