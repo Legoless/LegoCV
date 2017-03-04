@@ -441,6 +441,17 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)calcCovarMatrixWithSamples:(id<OCVInputArrayable>)samples toCovar:(id<OCVOutputArrayable>)covar mean:(id<OCVInputOutputArrayable>)mean flags:(OCVCovarTypes)flags;
 + (void)calcCovarMatrixWithSamples:(id<OCVInputArrayable>)samples toCovar:(id<OCVOutputArrayable>)covar mean:(id<OCVInputOutputArrayable>)mean flags:(OCVCovarTypes)flags depthType:(OCVDepthType)depthType;
 
+/*!
+
+ TODO: Check if those methods should even be implemented on operation, but rather on specific PCA and SV classes?
+ 
+  CV_EXPORTS_W void PCACompute(InputArray data, InputOutputArray mean, OutputArray eigenvectors, double retainedVariance);
+  CV_EXPORTS_W void PCAProject(InputArray data, InputArray mean, InputArray eigenvectors, OutputArray result);
+  CV_EXPORTS_W void PCABackProject(InputArray data, InputArray mean, InputArray eigenvectors, OutputArray result);
+  CV_EXPORTS_W void SVDecomp( InputArray src, OutputArray w, OutputArray u, OutputArray vt, int flags = 0 );
+  CV_EXPORTS_W void SVBackSubst( InputArray w, InputArray u, InputArray vt, nputArray rhs, OutputArray dst );
+ */
+
 @end
 
 NS_ASSUME_NONNULL_END
