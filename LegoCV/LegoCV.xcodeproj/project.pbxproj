@@ -291,6 +291,8 @@
 		38BF38061E6B20DF00C336EB /* OCVMinimumMaximum.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38041E6B20DF00C336EB /* OCVMinimumMaximum.m */; };
 		38BF38091E6B291900C336EB /* OCVVector.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF38071E6B291900C336EB /* OCVVector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38BF380A1E6B291900C336EB /* OCVVector.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BF38081E6B291900C336EB /* OCVVector.m */; };
+		38BF380D1E6B2D0800C336EB /* OCVBitOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38BF380B1E6B2D0800C336EB /* OCVBitOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38BF380E1E6B2D0800C336EB /* OCVBitOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38BF380C1E6B2D0800C336EB /* OCVBitOperation.mm */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -630,6 +632,8 @@
 		38BF38041E6B20DF00C336EB /* OCVMinimumMaximum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVMinimumMaximum.m; sourceTree = "<group>"; };
 		38BF38071E6B291900C336EB /* OCVVector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVector.h; sourceTree = "<group>"; };
 		38BF38081E6B291900C336EB /* OCVVector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVVector.m; sourceTree = "<group>"; };
+		38BF380B1E6B2D0800C336EB /* OCVBitOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVBitOperation.h; sourceTree = "<group>"; };
+		38BF380C1E6B2D0800C336EB /* OCVBitOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVBitOperation.mm; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
@@ -1298,6 +1302,8 @@
 				382F37751E3F8C1200A6F783 /* OCVScalar.m */,
 				38DB13EF1E367B1F00822472 /* OCVOperation.h */,
 				38DB13F01E367B1F00822472 /* OCVOperation.mm */,
+				38BF380B1E6B2D0800C336EB /* OCVBitOperation.h */,
+				38BF380C1E6B2D0800C336EB /* OCVBitOperation.mm */,
 				67E6429531419EE64501EFC2 /* OCVComplex.h */,
 				67E647669347DEDB0F2128DA /* OCVComplex.m */,
 				67E646287C3C3D415F1D7019 /* OCVTypes.h */,
@@ -1516,6 +1522,7 @@
 				383BC4DC1E2FFED0002EA7A1 /* OCVChiHistogramCostExtractor.h in Headers */,
 				67E644A83A079FB7EFF64636 /* OCVMat.h in Headers */,
 				383BC4A81E2FFDE5002EA7A1 /* OCVQueue.h in Headers */,
+				38BF380D1E6B2D0800C336EB /* OCVBitOperation.h in Headers */,
 				38A7500C1E3792D20036091A /* OCVCascadeClassifier.h in Headers */,
 				383BC47C1E2FFCD3002EA7A1 /* OCVRTree.h in Headers */,
 				383BC4B01E2FFDF6002EA7A1 /* OCVImage2D.h in Headers */,
@@ -1712,6 +1719,7 @@
 				38E7259A1E37B77C007DBC1F /* OCVRect.m in Sources */,
 				383BC5551E300062002EA7A1 /* OCVTiffWriter.m in Sources */,
 				383BC4591E2FFC2E002EA7A1 /* OCVFuzzyInvoke.m in Sources */,
+				38BF380E1E6B2D0800C336EB /* OCVBitOperation.mm in Sources */,
 				383BC4311E2FFB78002EA7A1 /* OCVNet.m in Sources */,
 				383BC4ED1E2FFF08002EA7A1 /* OCVHistogramCostExtractor.m in Sources */,
 				382F37761E3F8C1200A6F783 /* OCVScalar.m in Sources */,
