@@ -415,6 +415,23 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (void)sortIndexSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withTypes:(OCVSortTypes)types;
 
+/*!
+ *  cv::solveCubic()
+ */
++ (NSInteger)solveCubicWithCoefficients:(id<OCVInputArrayable>)coefficients toRoots:(id<OCVOutputArrayable>)roots;
+
+/*!
+ *  cv::solvePoly()
+ */
++ (double)solvePolyWithCoefficients:(id<OCVInputArrayable>)coefficients toRoots:(id<OCVOutputArrayable>)roots;
++ (double)solvePolyWithCoefficients:(id<OCVInputArrayable>)coefficients toRoots:(id<OCVOutputArrayable>)roots maxIterations:(NSInteger)maxIterations;
+
+/*!
+ *  cv::eigen()
+ */
++ (BOOL)eigenWithSource:(id<OCVInputArrayable>)source toEigenValues:(id<OCVOutputArrayable>)eigenValues;
++ (BOOL)eigenWithSource:(id<OCVInputArrayable>)source toEigenValues:(id<OCVOutputArrayable>)eigenValues withEigenVectors:(id<OCVOutputArrayable>)eigenValues;
+
 @end
 
 NS_ASSUME_NONNULL_END
