@@ -89,6 +89,8 @@ void processImage(cv::Mat img) {
 }
 ```
 
+More examples can be found in the sample project.
+
 ## Documentation
 
 As this is a project in progress, documentation will be added to [Wiki]() as development progresses.
