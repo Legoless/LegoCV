@@ -11,6 +11,8 @@
 #import "OCVInputArrayable.h"
 #import "OCVMat.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /*!
  *  Discriminant Analysis
  */
@@ -36,3 +38,5 @@
 + (OCVMat *)subspaceReconstructWithW:(id<OCVInputArrayable>)w mean:(id<OCVInputArrayable>)mean source:(id<OCVInputArrayable>)source;
 
 @end
+
+NS_ASSUME_NONNULL_END
