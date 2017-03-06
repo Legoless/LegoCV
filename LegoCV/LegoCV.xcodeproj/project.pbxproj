@@ -743,6 +743,7 @@
 				67E64B3E655A26032DBA8E9F /* Flann */,
 				67E64FDEDEE3065E9A7F3BE8 /* Fuzzy */,
 				67E641E369D94E7F5342E82E /* Geodetic */,
+				67E6489EBEF439348E9D6BCB /* ImageProcessing */,
 				67E64F6071CE207DF3EA0488 /* LineDescriptor */,
 				67E64432A132FEAC78280869 /* ML */,
 				67E643EB7AB5324B5B5C31E6 /* Ocl */,
@@ -764,7 +765,6 @@
 				67E64C67A5DA9CF04E6E96F7 /* XFeatures2D */,
 				67E649CA095FB911CF039A14 /* XImgproc */,
 				67E649E845FA0B83ABC44E56 /* XPhoto */,
-				67E6489EBEF439348E9D6BCB /* ImageProcessing */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
