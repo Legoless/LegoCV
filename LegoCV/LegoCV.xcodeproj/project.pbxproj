@@ -293,6 +293,8 @@
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F11E367B1F00822472 /* OCVOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EF1E367B1F00822472 /* OCVOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13F21E367B1F00822472 /* OCVOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38DB13F01E367B1F00822472 /* OCVOperation.mm */; };
+		38E3EA161E6E1C8600BCC097 /* OCVPCA.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA141E6E1C8600BCC097 /* OCVPCA.h */; };
+		38E3EA171E6E1C8600BCC097 /* OCVPCA.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38E3EA151E6E1C8600BCC097 /* OCVPCA.mm */; };
 		38E7259A1E37B77C007DBC1F /* OCVRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E725991E37B77C007DBC1F /* OCVRect.m */; };
 		67E640484491E8713097DEB2 /* OCVComplex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E647669347DEDB0F2128DA /* OCVComplex.m */; };
 		67E6411251DB061893ABA100 /* OCVScalar+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67E64A91CE4E6CE0DE474C95 /* OCVScalar+Private.mm */; };
@@ -643,6 +645,8 @@
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38DB13EF1E367B1F00822472 /* OCVOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOperation.h; sourceTree = "<group>"; };
 		38DB13F01E367B1F00822472 /* OCVOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVOperation.mm; sourceTree = "<group>"; };
+		38E3EA141E6E1C8600BCC097 /* OCVPCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPCA.h; sourceTree = "<group>"; };
+		38E3EA151E6E1C8600BCC097 /* OCVPCA.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVPCA.mm; sourceTree = "<group>"; };
 		38E725991E37B77C007DBC1F /* OCVRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRect.m; sourceTree = "<group>"; };
 		67E641E5AE5841744443558D /* OCVRect+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVRect+Private.mm"; sourceTree = "<group>"; };
 		67E6422A492670AF3DC695D8 /* OCVRect+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVRect+Private.h"; sourceTree = "<group>"; };
@@ -1317,7 +1321,10 @@
 		67E64E1D1A75A6F4A9339476 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				67E64745979703A472DBFFBC /* Private */,
 				38DB13ED1E366FD500822472 /* OCVCore.h */,
+				38E3EA141E6E1C8600BCC097 /* OCVPCA.h */,
+				38E3EA151E6E1C8600BCC097 /* OCVPCA.mm */,
 				38BF38131E6B43FE00C336EB /* OCVAlgorithm.h */,
 				38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */,
 				382F37731E3F873B00A6F783 /* OCVGeometry.h */,
@@ -1364,7 +1371,6 @@
 				38BF381C1E6B44A600C336EB /* OCVFormatter.m */,
 				38BF381F1E6B44D600C336EB /* OCVTermCriteria.h */,
 				38BF38201E6B44D600C336EB /* OCVTermCriteria.m */,
-				67E64745979703A472DBFFBC /* Private */,
 				67E64917DEA2C0A58F1E58F4 /* OCVInputArray.mm */,
 				67E64625EB21CDB51518A701 /* OCVInputOutputArray.mm */,
 				67E6435B1115B0678734BEDC /* OCVOutputArray.mm */,
@@ -1545,6 +1551,7 @@
 				383BC5941E30013C002EA7A1 /* OCVCudaSURF.h in Headers */,
 				383BC4301E2FFB78002EA7A1 /* OCVNet.h in Headers */,
 				383BC4601E2FFC6F002EA7A1 /* OCVBoost.h in Headers */,
+				38E3EA161E6E1C8600BCC097 /* OCVPCA.h in Headers */,
 				383BC4D01E2FFE90002EA7A1 /* OCVPlot.h in Headers */,
 				383BC5901E300134002EA7A1 /* OCVBriefDescriptorExtractor.h in Headers */,
 				383BC4D81E2FFEC0002EA7A1 /* OCVAffineTransformer.h in Headers */,
@@ -1825,6 +1832,7 @@
 				383BC5951E30013C002EA7A1 /* OCVCudaSURF.m in Sources */,
 				383BC4C11E2FFE4E002EA7A1 /* OCVPageIterator.m in Sources */,
 				383BC5651E30009D002EA7A1 /* OCVVideoCaptureFrameSource.m in Sources */,
+				38E3EA171E6E1C8600BCC097 /* OCVPCA.mm in Sources */,
 				383BC5811E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.m in Sources */,
 				67E640484491E8713097DEB2 /* OCVComplex.m in Sources */,
 				383BC4CD1E2FFE7C002EA7A1 /* OCVOrientation.m in Sources */,
