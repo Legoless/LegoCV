@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)backProjectWithVector:(id<OCVInputArrayable>)vector toDestination:(id<OCVOutputArrayable>)destination;
 
 //
-// TODO: Implement OCV FileStorage and OCV FileNode
+// TODO: Implement OCV FileStorage and OCV FileNode, for serialization
 //
 - (void)writeToPath:(NSString *)path;
 - (void)loadFrompath:(NSString *)path;

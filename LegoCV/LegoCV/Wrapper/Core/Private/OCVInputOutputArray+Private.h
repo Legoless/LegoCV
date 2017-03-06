@@ -7,7 +7,7 @@
 //
 
 #import "OCVInputOutputArray.h"
-#import <opencv2/mat.hpp>
+#import <opencv2/core/mat.hpp>
 
 @interface OCVInputOutputArray (OpenCV)
 
