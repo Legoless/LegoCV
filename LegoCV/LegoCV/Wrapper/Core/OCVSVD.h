@@ -1,5 +1,5 @@
 //
-//  OCVPCA.h
+//  OCVSVD.h
 //  LegoCV
 //
 //  Created by Dal Rupnik on 06/03/2017.
@@ -8,6 +8,6 @@
 
 #import "OCVObject.h"
 
-@interface OCVPCA : OCVObject
+@interface OCVSVD : OCVObject
 
 @end

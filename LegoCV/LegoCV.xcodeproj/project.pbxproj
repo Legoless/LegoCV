@@ -295,6 +295,8 @@
 		38DB13F21E367B1F00822472 /* OCVOperation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38DB13F01E367B1F00822472 /* OCVOperation.mm */; };
 		38E3EA161E6E1C8600BCC097 /* OCVPCA.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA141E6E1C8600BCC097 /* OCVPCA.h */; };
 		38E3EA171E6E1C8600BCC097 /* OCVPCA.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38E3EA151E6E1C8600BCC097 /* OCVPCA.mm */; };
+		38E3EA1A1E6E1CAE00BCC097 /* OCVSVD.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA181E6E1CAE00BCC097 /* OCVSVD.h */; };
+		38E3EA1B1E6E1CAE00BCC097 /* OCVSVD.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38E3EA191E6E1CAE00BCC097 /* OCVSVD.mm */; };
 		38E7259A1E37B77C007DBC1F /* OCVRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E725991E37B77C007DBC1F /* OCVRect.m */; };
 		67E640484491E8713097DEB2 /* OCVComplex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E647669347DEDB0F2128DA /* OCVComplex.m */; };
 		67E6411251DB061893ABA100 /* OCVScalar+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67E64A91CE4E6CE0DE474C95 /* OCVScalar+Private.mm */; };
@@ -647,6 +649,8 @@
 		38DB13F01E367B1F00822472 /* OCVOperation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVOperation.mm; sourceTree = "<group>"; };
 		38E3EA141E6E1C8600BCC097 /* OCVPCA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPCA.h; sourceTree = "<group>"; };
 		38E3EA151E6E1C8600BCC097 /* OCVPCA.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVPCA.mm; sourceTree = "<group>"; };
+		38E3EA181E6E1CAE00BCC097 /* OCVSVD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSVD.h; sourceTree = "<group>"; };
+		38E3EA191E6E1CAE00BCC097 /* OCVSVD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVSVD.mm; sourceTree = "<group>"; };
 		38E725991E37B77C007DBC1F /* OCVRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRect.m; sourceTree = "<group>"; };
 		67E641E5AE5841744443558D /* OCVRect+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVRect+Private.mm"; sourceTree = "<group>"; };
 		67E6422A492670AF3DC695D8 /* OCVRect+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVRect+Private.h"; sourceTree = "<group>"; };
@@ -1325,6 +1329,8 @@
 				38DB13ED1E366FD500822472 /* OCVCore.h */,
 				38E3EA141E6E1C8600BCC097 /* OCVPCA.h */,
 				38E3EA151E6E1C8600BCC097 /* OCVPCA.mm */,
+				38E3EA181E6E1CAE00BCC097 /* OCVSVD.h */,
+				38E3EA191E6E1CAE00BCC097 /* OCVSVD.mm */,
 				38BF38131E6B43FE00C336EB /* OCVAlgorithm.h */,
 				38BF38141E6B43FE00C336EB /* OCVAlgorithm.m */,
 				382F37731E3F873B00A6F783 /* OCVGeometry.h */,
@@ -1519,6 +1525,7 @@
 				383BC5801E3000E3002EA7A1 /* OCVBackgroundSubtractorMOG2.h in Headers */,
 				38BF38011E6B1E0A00C336EB /* OCVSparseMat.h in Headers */,
 				38BF38051E6B20DF00C336EB /* OCVMinimumMaximum.h in Headers */,
+				38E3EA1A1E6E1CAE00BCC097 /* OCVSVD.h in Headers */,
 				383BC45C1E2FFC5C002EA7A1 /* OCVLSDDetector.h in Headers */,
 				383BC55C1E300078002EA7A1 /* OCVMultiTracker.h in Headers */,
 				383BC5541E300062002EA7A1 /* OCVTiffWriter.h in Headers */,
@@ -1858,6 +1865,7 @@
 				67E64B0B819CCF54FB52EC47 /* OCVOutputArray.mm in Sources */,
 				67E643DAD0CF7893E1186E77 /* OCVMatDataAllocator.mm in Sources */,
 				67E64C3AD9D201BE55ACDD51 /* OCVPoint+Private.mm in Sources */,
+				38E3EA1B1E6E1CAE00BCC097 /* OCVSVD.mm in Sources */,
 				67E6411251DB061893ABA100 /* OCVScalar+Private.mm in Sources */,
 				67E6430460F88D3DB9A262A1 /* OCVRect+Private.mm in Sources */,
 				67E64C56148755FEAD662D52 /* OCVSize+Private.mm in Sources */,
