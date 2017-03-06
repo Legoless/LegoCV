@@ -89,7 +89,7 @@ void processImage(cv::Mat img) {
 }
 ```
 
-More examples can be found in the sample project.
+More examples, including Swift playgrounds can be found in the sample project.
 
 ## Documentation
 
