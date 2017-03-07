@@ -6,8 +6,8 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <opencv2/core/core.hpp>
-#import <opencv2/imgproc/imgproc.hpp>
+#import <opencv2/core.hpp>
+#import <opencv2/imgproc.hpp>
 
 #import "OCVGeometry+Private.h"
 

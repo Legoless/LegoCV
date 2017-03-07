@@ -6,8 +6,8 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <opencv2/core/core.hpp>
-#import <opencv2/objdetect/objdetect.hpp>
+#import <opencv2/core.hpp>
+#import <opencv2/objdetect.hpp>
 
 #import "OCVCascadeClassifier.h"
 #import "OCVInputArray+Private.h"
