@@ -6,7 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import <LegoCV/LegoCV.h>
+#import "OCVObject.h"
 
 @interface OCVFileNode : OCVObject
 
