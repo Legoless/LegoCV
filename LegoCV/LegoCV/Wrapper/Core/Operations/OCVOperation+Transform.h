@@ -1,5 +1,5 @@
 //
-//  OCVTransformOperation.h
+//  OCVOperation+Transform.h
 //  LegoCV
 //
 //  Created by Dal Rupnik on 04/03/2017.
