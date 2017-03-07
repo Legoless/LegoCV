@@ -17,7 +17,6 @@
 
 #import "OCVVector.h"
 #import "OCVUMat.h"
-#import "OCVSparseMat.h"
 
 #import "OCVMinimumMaximum.h"
 

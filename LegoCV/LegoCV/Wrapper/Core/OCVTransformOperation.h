@@ -15,12 +15,6 @@
 #import "OCVGeometry.h"
 #import "OCVTypes.h"
 
-#import "OCVVector.h"
-#import "OCVUMat.h"
-#import "OCVSparseMat.h"
-
-#import "OCVMinimumMaximum.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
