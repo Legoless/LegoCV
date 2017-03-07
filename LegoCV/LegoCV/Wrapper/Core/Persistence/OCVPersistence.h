@@ -11,5 +11,6 @@
 
 #import "OCVFileStorage.h"
 #import "OCVFileNode.h"
+#import "OCVSerializable.h"
 
 #endif /* OCVPersistence_h */

@@ -254,8 +254,10 @@
 		389871121E6F311400020CFB /* OCVFileStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871101E6F311400020CFB /* OCVFileStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389871131E6F311400020CFB /* OCVFileStorage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 389871111E6F311400020CFB /* OCVFileStorage.mm */; };
 		389871161E6F315A00020CFB /* OCVFileNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871141E6F315A00020CFB /* OCVFileNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		389871171E6F315A00020CFB /* OCVFileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 389871151E6F315A00020CFB /* OCVFileNode.m */; };
+		389871171E6F315A00020CFB /* OCVFileNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 389871151E6F315A00020CFB /* OCVFileNode.mm */; };
 		389871191E6F32BE00020CFB /* OCVPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871181E6F32BE00020CFB /* OCVPersistence.h */; };
+		3898711D1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3898711B1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h */; };
+		3898711E1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3898711C1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m */; };
 		38A74FE91E374FC10036091A /* OCVInputArrayable.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FE81E374FC10036091A /* OCVInputArrayable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FEB1E374FF80036091A /* OCVOutputArrayable.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FEA1E374FF80036091A /* OCVOutputArrayable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FED1E3750350036091A /* OCVInputOutputArrayable.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FEC1E3750350036091A /* OCVInputOutputArrayable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -611,9 +613,11 @@
 		389871101E6F311400020CFB /* OCVFileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFileStorage.h; sourceTree = "<group>"; };
 		389871111E6F311400020CFB /* OCVFileStorage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVFileStorage.mm; sourceTree = "<group>"; };
 		389871141E6F315A00020CFB /* OCVFileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFileNode.h; sourceTree = "<group>"; };
-		389871151E6F315A00020CFB /* OCVFileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFileNode.m; sourceTree = "<group>"; };
+		389871151E6F315A00020CFB /* OCVFileNode.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVFileNode.mm; sourceTree = "<group>"; };
 		389871181E6F32BE00020CFB /* OCVPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPersistence.h; sourceTree = "<group>"; };
 		3898711A1E6F393F00020CFB /* OCVSerializable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVSerializable.h; sourceTree = "<group>"; };
+		3898711B1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFileStorageFormatDescriptor.h; sourceTree = "<group>"; };
+		3898711C1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFileStorageFormatDescriptor.m; sourceTree = "<group>"; };
 		38A74FE81E374FC10036091A /* OCVInputArrayable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputArrayable.h; sourceTree = "<group>"; };
 		38A74FEA1E374FF80036091A /* OCVOutputArrayable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOutputArrayable.h; sourceTree = "<group>"; };
 		38A74FEC1E3750350036091A /* OCVInputOutputArrayable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputOutputArrayable.h; sourceTree = "<group>"; };
@@ -829,8 +833,10 @@
 				389871181E6F32BE00020CFB /* OCVPersistence.h */,
 				389871101E6F311400020CFB /* OCVFileStorage.h */,
 				389871111E6F311400020CFB /* OCVFileStorage.mm */,
+				3898711B1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h */,
+				3898711C1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m */,
 				389871141E6F315A00020CFB /* OCVFileNode.h */,
-				389871151E6F315A00020CFB /* OCVFileNode.m */,
+				389871151E6F315A00020CFB /* OCVFileNode.mm */,
 				3898711A1E6F393F00020CFB /* OCVSerializable.h */,
 			);
 			path = Persistence;
@@ -1488,6 +1494,7 @@
 				389871161E6F315A00020CFB /* OCVFileNode.h in Headers */,
 				383BC5B81E30018A002EA7A1 /* OCVXPhoto.h in Headers */,
 				383BC43C1E2FFBA6002EA7A1 /* OCVFaceRecognizer.h in Headers */,
+				3898711D1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h in Headers */,
 				383BC56C1E3000AD002EA7A1 /* OCVGaussianMotionFilter.h in Headers */,
 				383BC4941E2FFD2C002EA7A1 /* OCVMCvDTreeNode.h in Headers */,
 				383BC4101E2FF974002EA7A1 /* OCVObject.h in Headers */,
@@ -1797,7 +1804,7 @@
 				383BC4B51E2FFE06002EA7A1 /* OCVKernelConfiguration.m in Sources */,
 				383BC49D1E2FFD4B002EA7A1 /* OCVMCvDTreeSplitMOrder.m in Sources */,
 				383BC5A51E300157002EA7A1 /* OCVLUCID.m in Sources */,
-				389871171E6F315A00020CFB /* OCVFileNode.m in Sources */,
+				389871171E6F315A00020CFB /* OCVFileNode.mm in Sources */,
 				383BC4211E2FFB1D002EA7A1 /* OCVStorageOperationType.m in Sources */,
 				383BC57D1E3000DA002EA7A1 /* OCVBackgroundSubtractorKNN.m in Sources */,
 				383BC5211E2FFFAA002EA7A1 /* OCVSphericalWarper.m in Sources */,
@@ -1904,6 +1911,7 @@
 				67E6471FA02CAAF362060F84 /* OCVImage.m in Sources */,
 				67E64B9EA2DF9EA0F762E182 /* OCVInputArray.mm in Sources */,
 				67E641CAC31AFF78F43B29E1 /* OCVInputOutputArray.mm in Sources */,
+				3898711E1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m in Sources */,
 				67E64B0B819CCF54FB52EC47 /* OCVOutputArray.mm in Sources */,
 				67E643DAD0CF7893E1186E77 /* OCVMatDataAllocator.mm in Sources */,
 				67E64C3AD9D201BE55ACDD51 /* OCVPoint+Private.mm in Sources */,

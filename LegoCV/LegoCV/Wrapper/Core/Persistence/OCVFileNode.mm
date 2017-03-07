@@ -1,5 +1,5 @@
 //
-//  OCVFileNode.m
+//  OCVFileNode.mm
 //  LegoCV
 //
 //  Created by Dal Rupnik on 07/03/2017.
