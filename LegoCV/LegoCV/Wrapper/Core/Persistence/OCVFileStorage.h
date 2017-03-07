@@ -8,6 +8,7 @@
 
 #import "OCVObject.h"
 
+#import "OCVSerializable.h"
 #import "OCVFileNode.h"
 
 /*!
@@ -93,10 +94,13 @@ NS_ASSUME_NONNULL_BEGIN
 // Should do nothing, only allows access.
 - (void)setObject:(id)obj atIndexedSubscript:(NSString *)idx;
 
-//
-// MARK: Writing
-//
+#pragma mark - Write Methods
 
+- (void)writeRawWithFormat:(NSString *)format data:(NSData *)data;
+- (void)writeRawWithFormat:(NSString *)format data:(void *)data length:(NSInteger)length;
+
+- (void)writeRawWithDescriptor:(OCVFileStorageFormatDescriptor *)descriptor data:(NSData *)data;
+- (void)writeRawWithDescriptor:(OCVFileStorageFormatDescriptor *)descriptor data:(void *)data length:(NSInteger)length;
 
 @end
 
