@@ -10,7 +10,7 @@
 
 #import "OCVFileStorageFormatDescriptor.h"
 
-@class OCVMat;
+@class OCVMat, OCVSparseMat;
 
 typedef NS_ENUM(NSInteger, OCVFileNodeType) {
     OCVFileNodeTypeNone      = 0, //!< empty node
@@ -76,6 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)stringValue;
 
 - (nullable OCVMat *)matValue;
+- (nullable OCVSparseMat *)sparseMatValue;
 
 @end
 

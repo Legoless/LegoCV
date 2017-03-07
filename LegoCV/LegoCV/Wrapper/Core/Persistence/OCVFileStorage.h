@@ -79,12 +79,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)writeObject:(id<OCVSerializable>)object withName:(NSString *)name;
 
-- (void)writeValue:(double)value withName:(NSString *)name;
+- (void)writeDouble:(double)value withName:(NSString *)name;
 - (void)writeString:(NSString *)string withName:(NSString *)name;
 - (void)writeSource:(id<OCVInputArrayable>)source withName:(NSString *)name;
 
 - (void)writeComment:(NSString *)comment;
 - (void)writeComment:(NSString *)comment append:(BOOL)append;
+
+- (void)writeInt:(int)value;
+- (void)writeInteger:(NSInteger)value;
+- (void)writeFloat:(float)value;
+- (void)writeDouble:(double)value;
+- (void)writeString:(NSString *)value;
 
 #pragma mark - Class Methods
 
