@@ -10,6 +10,8 @@
 
 #import "OCVFileStorageFormatDescriptor.h"
 
+@class OCVMat;
+
 typedef NS_ENUM(NSInteger, OCVFileNodeType) {
     OCVFileNodeTypeNone      = 0, //!< empty node
     OCVFileNodeTypeInteger   = 1, //!< an integer
@@ -38,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSInteger size;
 
 - (instancetype)initWithNode:(OCVFileNode *)node;
+
 //
 // MARK: Subscript
 //
@@ -52,10 +55,27 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable OCVFileNode *)objectAtIndex:(NSInteger)index;
 
+//
+// TODO: Add File Node Iterator??
+//
+
 #pragma mark - Read methods
 
 - (NSData *)readRawWithFormat:(NSString *)format;
 - (NSData *)readRawWithDescriptor:(OCVFileStorageFormatDescriptor *)descriptor;
+
+//
+// Following methods mimic Foundation NSNumber API.
+//
+
+- (nullable id)objectValue;
+- (int)intValue;
+- (NSInteger)integerValue;
+- (float)floatValue;
+- (double)doubleValue;
+- (nullable NSString *)stringValue;
+
+- (nullable OCVMat *)matValue;
 
 @end
 
