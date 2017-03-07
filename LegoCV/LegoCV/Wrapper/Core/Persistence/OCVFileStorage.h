@@ -9,6 +9,7 @@
 #import "OCVObject.h"
 
 #import "OCVSerializable.h"
+#import "OCVInputArrayable.h"
 #import "OCVFileNode.h"
 
 /*!
@@ -42,6 +43,7 @@ typedef NS_OPTIONS(NSInteger, OCVFileStorageFormatType) {
     OCVFileStorageFormatType32BitPointer
 };
 
+NS_ASSUME_NONNULL_BEGIN
 /*!
  *  See @format_spec in OpenCV
  *
@@ -59,8 +61,6 @@ typedef NS_OPTIONS(NSInteger, OCVFileStorageFormatType) {
 
 @end
 
-NS_ASSUME_NONNULL_BEGIN
-
 /*!
  *  cv::FileStorage
  */
@@ -68,7 +68,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Public Properties
 
+@property (nonatomic, readonly) NSInteger state;
 @property (nonatomic, readonly) BOOL isOpened;
+@property (nullable, nonatomic, readonly) NSString *elementName;
 
 #pragma mark - Initialization
 
@@ -92,7 +94,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable OCVFileNode *)objectAtIndexedSubscript:(NSString *)idx;
 
 // Should do nothing, only allows access.
-- (void)setObject:(id)obj atIndexedSubscript:(NSString *)idx;
+//- (void)setObject:(id)obj atIndexedSubscript:(NSString *)idx;
 
 #pragma mark - Write Methods
 
@@ -101,6 +103,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)writeRawWithDescriptor:(OCVFileStorageFormatDescriptor *)descriptor data:(NSData *)data;
 - (void)writeRawWithDescriptor:(OCVFileStorageFormatDescriptor *)descriptor data:(void *)data length:(NSInteger)length;
+
+- (void)writeObject:(id<OCVSerializable>)object withName:(NSString *)name;
+
+- (void)writeValue:(double)value withName:(NSString *)name;
+- (void)writeString:(NSString *)string withName:(NSString *)name;
+- (void)writeSource:(id<OCVInputArrayable>)source withName:(NSString *)name;
+
+- (void)writeComment:(NSString *)comment;
+- (void)writeComment:(NSString *)comment append:(BOOL)append;
+
+#pragma mark - Class Methods
+
++ (NSString *)defaultObjectNameForFilename:(NSString *)filename;
 
 @end
 
