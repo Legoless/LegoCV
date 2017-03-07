@@ -299,6 +299,7 @@
 		38E3EA1B1E6E1CAE00BCC097 /* OCVSVD.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38E3EA191E6E1CAE00BCC097 /* OCVSVD.mm */; };
 		38E3EA1E1E6E245E00BCC097 /* OCVLDA.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA1C1E6E245E00BCC097 /* OCVLDA.h */; };
 		38E3EA1F1E6E245E00BCC097 /* OCVLDA.mm in Sources */ = {isa = PBXBuildFile; fileRef = 38E3EA1D1E6E245E00BCC097 /* OCVLDA.mm */; };
+		38E3EA211E6E305C00BCC097 /* OCVImageProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E7259A1E37B77C007DBC1F /* OCVRect.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E725991E37B77C007DBC1F /* OCVRect.m */; };
 		67E640484491E8713097DEB2 /* OCVComplex.m in Sources */ = {isa = PBXBuildFile; fileRef = 67E647669347DEDB0F2128DA /* OCVComplex.m */; };
 		67E6411251DB061893ABA100 /* OCVScalar+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67E64A91CE4E6CE0DE474C95 /* OCVScalar+Private.mm */; };
@@ -655,6 +656,7 @@
 		38E3EA191E6E1CAE00BCC097 /* OCVSVD.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVSVD.mm; sourceTree = "<group>"; };
 		38E3EA1C1E6E245E00BCC097 /* OCVLDA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVLDA.h; sourceTree = "<group>"; };
 		38E3EA1D1E6E245E00BCC097 /* OCVLDA.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVLDA.mm; sourceTree = "<group>"; };
+		38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVImageProcessing.h; sourceTree = "<group>"; };
 		38E725991E37B77C007DBC1F /* OCVRect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVRect.m; sourceTree = "<group>"; };
 		67E641E5AE5841744443558D /* OCVRect+Private.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "OCVRect+Private.mm"; sourceTree = "<group>"; };
 		67E6422A492670AF3DC695D8 /* OCVRect+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVRect+Private.h"; sourceTree = "<group>"; };
@@ -1145,6 +1147,7 @@
 				67E645697CBF982455006B11 /* OCVInterpolationType.h */,
 				67E64391B0744DE769F98B1C /* OCVImage.h */,
 				67E649531633D7EAAED7D919 /* OCVImage.m */,
+				38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -1516,6 +1519,7 @@
 				38E3EA1E1E6E245E00BCC097 /* OCVLDA.h in Headers */,
 				38A74FF01E37506D0036091A /* OCVInputArray.h in Headers */,
 				38A74FE91E374FC10036091A /* OCVInputArrayable.h in Headers */,
+				38E3EA211E6E305C00BCC097 /* OCVImageProcessing.h in Headers */,
 				383BC4A41E2FFDDA002EA7A1 /* OCVDevice.h in Headers */,
 				383BC5381E2FFFFC002EA7A1 /* OCVRgba.h in Headers */,
 				67E64667BC1DFFA5580A5132 /* OCVComplex.h in Headers */,
