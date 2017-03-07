@@ -252,7 +252,7 @@
 		389718911E3643A900CB02B4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389718901E3643A900CB02B4 /* CoreImage.framework */; };
 		389718931E3643B600CB02B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389718921E3643B600CB02B4 /* QuartzCore.framework */; };
 		389871121E6F311400020CFB /* OCVFileStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871101E6F311400020CFB /* OCVFileStorage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		389871131E6F311400020CFB /* OCVFileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 389871111E6F311400020CFB /* OCVFileStorage.m */; };
+		389871131E6F311400020CFB /* OCVFileStorage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 389871111E6F311400020CFB /* OCVFileStorage.mm */; };
 		389871161E6F315A00020CFB /* OCVFileNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871141E6F315A00020CFB /* OCVFileNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389871171E6F315A00020CFB /* OCVFileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 389871151E6F315A00020CFB /* OCVFileNode.m */; };
 		389871191E6F32BE00020CFB /* OCVPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871181E6F32BE00020CFB /* OCVPersistence.h */; };
@@ -609,7 +609,7 @@
 		389718901E3643A900CB02B4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		389718921E3643B600CB02B4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		389871101E6F311400020CFB /* OCVFileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFileStorage.h; sourceTree = "<group>"; };
-		389871111E6F311400020CFB /* OCVFileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFileStorage.m; sourceTree = "<group>"; };
+		389871111E6F311400020CFB /* OCVFileStorage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OCVFileStorage.mm; sourceTree = "<group>"; };
 		389871141E6F315A00020CFB /* OCVFileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFileNode.h; sourceTree = "<group>"; };
 		389871151E6F315A00020CFB /* OCVFileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFileNode.m; sourceTree = "<group>"; };
 		389871181E6F32BE00020CFB /* OCVPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPersistence.h; sourceTree = "<group>"; };
@@ -827,7 +827,7 @@
 			children = (
 				389871181E6F32BE00020CFB /* OCVPersistence.h */,
 				389871101E6F311400020CFB /* OCVFileStorage.h */,
-				389871111E6F311400020CFB /* OCVFileStorage.m */,
+				389871111E6F311400020CFB /* OCVFileStorage.mm */,
 				389871141E6F315A00020CFB /* OCVFileNode.h */,
 				389871151E6F315A00020CFB /* OCVFileNode.m */,
 			);
@@ -1817,7 +1817,7 @@
 				38BF380E1E6B2D0800C336EB /* OCVBitwiseOperation.mm in Sources */,
 				383BC4311E2FFB78002EA7A1 /* OCVNet.m in Sources */,
 				38BF38121E6B408100C336EB /* OCVTransformOperation.mm in Sources */,
-				389871131E6F311400020CFB /* OCVFileStorage.m in Sources */,
+				389871131E6F311400020CFB /* OCVFileStorage.mm in Sources */,
 				383BC4ED1E2FFF08002EA7A1 /* OCVHistogramCostExtractor.m in Sources */,
 				382F37761E3F8C1200A6F783 /* OCVScalar.m in Sources */,
 				383BC4191E2FFAC2002EA7A1 /* OCVBlob.m in Sources */,
