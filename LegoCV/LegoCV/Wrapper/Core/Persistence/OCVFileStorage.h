@@ -26,7 +26,6 @@ typedef NS_OPTIONS(NSInteger, OCVFileStorageModes) {
     OCVFileStorageModeWriteBase64   = OCVFileStorageModeBase64 | OCVFileStorageModeWrite, //!< flag, enable both Write and Base64
 };
 
-
 /*!
  *  cv::FileStorage
  */

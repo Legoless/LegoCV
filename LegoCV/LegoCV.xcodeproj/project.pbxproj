@@ -255,6 +255,7 @@
 		389871131E6F311400020CFB /* OCVFileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 389871111E6F311400020CFB /* OCVFileStorage.m */; };
 		389871161E6F315A00020CFB /* OCVFileNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871141E6F315A00020CFB /* OCVFileNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389871171E6F315A00020CFB /* OCVFileNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 389871151E6F315A00020CFB /* OCVFileNode.m */; };
+		389871191E6F32BE00020CFB /* OCVPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871181E6F32BE00020CFB /* OCVPersistence.h */; };
 		38A74FE91E374FC10036091A /* OCVInputArrayable.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FE81E374FC10036091A /* OCVInputArrayable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FEB1E374FF80036091A /* OCVOutputArrayable.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FEA1E374FF80036091A /* OCVOutputArrayable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38A74FED1E3750350036091A /* OCVInputOutputArrayable.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A74FEC1E3750350036091A /* OCVInputOutputArrayable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -611,6 +612,7 @@
 		389871111E6F311400020CFB /* OCVFileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFileStorage.m; sourceTree = "<group>"; };
 		389871141E6F315A00020CFB /* OCVFileNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVFileNode.h; sourceTree = "<group>"; };
 		389871151E6F315A00020CFB /* OCVFileNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVFileNode.m; sourceTree = "<group>"; };
+		389871181E6F32BE00020CFB /* OCVPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPersistence.h; sourceTree = "<group>"; };
 		38A74FE81E374FC10036091A /* OCVInputArrayable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputArrayable.h; sourceTree = "<group>"; };
 		38A74FEA1E374FF80036091A /* OCVOutputArrayable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVOutputArrayable.h; sourceTree = "<group>"; };
 		38A74FEC1E3750350036091A /* OCVInputOutputArrayable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputOutputArrayable.h; sourceTree = "<group>"; };
@@ -823,6 +825,7 @@
 		3898710F1E6F30F700020CFB /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				389871181E6F32BE00020CFB /* OCVPersistence.h */,
 				389871101E6F311400020CFB /* OCVFileStorage.h */,
 				389871111E6F311400020CFB /* OCVFileStorage.m */,
 				389871141E6F315A00020CFB /* OCVFileNode.h */,
@@ -1508,6 +1511,7 @@
 				383BC5981E300142002EA7A1 /* OCVDAISY.h in Headers */,
 				383BC4B81E2FFE13002EA7A1 /* OCVPlatformInfo.h in Headers */,
 				383BC4201E2FFB1D002EA7A1 /* OCVStorageOperationType.h in Headers */,
+				389871191E6F32BE00020CFB /* OCVPersistence.h in Headers */,
 				383BC4981E2FFD39002EA7A1 /* OCVMCvDTreeSplit.h in Headers */,
 				383BC5201E2FFFAA002EA7A1 /* OCVSphericalWarper.h in Headers */,
 				383BC4641E2FFC7B002EA7A1 /* OCVANNMLP.h in Headers */,
