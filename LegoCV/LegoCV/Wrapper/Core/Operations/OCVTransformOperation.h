@@ -15,12 +15,14 @@
 #import "OCVGeometry.h"
 #import "OCVTypes.h"
 
+#import "OCVOperation.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  Wraps transform operations defined in core.hpp such as DFT and DCT
  */
-@interface OCVTransformOperation : OCVObject
+@interface OCVOperation (Transform)
 
 /*!
  *  cv::dft()

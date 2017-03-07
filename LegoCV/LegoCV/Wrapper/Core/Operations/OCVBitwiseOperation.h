@@ -15,17 +15,14 @@
 #import "OCVGeometry.h"
 #import "OCVTypes.h"
 
-#import "OCVVector.h"
-#import "OCVUMat.h"
-
-#import "OCVMinimumMaximum.h"
+#import "OCVOperation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
  *  Wraps bitwise operations defined in core.hpp
  */
-@interface OCVBitwiseOperation : OCVObject
+@interface OCVOperation (Bitwise)
 
 /*!
  *  cv::bitwise_and()

@@ -957,13 +957,13 @@
 			isa = PBXGroup;
 			children = (
 				67E645D09E183D239A916DD8 /* OCVBitwiseOperation.h */,
-				67E644AF37D67E1163B102A4 /* OCVTransformOperation.mm */,
-				67E64BC77E241D37FD032064 /* OCVTransformOperation.h */,
 				67E6425526F810208AA6B50E /* OCVBitwiseOperation.mm */,
+				67E64BC77E241D37FD032064 /* OCVTransformOperation.h */,
+				67E644AF37D67E1163B102A4 /* OCVTransformOperation.mm */,
 				67E6438675C6C73B77B08385 /* OCVOperation.h */,
 				67E64B051241494FBEEEE346 /* OCVOperation.mm */,
-				67E64B35099EBE43C5F9A1C2 /* OCVMinimumMaximum.m */,
 				67E644438826EEE78DA5FA73 /* OCVMinimumMaximum.h */,
+				67E64B35099EBE43C5F9A1C2 /* OCVMinimumMaximum.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
