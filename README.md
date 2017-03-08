@@ -116,4 +116,4 @@ To build LegoCV project you need `cmake`. Install it with `brew install cmake` a
 
 # License
 
-[BSD license](), respect [OpenCV](https://github.com/opencv/opencv) license as well.
+[BSD license](https://github.com/legoless/legocv/blob/master/LICENSE), respect [OpenCV](https://github.com/opencv/opencv/blob/master/LICENSE) license as well.
