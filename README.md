@@ -27,7 +27,14 @@ func process(image: OCVMat) {
         
     let gray = OCVMat()
     let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
-        
+    
+    // OpenCV Syntax
+    OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
+    
+    // LegoCV Syntax
+    image.convertColor(to: gray, with: .BGR2GRAY)
+    let grayImg = image.convertColor(with: .BGR2GRAY)
+    
     OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
     OCVOperation.resize(from: gray, to: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
     OCVOperation.equalizeHistogram(from: smallImage, to: smallImage)
