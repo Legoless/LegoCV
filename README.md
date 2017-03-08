@@ -101,7 +101,7 @@ There is a smaller performance impact compared to pure native C++ code of OpenCV
 
 ## Installation
 
-LegoCV can be installed with [CocoaPods](https://cocoapods.org) or [Carthage](). It's only dependency is OpenCV framework, which can be downloaded from their website.
+LegoCV can be installed with [CocoaPods](https://cocoapods.org) or [Carthage](https://github.com/Carthage/Carthage). It's only dependency is OpenCV framework, which can be downloaded from their website.
 
 ```ruby
 pod 'LegoCV'
