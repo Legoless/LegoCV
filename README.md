@@ -111,7 +111,7 @@ pod 'LegoCV/Core'
 pod 'LegoCV/VideoIO'
 ```
 
-LegoCV supports iOS 8 and higher.
+*LegoCV supports iOS 8 and higher.*
 
 # Building
 
