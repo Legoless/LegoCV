@@ -106,9 +106,12 @@ LegoCV can be installed with [CocoaPods](https://cocoapods.org) or [Carthage](ht
 ```ruby
 pod 'LegoCV'
 
-# Specific modules
+# Use only specific modules
 pod 'LegoCV/Core'
+pod 'LegoCV/VideoIO'
 ```
+
+LegoCV supports iOS 8 and higher.
 
 # Building
 
