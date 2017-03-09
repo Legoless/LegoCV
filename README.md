@@ -31,7 +31,7 @@ func process(image: OCVMat) {
     // OpenCV Syntax
     OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
     
-    // LegoCV Syntax
+    // LegoCV Syntactic sugar
     image.convertColor(to: gray, with: .BGR2GRAY)
     let grayImg = image.convertColor(with: .BGR2GRAY)
     
