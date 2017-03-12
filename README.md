@@ -28,10 +28,14 @@ func process(image: OCVMat) {
     let gray = OCVMat()
     let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
     
-    // OpenCV Syntax
+    //
+    // OpenCV Default Syntax requires to predefine both input and output
+    //
     OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
     
-    // LegoCV Syntactic sugar
+    //
+    // LegoCV Syntactic sugar allows you to perform operations directly on the input, only defining output.
+    //
     image.convertColor(to: gray, with: .BGR2GRAY)
     let grayImg = image.convertColor(with: .BGR2GRAY)
     
