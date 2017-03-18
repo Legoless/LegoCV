@@ -34,6 +34,20 @@ typedef NS_ENUM(NSInteger, OCVSubdiv2DEdgeType) {
     OCVSubdiv2DEdgeTypePreviousAroundRight  = 0x02
 };
 
+/*!
+ *  Used with locating point methods
+ */
+typedef struct OCVSubdiv2DLocateResult {
+    OCVSubdiv2DEdgeType edgeType;
+    NSInteger edge;
+    NSInteger vertex;
+} OCVSubdiv2DLocateResult;
+
+typedef struct OCVSubdiv2DNearestResult {
+    OCVPoint2f nearestPoint;
+    NSInteger vertex;
+} OCVSubdiv2DNearestResult;
+
 NS_ASSUME_NONNULL_BEGIN
 
 /*!
@@ -44,7 +58,18 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithRect:(OCVRect)rect;
 
 - (void)setupDelaunayWithRect:(OCVRect)rect;
-- (NSInteger)insertPointWithPoint:(OCVPoint2f)point;
+- (NSInteger)insertPoint:(OCVPoint2f)point;
+
+/*!
+ *  Inserts vector of OCVPoint2f structs
+ *
+ *  TODO: Add Swift wrapper for this
+ */
+- (NSInteger)insertArray:(NSArray<NSValue *> *)array;
+
+- (OCVSubdiv2DLocateResult)locatePoint:(OCVPoint2f)point;
+
+- (OCVSubdiv2DNearestResult)findNearestWithPoint:(OCVPoint2f)point;
 
 @end
 
