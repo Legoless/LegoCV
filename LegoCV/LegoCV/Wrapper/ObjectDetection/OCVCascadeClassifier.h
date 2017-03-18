@@ -6,36 +6,17 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVPointerObject.h"
+#import "OCVBaseCascadeClassifier.h"
 #import "OCVInputArrayable.h"
 #import "OCVSize.h"
 #import "OCVRect.h"
+#import "OCVPersistence.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface OCVCascadeClassifier : OCVPointerObject
+@interface OCVCascadeClassifier : OCVBaseCascadeClassifier
 
-@property (nonatomic, readonly) BOOL isOldFormatCascade;
-@property (nonatomic, readonly) OCVSize originalWindowSize;
-
-- (instancetype)initWithURL:(NSURL *)url;
-- (instancetype)initWithPath:(NSString *)path;
-
-/*!
- *  Needs to be absolute path to the XML model for classifier: Bundle.main.bundlePath + relativePath
- */
-- (void)loadPath:(NSString *)path;
-- (void)loadURL:(NSURL *)url;
-
-//
-// TODO: Add Swift wrapper method to return OCVRect directly.
-//
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image;
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor;
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours;
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags;
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize;
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize;
+- (void)readWithNode:(OCVFileNode *)node;
 
 @end
 

@@ -93,7 +93,7 @@ class FaceDetector : NSObject, OCVVideoCameraDelegate {
         OCVImageOperation.resize(fromSource: gray, toDestination: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
         OCVImageOperation.equalizeHistogram(fromSource: smallImage, toDestination: smallImage)
         
-        return (faceDetector.detectMultiscale(with: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }, smallImage)
+        return (faceDetector.detectMultiScale(onImage: smallImage, scaleFactor: scaleFactor, minNeighbours: minRects, flags: 0, minSize: minSize).map { $0.rect }, smallImage)
     }
     
     private func draw(faces: [OCVRect], on image: OCVMat, with smallImage: OCVMat) {
