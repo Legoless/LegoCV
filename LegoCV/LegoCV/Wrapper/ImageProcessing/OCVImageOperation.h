@@ -6,6 +6,7 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
+#import "OCVTypes.h"
 #import "OCVObject.h"
 #import "OCVInputArrayable.h"
 #import "OCVOutputArrayable.h"
@@ -21,7 +22,26 @@
  */
 @interface OCVImageOperation : OCVObject
 
-//+ (id<OCVOutputArrayable>)convertColorFromSource:(id<OCVInputArrayable>)source withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn;
+/*!
+ *  Reference type: cv::getGaussianKernel
+ */
++ (OCVMat *)gaussianKernelForSize:(NSInteger)size sigma:(double)sigma;
++ (OCVMat *)gaussianKernelForSize:(NSInteger)size sigma:(double)sigma coefficientDepthType:(OCVDepthType)depthType;
+
+/*!
+ *  Reference type: cv::getDerivKernels
+ */
++ (void)derivKernelsWithKx:(id<OCVOutputArrayable>)kx ky:(id<OCVOutputArrayable>)ky dx:(NSInteger)dx dy:(NSInteger)dy apertureSize:(NSInteger)size;
++ (void)derivKernelsWithKx:(id<OCVOutputArrayable>)kx ky:(id<OCVOutputArrayable>)ky dx:(NSInteger)dx dy:(NSInteger)dy apertureSize:(NSInteger)size normalize:(BOOL)normalize;
++ (void)derivKernelsWithKx:(id<OCVOutputArrayable>)kx ky:(id<OCVOutputArrayable>)ky dx:(NSInteger)dx dy:(NSInteger)dy apertureSize:(NSInteger)size normalize:(BOOL)normalize coefficientDepthType:(OCVDepthType)depthType;
+
+
+
+
+
+
+
+
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type;
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn;
