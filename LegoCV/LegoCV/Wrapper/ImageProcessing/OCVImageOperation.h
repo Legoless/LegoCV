@@ -49,7 +49,8 @@
 /*!
  *  Reference type: cv::getStructuringElement()
  */
-
++ (OCVMat *)structuringElementWithShape:(OCVMorphShape)shape size:(OCVSize)size;
++ (OCVMat *)structuringElementWithShape:(OCVMorphShape)shape size:(OCVSize)size anchor:(OCVPoint)anchor;
 
 
 
