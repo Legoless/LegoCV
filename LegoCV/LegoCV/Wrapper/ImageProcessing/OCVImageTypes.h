@@ -54,4 +54,31 @@ typedef NS_ENUM(NSInteger, OCVAdaptiveThresholdType) {
     OCVAdaptiveThresholdTypeGaussianC = 1
 };
 
+/*!
+ *  Reference type: cv::UndistortTypes
+ */
+typedef NS_ENUM(NSInteger, OCVUndistortType) {
+    OCVUndistortTypeProjectionSphericalOrthogonal     = 0,
+    OCVUndistortTypeProjectionSphericalEqualRectangle = 1
+};
+
+/*!
+ *  Reference type: cv::GrabCutClasses
+ */
+typedef NS_ENUM(NSInteger, OCVGrabCutClassType) {
+    OCVGrabCutClassTypeBackground           = 0,  //!< an obvious background pixels
+    OCVGrabCutClassTypeForeground           = 1,  //!< an obvious foreground (object) pixel
+    OCVGrabCutClassTypePossibleBackground   = 2,  //!< a possible background pixel
+    OCVGrabCutClassTypePossibleForeground   = 3   //!< a possible foreground pixel
+};
+
+/*!
+ *  Reference type: cv::GrabCutModes
+ */
+typedef NS_ENUM(NSInteger, OCVGrabCutMode) {
+    OCVGrabCutModeInitWithRect  = 0,
+    OCVGrabCutModeInitWithMask  = 1,
+    OCVGrabCutModeEval          = 2
+};
+
 #endif /* OCVImageTypes_h */
