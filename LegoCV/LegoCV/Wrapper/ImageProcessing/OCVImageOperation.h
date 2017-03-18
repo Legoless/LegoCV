@@ -50,12 +50,41 @@
  *  Reference type: cv::getStructuringElement()
  */
 + (OCVMat *)structuringElementWithShape:(OCVMorphShape)shape size:(OCVSize)size;
-+ (OCVMat *)structuringElementWithShape:(OCVMorphShape)shape size:(OCVSize)size anchor:(OCVPoint)anchor;
++ (OCVMat *)structuringElementWithShape:(OCVMorphShape)shape size:(OCVSize)size anchorPoint:(OCVPoint)anchorPoint;
 
+/*!
+ *  Reference type: cv::medianBlur()
+ */
++ (void)medianBlurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size;
 
+/*!
+ *  Reference type: cv::GaussianBlur()
+ */
++ (void)gaussianBlurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size sigmaX:(double)sigmaX;
++ (void)gaussianBlurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size sigmaX:(double)sigmaX sigmaY:(double)sigmaY;
++ (void)gaussianBlurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size sigmaX:(double)sigmaX sigmaY:(double)sigmaY borderType:(OCVBorderType)borderType;
 
+/*!
+ *  Reference type: cv::bilateralFilter()
+ */
++ (void)bilateralFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination diameter:(NSInteger)diameter sigmaColor:(double)sigmaColor sigmaSpace:(double)sigmaSpace;
++ (void)bilateralFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination diameter:(NSInteger)diameter sigmaColor:(double)sigmaColor sigmaSpace:(double)sigmaSpace borderType:(OCVBorderType)borderType;
 
+/*!
+ *  Reference type: cv::boxFilter()
+ */
++ (void)boxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size;
++ (void)boxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint;
++ (void)boxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint normalize:(BOOL)normalize;
++ (void)boxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint normalize:(BOOL)normalize borderType:(OCVBorderType)borderType;
 
+/*!
+ *  Reference type: cv::sqrBoxFilter()
+ */
++ (void)squareBoxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size;
++ (void)squareBoxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint;
++ (void)squareBoxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint normalize:(BOOL)normalize;
++ (void)squareBoxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint normalize:(BOOL)normalize borderType:(OCVBorderType)borderType;
 
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type;
