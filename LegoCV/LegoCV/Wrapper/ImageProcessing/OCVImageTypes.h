@@ -92,11 +92,44 @@ typedef NS_ENUM(NSInteger, OCVDistanceTransformLabelType) {
 /*!
  *  Reference type: cv::FloodFillFlags
  */
-typedef NS_ENUM(NSInteger, OCVFloodFillFlags) {
+typedef NS_OPTIONS(NSInteger, OCVFloodFillFlags) {
     OCVFloodFillFlagFixedRange      = 1 << 16,
     OCVFloodFillFlagsMaskOnly       = 1 << 17
 };
 
+/*!
+ *  Reference type: cv::ConnectedComponentsTypes
+ */
+typedef NS_ENUM(NSInteger, OCVConnectedComponentType) {
+    OCVConnectedComponentTypeLeft   = 0, //!< The leftmost (x) coordinate which is the inclusive start of the bounding
+    //!< box in the horizontal direction.
+    OCVConnectedComponentTypeTop    = 1, //!< The topmost (y) coordinate which is the inclusive start of the bounding
+    //!< box in the vertical direction.
+    OCVConnectedComponentTypeWidth  = 2, //!< The horizontal size of the bounding box
+    OCVConnectedComponentTypeHeight = 3, //!< The vertical size of the bounding box
+    OCVConnectedComponentTypeArea   = 4, //!< The total area (in pixels) of the connected component
+    OCVConnectedComponentTypeMax    = 5
+};
+
+/*!
+ *  Reference type: cv::ConnectedComponentsAlgorithmsTypes
+ */
+typedef NS_ENUM(NSInteger, OCVConnectedComponentAlgorithmType) {
+    OCVConnectedComponentAlgorithmTypeWu      = 0,  //!< SAUF algorithm for 8-way connectivity, SAUF algorithm for 4-way connectivity
+    OCVConnectedComponentAlgorithmTypeDefault = -1, //!< BBDT algortihm for 8-way connectivity, SAUF algorithm for 4-way connectivity
+    OCVConnectedComponentAlgorithmTypeGrana   = 1   //!< BBDT algorithm for 8-way connectivity, SAUF algorithm for 4-way connectivity
+};
+
+/*!
+ *  Reference type: cv::RetrievalModes
+ */
+typedef NS_ENUM(NSInteger, OCVRetrievalMode) {
+    OCVRetrievalModeExternal                = 0,
+    OCVRetrievalModeList                    = 1,
+    OCVRetrievalModeConnectedComponent      = 2,
+    OCVRetrievalModeTree                    = 3,
+    OCVRetrievalModeFloodFill               = 4
+};
 
 
 
