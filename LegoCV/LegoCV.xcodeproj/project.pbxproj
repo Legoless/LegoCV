@@ -272,6 +272,8 @@
 		38C0D9201E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */; };
 		38C0D9231E7D77B500246963 /* OCVSubdiv2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D9211E7D77B500246963 /* OCVSubdiv2D.h */; };
 		38C0D9241E7D77B500246963 /* OCVSubdiv2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D9221E7D77B500246963 /* OCVSubdiv2D.m */; };
+		38C0D92B1E7D7EAC00246963 /* OCVLineSegmentDetector.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D9291E7D7EAC00246963 /* OCVLineSegmentDetector.h */; };
+		38C0D92C1E7D7EAC00246963 /* OCVLineSegmentDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D92A1E7D7EAC00246963 /* OCVLineSegmentDetector.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E3EA211E6E305C00BCC097 /* OCVImageProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -648,6 +650,8 @@
 		38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVContrastLimitedAdaptiveHistogramEqualization.m; sourceTree = "<group>"; };
 		38C0D9211E7D77B500246963 /* OCVSubdiv2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSubdiv2D.h; sourceTree = "<group>"; };
 		38C0D9221E7D77B500246963 /* OCVSubdiv2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVSubdiv2D.m; sourceTree = "<group>"; };
+		38C0D9291E7D7EAC00246963 /* OCVLineSegmentDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVLineSegmentDetector.h; sourceTree = "<group>"; };
+		38C0D92A1E7D7EAC00246963 /* OCVLineSegmentDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVLineSegmentDetector.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVImageProcessing.h; sourceTree = "<group>"; };
@@ -1241,6 +1245,8 @@
 				38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */,
 				38C0D9211E7D77B500246963 /* OCVSubdiv2D.h */,
 				38C0D9221E7D77B500246963 /* OCVSubdiv2D.m */,
+				38C0D9291E7D7EAC00246963 /* OCVLineSegmentDetector.h */,
+				38C0D92A1E7D7EAC00246963 /* OCVLineSegmentDetector.m */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -1569,6 +1575,7 @@
 				383BC4EC1E2FFF08002EA7A1 /* OCVHistogramCostExtractor.h in Headers */,
 				383BC5B41E30017C002EA7A1 /* OCVDTFilter.h in Headers */,
 				383BC4F81E2FFF39002EA7A1 /* OCVShapeDistanceExtractor.h in Headers */,
+				38C0D92B1E7D7EAC00246963 /* OCVLineSegmentDetector.h in Headers */,
 				38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */,
 				383BC5141E2FFF8F002EA7A1 /* OCVPaniniPortraitWarper.h in Headers */,
 				383BC4E01E2FFEDE002EA7A1 /* OCVEMDHistogramCostExtractor.h in Headers */,
@@ -1954,6 +1961,7 @@
 				383BC54D1E300044002EA7A1 /* OCVERFilterNM2.m in Sources */,
 				383BC5851E3000F7002EA7A1 /* OCVHistogramBox.m in Sources */,
 				383BC5491E30003C002EA7A1 /* OCVERFilterNM1.m in Sources */,
+				38C0D92C1E7D7EAC00246963 /* OCVLineSegmentDetector.m in Sources */,
 				383BC5A91E30015E002EA7A1 /* OCVSIFT.m in Sources */,
 				383BC4791E2FFCC9002EA7A1 /* OCVNormalBayesClassifier.m in Sources */,
 				383BC55D1E300078002EA7A1 /* OCVMultiTracker.m in Sources */,
