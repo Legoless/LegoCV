@@ -23,6 +23,8 @@
 @property (nonatomic, assign) double minimalDensity;
 @property (nonatomic, assign) NSInteger numberOfBins;
 
++ (instancetype)defaultOptions;
+
 @end
 
 @interface OCVLineSegmentDetector : OCVAlgorithm
