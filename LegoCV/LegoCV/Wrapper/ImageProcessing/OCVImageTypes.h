@@ -165,7 +165,6 @@ typedef NS_ENUM(NSInteger, OCVLineSegmentDetectorMode) {
     //!< refined through increase of precision, decrement in size, etc.
 };
 
-
 /*!
  *  Reference type: cv::HistCompMethods
  */
@@ -177,6 +176,15 @@ typedef NS_ENUM(NSInteger, OCVHistogramComparisonMethodType) {
     OCVHistogramComparisonMethodTypeHellinger               = OCVHistogramComparisonMethodTypeBhattacharyya,
     OCVHistogramComparisonMethodTypeChiSquareAlternative    = 4,
     OCVHistogramComparisonMethodTypeKullbackLeibler         = 5
+};
+
+/*!
+ *  Reference type: cv::RectanglesIntersectTypes
+ */
+typedef NS_ENUM(NSInteger, OCVRectangleIntersectType) {
+    OCVRectangleIntersectTypeNone       = 0, //!< No intersection
+    OCVRectangleIntersectTypePartial    = 1, //!< There is a partial intersection
+    OCVRectangleIntersectTypeFull       = 2 //!< One of the rectangle is fully enclosed in the other
 };
 
 
