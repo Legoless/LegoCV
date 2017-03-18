@@ -86,6 +86,30 @@
 + (void)squareBoxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint normalize:(BOOL)normalize;
 + (void)squareBoxFilterWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint normalize:(BOOL)normalize borderType:(OCVBorderType)borderType;
 
+/*!
+ *  Reference type: cv::blur()
+ */
++ (void)blurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size;
++ (void)blurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint;
++ (void)blurWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination size:(NSInteger)size anchorPoint:(OCVPoint)anchorPoint borderType:(OCVBorderType)borderType;
+
+/*!
+ *  Reference type: cv::filter2D()
+ */
++ (void)filter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernel:(id<OCVInputArrayable>)kernel;
++ (void)filter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernel:(id<OCVInputArrayable>)kernel anchorPoint:(OCVPoint)anchorPoint;
++ (void)filter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernel:(id<OCVInputArrayable>)kernel anchorPoint:(OCVPoint)anchorPoint delta:(double)delta;
++ (void)filter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernel:(id<OCVInputArrayable>)kernel anchorPoint:(OCVPoint)anchorPoint delta:(double)delta borderType:(OCVBorderType)borderType;
+
+/*!
+ *  Reference type: cv::sepFilter2D()
+ */
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernelX:(id<OCVInputArrayable>)kernelX kernelY:(id<OCVInputArrayable>)kernelY;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernelX:(id<OCVInputArrayable>)kernelX kernelY:(id<OCVInputArrayable>)kernelY anchorPoint:(OCVPoint)anchorPoint;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernelX:(id<OCVInputArrayable>)kernelX kernelY:(id<OCVInputArrayable>)kernelY anchorPoint:(OCVPoint)anchorPoint delta:(double)delta;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernelX:(id<OCVInputArrayable>)kernelX kernelY:(id<OCVInputArrayable>)kernelY anchorPoint:(OCVPoint)anchorPoint delta:(double)delta borderType:(OCVBorderType)borderType;
+
+
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type;
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type withDestinationCn:(NSInteger)destinationCn;
