@@ -34,6 +34,11 @@ typedef NS_ENUM(NSInteger, OCVSubdiv2DEdgeType) {
     OCVSubdiv2DEdgeTypePreviousAroundRight  = 0x02
 };
 
+//
+// MARK: Utility classes and structs to improve API design
+//
+
+
 /*!
  *  Used with locating point methods
  */
@@ -50,10 +55,40 @@ typedef struct OCVSubdiv2DNearestResult {
 
 NS_ASSUME_NONNULL_BEGIN
 
+@interface OCVVoronoiFacetResult : OCVObject
+
+//
+// TODO: Implement type here, array of arrays of OCVPoint2f
+//
+@property (nonatomic, strong) NSArray <NSArray *> * facets;
+
+//
+// TODO: Implement type here, array of OCVPoint2f
+//
+@property (nonatomic, strong) NSArray* facetCenters;
+
+@end
+
 /*!
  *  Reference type: cv::Subdiv2D
  */
 @interface OCVSubdiv2D : OCVObject
+
+//
+// TODO: Implement type here, an array of Vec4f elements
+//
+@property (nonatomic, readonly) NSArray* edges;
+
+//
+// TODO: Implement Swift wrapper, numbers are all integers
+//
+@property (nonatomic, readonly) NSArray<NSNumber *>* leadingEdges;
+
+//
+// TODO: Implement type here, an array of Vec6f elements
+//
+@property (nonatomic, readonly) NSArray* triangles;
+
 
 - (instancetype)initWithRect:(OCVRect)rect;
 
@@ -70,6 +105,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (OCVSubdiv2DLocateResult)locatePoint:(OCVPoint2f)point;
 
 - (OCVSubdiv2DNearestResult)findNearestWithPoint:(OCVPoint2f)point;
+
+- (OCVVoronoiFacetResult *)voronoiFacetListWithIndexes:(NSArray<NSNumber *> *)indexes;
+
 
 @end
 
