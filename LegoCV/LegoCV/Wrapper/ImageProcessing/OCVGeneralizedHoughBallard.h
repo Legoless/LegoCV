@@ -6,8 +6,11 @@
 //  Copyright © 2017 Unified Sense. All rights reserved.
 //
 
-#import "OCVObject.h"
+#import "OCVGeneralizedHough.h"
 
-@interface OCVGeneralizedHoughBallard : OCVObject
+@interface OCVGeneralizedHoughBallard : OCVGeneralizedHough
+
+@property (nonatomic, assign) NSInteger levels;
+@property (nonatomic, assign) NSInteger voteThreshold;
 
 @end
