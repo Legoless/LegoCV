@@ -166,4 +166,18 @@ typedef NS_ENUM(NSInteger, OCVLineSegmentDetectorMode) {
 };
 
 
+/*!
+ *  Reference type: cv::HistCompMethods
+ */
+typedef NS_ENUM(NSInteger, OCVHistogramComparisonMethodType) {
+    OCVHistogramComparisonMethodTypeCorrelation             = 0,
+    OCVHistogramComparisonMethodTypeChiSquare               = 1,
+    OCVHistogramComparisonMethodTypeIntersection            = 2,
+    OCVHistogramComparisonMethodTypeBhattacharyya           = 3,
+    OCVHistogramComparisonMethodTypeHellinger               = OCVHistogramComparisonMethodTypeBhattacharyya,
+    OCVHistogramComparisonMethodTypeChiSquareAlternative    = 4,
+    OCVHistogramComparisonMethodTypeKullbackLeibler         = 5
+};
+
+
 #endif /* OCVImageTypes_h */
