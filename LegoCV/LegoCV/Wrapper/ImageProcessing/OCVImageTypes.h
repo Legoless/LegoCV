@@ -131,6 +131,39 @@ typedef NS_ENUM(NSInteger, OCVRetrievalMode) {
     OCVRetrievalModeFloodFill               = 4
 };
 
+/*!
+ *  Reference type: cv::ContourApproximationModes
+ */
+typedef NS_ENUM(NSInteger, OCVContourApproximationMode) {
+    OCVContourApproximationModeNone         = 1,
+    /** compresses horizontal, vertical, and diagonal segments and leaves only their end points.
+     For example, an up-right rectangular contour is encoded with 4 points. */
+    OCVContourApproximationModeSimple       = 2,
+    /** applies one of the flavors of the Teh-Chin chain approximation algorithm @cite TehChin89 */
+    OCVContourApproximationModeTC89L1       = 3,
+    /** applies one of the flavors of the Teh-Chin chain approximation algorithm @cite TehChin89 */
+    OCVContourApproximationModeC89KCOS      = 4
+};
+
+/*!
+ *  Reference type: cv::HoughModes
+ */
+typedef NS_ENUM(NSInteger, OCVHoughMode) {
+    OCVHoughModeStandard      = 0,
+    OCVHoughModeProbabilistic = 1,
+    OCVHoughModeMultiScale    = 2,
+    OCVHoughModeGradient      = 3
+};
+
+/*!
+ *  Reference type: cv::LineSegmentDetectorModes
+ */
+typedef NS_ENUM(NSInteger, OCVLineSegmentDetectorMode) {
+    OCVLineSegmentDetectorModeNone          = 0, //!< No refinement applied
+    OCVLineSegmentDetectorModeStandard      = 1, //!< Standard refinement is applied. E.g. breaking arches into smaller straighter line approximations.
+    OCVLineSegmentDetectorModeAdvanced      = 2  //!< Advanced refinement. Number of false alarms is calculated, lines are
+    //!< refined through increase of precision, decrement in size, etc.
+};
 
 
 #endif /* OCVImageTypes_h */
