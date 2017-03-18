@@ -112,11 +112,11 @@
 /*!
  *  Reference type: cv::Sobel()
  */
-+ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy;
-+ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size;
-+ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale;
-+ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale delta:(double)delta;
-+ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale delta:(double)delta borderType:(OCVBorderType)borderType;
++ (void)sobelWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy;
++ (void)sobelWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size;
++ (void)sobelWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale;
++ (void)sobelWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale delta:(double)delta;
++ (void)sobelWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale delta:(double)delta borderType:(OCVBorderType)borderType;
 
 /*!
  *  Reference type: cv::spatialGradient()
@@ -125,6 +125,22 @@
 + (void)spatialGradientWithSource:(id<OCVInputArrayable>)source dx:(id<OCVOutputArrayable>)dx dy:(id<OCVOutputArrayable>)dy size:(NSInteger)size;
 + (void)spatialGradientWithSource:(id<OCVInputArrayable>)source dx:(id<OCVOutputArrayable>)dx dy:(id<OCVOutputArrayable>)dy size:(NSInteger)size borderType:(OCVBorderType)borderType;
 
+/*!
+ *  Reference type: cv::Scharr()
+ */
++ (void)scharrWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy;
++ (void)scharrWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy scale:(double)scale;
++ (void)scharrWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy scale:(double)scale delta:(double)delta;
++ (void)scharrWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy scale:(double)scale delta:(double)delta borderType:(OCVBorderType)borderType;
+
+/*!
+ *  Reference type: cv::Laplacian()
+ */
++ (void)laplacianWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth;
++ (void)laplacianWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size;
++ (void)laplacianWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size scale:(double)scale;
++ (void)laplacianWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size scale:(double)scale delta:(double)delta;
++ (void)laplacianWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth size:(NSInteger)size scale:(double)scale delta:(double)delta borderType:(OCVBorderType)borderType;
 
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type;
