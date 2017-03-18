@@ -22,4 +22,13 @@
 
 @property (nonatomic, assign) NSInteger maxBufferSize;
 
+- (void)setTemplateWithTemplate:(id<OCVInputArrayable>)template;
+- (void)setTemplateWithTemplate:(id<OCVInputArrayable>)template withTemplateCenter:(OCVPoint)templateCenter;
+
+- (void)detectOnImage:(id<OCVInputArrayable>)image toPositions:(id<OCVOutputArrayable>)positions;
+- (void)detectOnImage:(id<OCVInputArrayable>)image toPositions:(id<OCVOutputArrayable>)positions withVotes:(id<OCVOutputArrayable>)votes;
+
+- (void)detectEdges:(id<OCVInputArrayable>)edges withDx:(id<OCVInputArrayable>)dx withDy:(id<OCVInputArrayable>)dy toPositions:(id<OCVOutputArrayable>)positions;
+- (void)detectEdges:(id<OCVInputArrayable>)edges withDx:(id<OCVInputArrayable>)dx withDy:(id<OCVInputArrayable>)dy toPositions:(id<OCVOutputArrayable>)positions withVotes:(id<OCVOutputArrayable>)votes;
+
 @end
