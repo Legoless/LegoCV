@@ -81,4 +81,23 @@ typedef NS_ENUM(NSInteger, OCVGrabCutMode) {
     OCVGrabCutModeEval          = 2
 };
 
+/*!
+ *  Reference type: cv::DistanceTransformLabelTypes
+ */
+typedef NS_ENUM(NSInteger, OCVDistanceTransformLabelType) {
+    OCVDistanceTransformLabelTypeConnectedComponent = 0,
+    OCVDistanceTransformLabelTypePixel              = 1
+};
+
+/*!
+ *  Reference type: cv::FloodFillFlags
+ */
+typedef NS_ENUM(NSInteger, OCVFloodFillFlags) {
+    OCVFloodFillFlagFixedRange      = 1 << 16,
+    OCVFloodFillFlagsMaskOnly       = 1 << 17
+};
+
+
+
+
 #endif /* OCVImageTypes_h */
