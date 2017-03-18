@@ -7,6 +7,7 @@
 //
 
 #import "OCVGeometry.h"
+#import "OCVArrayables.h"
 #import "OCVAlgorithm.h"
 
 /*!
