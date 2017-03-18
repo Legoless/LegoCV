@@ -34,6 +34,13 @@ typedef NS_ENUM(NSInteger, OCVSubdiv2DEdgeType) {
     OCVSubdiv2DEdgeTypePreviousAroundRight  = 0x02
 };
 
+typedef NS_ENUM(NSInteger, OCVSubdiv2DRotationType) {
+    OCVSubdiv2DRotationTypeInputEdge                = 0,
+    OCVSubdiv2DRotationTypeRotatedEdge              = 1,
+    OCVSubdiv2DRotationTypeReversedEdge             = 2,
+    OCVSubdiv2DRotationTypeReversedRotatedEdge      = 3
+};
+
 //
 // MARK: Utility classes and structs to improve API design
 //
@@ -52,6 +59,16 @@ typedef struct OCVSubdiv2DNearestResult {
     OCVPoint2f nearestPoint;
     NSInteger vertex;
 } OCVSubdiv2DNearestResult;
+
+typedef struct OCVSubdiv2DVertexResult {
+    OCVPoint2f vertex;
+    NSInteger firstEdge;
+} OCVSubdiv2DVertexResult;
+
+typedef struct OCVSubdiv2DEdgePointResult {
+    NSInteger edge;
+    OCVPoint2f point;
+} OCVSubdiv2DEdgePointResult;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -108,6 +125,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (OCVVoronoiFacetResult *)voronoiFacetListWithIndexes:(NSArray<NSNumber *> *)indexes;
 
+- (OCVSubdiv2DVertexResult)vertexResultWithId:(NSInteger)vertex;
+
+- (NSInteger)edgeWithEdge:(NSInteger)edge nextEdgeType:(OCVSubdiv2DEdgeType)nextEdgeType;
+- (NSInteger)nextEdgeWithEdge:(NSInteger)edge;
+
+- (NSInteger)rotateEdgeWithEdge:(NSInteger)edge rotationType:(OCVSubdiv2DRotationType)rotationType;
+- (NSInteger)symEdgeWithEdge:(NSInteger)edge;
+
+- (OCVSubdiv2DEdgePointResult)edgeOriginWithEdge:(NSInteger)edge;
+- (OCVSubdiv2DEdgePointResult)edgeDistanceToEdge:(NSInteger)edge;
 
 @end
 
