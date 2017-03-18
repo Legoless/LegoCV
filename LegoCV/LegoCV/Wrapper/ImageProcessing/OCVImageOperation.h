@@ -109,6 +109,22 @@
 + (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernelX:(id<OCVInputArrayable>)kernelX kernelY:(id<OCVInputArrayable>)kernelY anchorPoint:(OCVPoint)anchorPoint delta:(double)delta;
 + (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth kernelX:(id<OCVInputArrayable>)kernelX kernelY:(id<OCVInputArrayable>)kernelY anchorPoint:(OCVPoint)anchorPoint delta:(double)delta borderType:(OCVBorderType)borderType;
 
+/*!
+ *  Reference type: cv::Sobel()
+ */
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale delta:(double)delta;
++ (void)separableFilter2DWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination depth:(NSInteger)depth dx:(NSInteger)dx dy:(NSInteger)dy size:(NSInteger)size scale:(double)scale delta:(double)delta borderType:(OCVBorderType)borderType;
+
+/*!
+ *  Reference type: cv::spatialGradient()
+ */
++ (void)spatialGradientWithSource:(id<OCVInputArrayable>)source dx:(id<OCVOutputArrayable>)dx dy:(id<OCVOutputArrayable>)dy;
++ (void)spatialGradientWithSource:(id<OCVInputArrayable>)source dx:(id<OCVOutputArrayable>)dx dy:(id<OCVOutputArrayable>)dy size:(NSInteger)size;
++ (void)spatialGradientWithSource:(id<OCVInputArrayable>)source dx:(id<OCVOutputArrayable>)dx dy:(id<OCVOutputArrayable>)dy size:(NSInteger)size borderType:(OCVBorderType)borderType;
+
 
 
 + (void)convertColorFromSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination withType:(OCVColorConversionType)type;
