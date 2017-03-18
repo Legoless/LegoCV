@@ -23,4 +23,35 @@ typedef NS_ENUM(NSInteger, OCVDistanceType) {
     OCVDistanceTypeHubar   = 7    //!< distance = |x|<c ? x^2/2 : c(|x|-c/2), c=1.345
 };
 
+/*!
+ *  Reference type: cv::DistanceTransformMasks
+ */
+typedef NS_OPTIONS(NSInteger, OCVDistanceTransformMasks) {
+    OCVDistanceTransformMask3       = 3, //!< mask=3
+    OCVDistanceTransformMask5       = 5, //!< mask=5
+    OCVDistanceTransformMaskPrecise = 0  //!<
+};
+
+/*!
+ *  Reference type: cv::ThresholdTypes
+ */
+typedef NS_ENUM(NSInteger, OCVThresholdType) {
+    OCVThresholdTypeBinary          = 0,
+    OCVThresholdTypeBinaryInverse   = 1,
+    OCVThresholdTypeTruncate        = 2,
+    OCVThresholdTypeToZero          = 3,
+    OCVThresholdTypeToZeroInverse   = 4,
+    OCVThresholdTypeMask            = 7,
+    OCVThresholdTypeOtsu            = 8, //!< flag, use Otsu algorithm to choose the optimal threshold value
+    OCVThresholdTypeTriangle        = 16 //!< flag, use Triangle algorithm to choose the optimal threshold value
+};
+
+/*!
+ *  Reference type: cv::AdaptiveThresholdTypes
+ */
+typedef NS_ENUM(NSInteger, OCVAdaptiveThresholdType) {
+    OCVAdaptiveThresholdTypeMeanC     = 0,
+    OCVAdaptiveThresholdTypeGaussianC = 1
+};
+
 #endif /* OCVImageTypes_h */
