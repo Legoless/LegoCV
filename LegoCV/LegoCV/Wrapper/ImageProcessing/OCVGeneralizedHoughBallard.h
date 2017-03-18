@@ -8,6 +8,9 @@
 
 #import "OCVGeneralizedHough.h"
 
+/*!
+ *  Reference type: cv::GeneralizedHoughBallard
+ */
 @interface OCVGeneralizedHoughBallard : OCVGeneralizedHough
 
 @property (nonatomic, assign) NSInteger levels;

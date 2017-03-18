@@ -8,6 +8,9 @@
 
 #import "OCVGeneralizedHough.h"
 
+/*!
+ *  Reference type: cv::GeneralizedHoughGuil
+ */
 @interface OCVGeneralizedHoughGuil : OCVGeneralizedHough
 
 @property (nonatomic, assign) double xi;

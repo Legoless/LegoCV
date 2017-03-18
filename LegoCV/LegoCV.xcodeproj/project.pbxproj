@@ -268,6 +268,8 @@
 		38C0D9181E7D747700246963 /* OCVArrayables.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D9171E7D747700246963 /* OCVArrayables.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C0D91B1E7D764200246963 /* OCVGeneralizedHoughGuil.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D9191E7D764200246963 /* OCVGeneralizedHoughGuil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38C0D91C1E7D764200246963 /* OCVGeneralizedHoughGuil.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D91A1E7D764200246963 /* OCVGeneralizedHoughGuil.m */; };
+		38C0D91F1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D91D1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h */; };
+		38C0D9201E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E3EA211E6E305C00BCC097 /* OCVImageProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -640,6 +642,8 @@
 		38C0D9171E7D747700246963 /* OCVArrayables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVArrayables.h; sourceTree = "<group>"; };
 		38C0D9191E7D764200246963 /* OCVGeneralizedHoughGuil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVGeneralizedHoughGuil.h; sourceTree = "<group>"; };
 		38C0D91A1E7D764200246963 /* OCVGeneralizedHoughGuil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVGeneralizedHoughGuil.m; sourceTree = "<group>"; };
+		38C0D91D1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVContrastLimitedAdaptiveHistogramEqualization.h; sourceTree = "<group>"; };
+		38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVContrastLimitedAdaptiveHistogramEqualization.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVImageProcessing.h; sourceTree = "<group>"; };
@@ -1229,6 +1233,8 @@
 				38C0D9141E7D73D100246963 /* OCVGeneralizedHough.m */,
 				38C0D9191E7D764200246963 /* OCVGeneralizedHoughGuil.h */,
 				38C0D91A1E7D764200246963 /* OCVGeneralizedHoughGuil.m */,
+				38C0D91D1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h */,
+				38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -1674,6 +1680,7 @@
 				67E641AE46ACCCCFFFCE3621 /* OCVPoint.h in Headers */,
 				67E6436EE5D768B6C32F3C87 /* OCVTypes.h in Headers */,
 				67E64B60D2C9C331E963C1B0 /* OCVVector.h in Headers */,
+				38C0D91F1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h in Headers */,
 				67E648675A5F8621E5FD80C2 /* OCVAlgorithm.h in Headers */,
 				67E64F5B14D37BB167F88E90 /* OCVGeometry.h in Headers */,
 				67E6456620CCF41EBB3210AD /* OCVLDA.h in Headers */,
@@ -1966,6 +1973,7 @@
 				67E647D10B4E166E041A9B8D /* OCVAlgorithm.m in Sources */,
 				67E645A832B070AB94DE46CF /* OCVPCA.mm in Sources */,
 				67E641A0E84C3661DCAE643F /* OCVSVD.mm in Sources */,
+				38C0D9201E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m in Sources */,
 				67E64787FDDD324B05DA33EA /* OCVCascadeClassifier.mm in Sources */,
 				67E6470893E985806C173E68 /* OCVRandomGenerator.mm in Sources */,
 				67E648D0AA7CBC940CD83B4C /* OCVLDA.mm in Sources */,
