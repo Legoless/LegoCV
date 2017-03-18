@@ -18,7 +18,7 @@
 @property (nonatomic, assign) double clipLimit;
 @property (nonatomic, assign) OCVSize tileGridSize;
 
-- (void)applyWithSource:(id<OCVInputArray>)source toDestination:(id<OCVOutputArray>)destination;
+- (void)applyWithSource:(id<OCVInputArrayable>)source toDestination:(id<OCVOutputArrayable>)destination;
 
 - (void)collectGarbage;
 

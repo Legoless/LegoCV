@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /*!
- *  Represents cv::Point, cv::Point2i, cv::Point_<int>
+ *  Reference type: cv::Point, cv::Point2i, cv::Point_<int>
  */
 typedef struct OCVPoint
 {
@@ -17,3 +17,11 @@ typedef struct OCVPoint
     NSInteger y;
 }
 OCVPoint;
+
+/*!
+ *  Reference type: cv::Point2f, cv::Point_<float>
+ */
+typedef struct OCVPoint2f {
+    float x;
+    float y;
+} OCVPoint2f;

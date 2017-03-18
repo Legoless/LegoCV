@@ -270,6 +270,8 @@
 		38C0D91C1E7D764200246963 /* OCVGeneralizedHoughGuil.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D91A1E7D764200246963 /* OCVGeneralizedHoughGuil.m */; };
 		38C0D91F1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D91D1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h */; };
 		38C0D9201E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */; };
+		38C0D9231E7D77B500246963 /* OCVSubdiv2D.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C0D9211E7D77B500246963 /* OCVSubdiv2D.h */; };
+		38C0D9241E7D77B500246963 /* OCVSubdiv2D.m in Sources */ = {isa = PBXBuildFile; fileRef = 38C0D9221E7D77B500246963 /* OCVSubdiv2D.m */; };
 		38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13EB1E366E0100822472 /* OCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38DB13EE1E366FE700822472 /* OCVCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 38DB13ED1E366FD500822472 /* OCVCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38E3EA211E6E305C00BCC097 /* OCVImageProcessing.h in Headers */ = {isa = PBXBuildFile; fileRef = 38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -644,6 +646,8 @@
 		38C0D91A1E7D764200246963 /* OCVGeneralizedHoughGuil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVGeneralizedHoughGuil.m; sourceTree = "<group>"; };
 		38C0D91D1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVContrastLimitedAdaptiveHistogramEqualization.h; sourceTree = "<group>"; };
 		38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVContrastLimitedAdaptiveHistogramEqualization.m; sourceTree = "<group>"; };
+		38C0D9211E7D77B500246963 /* OCVSubdiv2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVSubdiv2D.h; sourceTree = "<group>"; };
+		38C0D9221E7D77B500246963 /* OCVSubdiv2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVSubdiv2D.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
 		38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVImageProcessing.h; sourceTree = "<group>"; };
@@ -1235,6 +1239,8 @@
 				38C0D91A1E7D764200246963 /* OCVGeneralizedHoughGuil.m */,
 				38C0D91D1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.h */,
 				38C0D91E1E7D771300246963 /* OCVContrastLimitedAdaptiveHistogramEqualization.m */,
+				38C0D9211E7D77B500246963 /* OCVSubdiv2D.h */,
+				38C0D9221E7D77B500246963 /* OCVSubdiv2D.m */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -1544,6 +1550,7 @@
 				383BC4801E2FFCE1002EA7A1 /* OCVStatModelExtensions.h in Headers */,
 				38DB13EC1E366E0100822472 /* OCVVideo.h in Headers */,
 				383BC5401E30001E002EA7A1 /* OCVSuperResolution.h in Headers */,
+				38C0D9231E7D77B500246963 /* OCVSubdiv2D.h in Headers */,
 				383BC4841E2FFCEA002EA7A1 /* OCVSVM.h in Headers */,
 				383BC46C1E2FFCA2002EA7A1 /* OCVEM.h in Headers */,
 				383BC4C41E2FFE63002EA7A1 /* OCVTesseract.h in Headers */,
@@ -1933,6 +1940,7 @@
 				383BC5AD1E300165002EA7A1 /* OCVStarDetector.m in Sources */,
 				383BC5711E3000B6002EA7A1 /* OCVOnePassStabilizer.m in Sources */,
 				383BC4491E2FFBD5002EA7A1 /* OCVFeature2D.m in Sources */,
+				38C0D9241E7D77B500246963 /* OCVSubdiv2D.m in Sources */,
 				383BC5511E30004F002EA7A1 /* OCVERStat.m in Sources */,
 				383BC4111E2FF974002EA7A1 /* OCVObject.m in Sources */,
 				383BC5951E30013C002EA7A1 /* OCVCudaSURF.m in Sources */,
