@@ -10,6 +10,30 @@
 #define OCVImageTypes_h
 
 /*!
+ *  Reference type: cv::MorphTypes
+ */
+typedef NS_ENUM(NSInteger, OCVMorphType) {
+    OCVMorphTypeErode      = 0,
+    OCVMorphTypeDilate     = 1,
+    OCVMorphTypeOpen       = 2,
+    OCVMorphTypeClose      = 3,
+    OCVMorphTypeGradient   = 4,
+    OCVMorphTypeTopHat     = 5,
+    OCVMorphTypeBlackHat   = 6,
+    OCVMorphTypeHitOrMiss  = 7
+};
+
+/*!
+ *  Reference type: cv::MorphShapes
+ */
+typedef NS_ENUM(NSInteger, OCVMorphShape) {
+    OCVMorphShapeRect    = 0,
+    OCVMorphShapeCross   = 1,
+    OCVMorphShapeEllipse = 2
+};
+
+
+/*!
  *  Reference type: cv::DistanceTypes
  */
 typedef NS_ENUM(NSInteger, OCVDistanceType) {

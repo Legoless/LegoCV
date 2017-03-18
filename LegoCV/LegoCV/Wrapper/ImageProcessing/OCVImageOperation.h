@@ -22,25 +22,36 @@
 @interface OCVImageOperation : OCVObject
 
 /*!
- *  Reference type: cv::getGaussianKernel
+ *  Reference type: cv::getGaussianKernel()
  */
 + (OCVMat *)gaussianKernelForApertureSize:(NSInteger)size sigma:(double)sigma;
 + (OCVMat *)gaussianKernelForApertureSize:(NSInteger)size sigma:(double)sigma coefficientDepthType:(OCVDepthType)depthType;
 
 /*!
- *  Reference type: cv::getDerivKernels
+ *  Reference type: cv::getDerivKernels()
  */
 + (void)derivKernelsWithKx:(id<OCVOutputArrayable>)kx ky:(id<OCVOutputArrayable>)ky dx:(NSInteger)dx dy:(NSInteger)dy apertureSize:(NSInteger)size;
 + (void)derivKernelsWithKx:(id<OCVOutputArrayable>)kx ky:(id<OCVOutputArrayable>)ky dx:(NSInteger)dx dy:(NSInteger)dy apertureSize:(NSInteger)size normalize:(BOOL)normalize;
 + (void)derivKernelsWithKx:(id<OCVOutputArrayable>)kx ky:(id<OCVOutputArrayable>)ky dx:(NSInteger)dx dy:(NSInteger)dy apertureSize:(NSInteger)size normalize:(BOOL)normalize coefficientDepthType:(OCVDepthType)depthType;
 
 /*!
- *  Reference type: cv::getGaborKernel
+ *  Reference type: cv::getGaborKernel()
  */
-
 + (OCVMat *)gaborKernelForSize:(OCVSize)size sigma:(double)sigma theta:(double)theta waveLength:(double)lambd gamma:(double)gamma;
 + (OCVMat *)gaborKernelForSize:(OCVSize)size sigma:(double)sigma theta:(double)theta waveLength:(double)lambd gamma:(double)gamma phaseOffset:(double)phaseOffset;
 + (OCVMat *)gaborKernelForSize:(OCVSize)size sigma:(double)sigma theta:(double)theta waveLength:(double)lambd gamma:(double)gamma phaseOffset:(double)phaseOffset coefficientDepthType:(OCVDepthType)depthType;
+
+/*!
+ *  Reference type: cv::morphologyDefaultBorderValue()
+ */
++ (OCVScalar)morphologyDefaultBorderValue;
+
+/*!
+ *  Reference type: cv::getStructuringElement()
+ */
+
+
+
 
 
 
