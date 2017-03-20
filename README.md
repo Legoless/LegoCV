@@ -74,6 +74,8 @@ func process(image: OCVMat) {
     
     // Faces are returned as OCVRectValue instances, which wrap OCVRect structs.
     NSArray<OCVRectValue *>* faces = [self.faceDetector detectMultiscaleWith:smallImage scaleFactor:1.1 minNeighbours:2 flags: 0 minSize:minSize];
+    
+    OCVCascadeClassifierResult* result = [self.faceDetector detectMultiScaleOnImage:smallImage withOptions:[OCVCascadeClassifierOptions defaultOptions]];
 }
 ```
 
