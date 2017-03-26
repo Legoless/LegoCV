@@ -24,6 +24,8 @@ func process(image: OCVMat) {
     let scale = 2.0
 
     let minSize = OCVSize(width: 30, height: 30)
+    
+    let size = CGSize(width: 140.0, height: 140.00).ocvSize
         
     let gray = OCVMat()
     let smallImage = OCVMat(rows: Int(round(Double(image.rows) / scale)), cols: Int(round(Double(image.cols) / scale)), type: .cv8U, channels: 1)
