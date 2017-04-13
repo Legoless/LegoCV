@@ -12,7 +12,7 @@ This project's purpose is to create a simple, easy to use native Swift framework
 
 ## Example
 
-The following examples display the difference in using LegoCV in Swift and Objective-C versus vanilla OpenCV in C++.
+The following examples display the difference in using LegoCV in Swift and Objective-C compared vanilla OpenCV in C++.
 The example is extracted from Face detection sample code, included with LegoCV. On iOS it uses `OCVVideoCamera` wrapper class to get image stream from camera (wraps OpenCV's `CvVideoCamera`, to keep backward compatibiliy).
 
 #### Swift (LegoCV):
