@@ -45,10 +45,14 @@ func process(image: OCVMat) {
     OCVOperation.resize(from: gray, to: smallImage, size: smallImage.size, fx: 0, fy: 0, interpolation: .linear)
     OCVOperation.equalizeHistogram(from: smallImage, to: smallImage)
     
+    //
     // Faces are returned as OCVRect instances, so they are mapped in Swift, as they are structs.
+    //
     var faces : [OCVRect] = faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
     
+    //
     // More LegoCV objective syntactic sugar
+    //
     let result : OCVCascadeClassifierResult = faceDetector.detectMultiscale(on: smallImage, with: OCVCascadeClassifierOptions.default)
     faces = result.objects
     
@@ -76,9 +80,14 @@ func process(image: OCVMat) {
     [OCVOperation resizeFromSource:gray toDestination:smallImage size:smallImage.size fx:0 fy:0 interpolation:OCVInterpolationTypeLinear];
     [OCVOperation equalizeHistogramFromSource:smallImage toDestination:smallImage];
     
+    //
     // Faces are returned as OCVRectValue instances, which wrap OCVRect structs.
+    //
     NSArray<OCVRectValue *>* faces = [self.faceDetector detectMultiscaleWith:smallImage scaleFactor:1.1 minNeighbours:2 flags: 0 minSize:minSize];
     
+    //
+    // Call the face detector classifier
+    //
     OCVCascadeClassifierResult* result = [self.faceDetector detectMultiScaleOnImage:smallImage withOptions:[OCVCascadeClassifierOptions defaultOptions]];
 }
 ```
