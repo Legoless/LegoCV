@@ -36,7 +36,7 @@ func process(image: OCVMat) {
     OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
     
     //
-    // LegoCV Syntactic sugar allows you to perform operations directly on the input, only defining output.
+    // LegoCV syntactic sugar allows you to perform operations directly on the input, only defining output.
     //
     image.convertColor(to: gray, with: .BGR2GRAY)
     let grayImg = image.convertColor(with: .BGR2GRAY)
