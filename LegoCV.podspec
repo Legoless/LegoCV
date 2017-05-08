@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LegoCV'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Simple, lightweight native OpenCV wrapper for Objective-C and Swift.'
 
   s.description      = <<-DESC
