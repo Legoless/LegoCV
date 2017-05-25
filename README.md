@@ -8,7 +8,7 @@ Swift is one of the fastest evolving languages, but there is currently no way to
 
 This project's purpose is to create a simple, easy to use native Swift framework for OpenCV. The project adds Swift and Objective-C convenience methods, but translates to OpenCV API entirely.
 
-*The idea is to simply wrap OpenCV native C++ classes into lightweight Objective-C classes, which are then natively bridged to Swift, providing a thin layer on top of native OpenCV. [Realm](https://realm.io) and [EmguCV](http://www.emgu.com) in C# use similar framework structure.*
+*The idea is to simply wrap OpenCV native C++ classes into lightweight Objective-C classes, which are then natively bridged to Swift, providing a thin layer on top of native OpenCV. [Realm](https://realm.io) and [EmguCV](http://www.emgu.com) in C# use similar framework structure. Possibility for fully native cross-platform Swift version of OpenCV exists in the future.*
 
 ## Example
 
