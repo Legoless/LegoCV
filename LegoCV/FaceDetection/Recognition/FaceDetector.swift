@@ -8,7 +8,7 @@
 
 import LegoCV
 
-class FaceDetector : NSObject, OCVVideoCameraDelegate {
+class FaceDetector : OCVVideoCameraDelegate {
     private var imageView : UIImageView
     private var scale : CGFloat
     
