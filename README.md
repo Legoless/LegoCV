@@ -4,7 +4,7 @@ LegoCV is native OpenCV framework built for Swift and Objective-C projects. It e
 
 ## Mission
 
-Swift is one of the fastest evolving languages, but there is currently no way to use C++ framework directly, as it could be with Objective-C/C++.
+Swift is one of the fastest evolving languages, but there is currently no way to use C++ frameworks directly, as it was possible be with Objective-C/C++.
 
 This project's purpose is to create a simple, easy to use native Swift framework for OpenCV. The project adds Swift and Objective-C convenience methods, but translates to OpenCV API entirely.
 
