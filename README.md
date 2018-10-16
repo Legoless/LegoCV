@@ -130,6 +130,12 @@ There is a smaller performance impact compared to pure native C++ code of OpenCV
 
 ## Installation
 
+### Prerequisites
+
+For LegoCV you need `cmake`. Install it with `brew install cmake` and make sure you have Xcode Command Line tools installed. Trigger with `xcode-select --install` to check. Also make sure you use latest Xcode version and not Beta for master branch.
+
+### CocoaPods
+
 LegoCV can be installed with [CocoaPods](https://cocoapods.org) or [Carthage](https://github.com/Carthage/Carthage). It's only dependency is OpenCV framework, which can be downloaded from their website.
 
 ```ruby
@@ -142,9 +148,28 @@ pod 'LegoCV/VideoIO'
 
 *LegoCV supports iOS 8 and higher.*
 
-# Building
+### Example Project
 
-To build LegoCV project you need `cmake`. Install it with `brew install cmake` and make sure you have Xcode Command Line tools installed. Trigger with `xcode-select --install` to check. Also make sure you use latest Xcode version and not Beta for master branch.
+1. First clone the project:
+
+`git clone git@github.com:legoless/legocv.git`
+`cd legocv`
+
+2. Initialize submodules
+
+```
+git submodule init
+git submodule update
+```
+
+3. Build `opencv2.framework` from git repository.
+
+```
+/usr/bin/python opencv/platforms/ios/build_framework.py ios --dynamic
+```
+
+4. Open `LegoCV.xcodeproj` and build.
+
 
 # License
 
