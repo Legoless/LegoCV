@@ -225,7 +225,6 @@
 		386F2B841E3524D300320AEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B811E3524D300320AEB /* UIKit.framework */; };
 		386F2B871E352A4800320AEB /* OCVPointerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B851E352A4800320AEB /* OCVPointerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		386F2B881E352A4800320AEB /* OCVPointerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F2B861E352A4800320AEB /* OCVPointerObject.m */; };
-		389718651E36170F00CB02B4 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 389718641E36170F00CB02B4 /* data */; };
 		389718691E36175E00CB02B4 /* LiveCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389718681E36175E00CB02B4 /* LiveCameraVC.swift */; };
 		3897186B1E36176B00CB02B4 /* FaceRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */; };
 		3897186D1E3618B200CB02B4 /* FaceRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */; };
@@ -605,7 +604,6 @@
 		386F2B811E3524D300320AEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		386F2B851E352A4800320AEB /* OCVPointerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVPointerObject.h; sourceTree = "<group>"; };
 		386F2B861E352A4800320AEB /* OCVPointerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVPointerObject.m; sourceTree = "<group>"; };
-		389718641E36170F00CB02B4 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../opencv/data; sourceTree = "<group>"; };
 		389718681E36175E00CB02B4 /* LiveCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCameraVC.swift; sourceTree = "<group>"; };
 		3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognitionVC.swift; sourceTree = "<group>"; };
 		3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognizer.swift; sourceTree = "<group>"; };
@@ -824,14 +822,6 @@
 			path = Wrapper;
 			sourceTree = "<group>";
 		};
-		389718631E3616D400CB02B4 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				389718641E36170F00CB02B4 /* data */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		389718661E36172200CB02B4 /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
@@ -883,10 +873,8 @@
 		38B4D4A61E2AA01F008AAAB0 = {
 			isa = PBXGroup;
 			children = (
-				38B4D4CB1E2AA098008AAAB0 /* Examples */,
 				38B4D4B21E2AA01F008AAAB0 /* LegoCV */,
 				38B4D4BD1E2AA01F008AAAB0 /* LegoCVTests */,
-				389718631E3616D400CB02B4 /* Resources */,
 				38B4D4D11E2AA110008AAAB0 /* FaceDetection */,
 				38B4D4B11E2AA01F008AAAB0 /* Products */,
 				38B4D4CA1E2AA090008AAAB0 /* Frameworks */,
@@ -937,13 +925,6 @@
 				381F15081E2AA1D50072F870 /* opencv2.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		38B4D4CB1E2AA098008AAAB0 /* Examples */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Examples;
 			sourceTree = "<group>";
 		};
 		38B4D4D11E2AA110008AAAB0 /* FaceDetection */ = {
@@ -1871,7 +1852,6 @@
 			files = (
 				38B4D4DD1E2AA111008AAAB0 /* LaunchScreen.storyboard in Resources */,
 				38B4D4DA1E2AA111008AAAB0 /* Assets.xcassets in Resources */,
-				389718651E36170F00CB02B4 /* data in Resources */,
 				38B4D4D81E2AA110008AAAB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
