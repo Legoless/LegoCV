@@ -229,7 +229,6 @@
 		3897186B1E36176B00CB02B4 /* FaceRecognitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */; };
 		3897186D1E3618B200CB02B4 /* FaceRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */; };
 		3897186F1E3618BC00CB02B4 /* FaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3897186E1E3618BC00CB02B4 /* FaceDetector.swift */; };
-		389718701E361A3600CB02B4 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381F15081E2AA1D50072F870 /* opencv2.framework */; };
 		389718771E361ECC00CB02B4 /* OCVVideoCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718751E361ECC00CB02B4 /* OCVVideoCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		389718781E361ECC00CB02B4 /* OCVVideoCamera.mm in Sources */ = {isa = PBXBuildFile; fileRef = 389718761E361ECC00CB02B4 /* OCVVideoCamera.mm */; };
 		3897187B1E361F0600CB02B4 /* OCVPhotoCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 389718791E361F0600CB02B4 /* OCVPhotoCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -663,6 +662,7 @@
 		38C0D9371E7D8FFC00246963 /* OCVCascadeClassifierOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVCascadeClassifierOptions.m; sourceTree = "<group>"; };
 		38DB13EB1E366E0100822472 /* OCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVVideo.h; sourceTree = "<group>"; };
 		38DB13ED1E366FD500822472 /* OCVCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCVCore.h; sourceTree = "<group>"; };
+		38DDD2492181033B007B999D /* MatrixOperations.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MatrixOperations.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		38E3EA201E6E305C00BCC097 /* OCVImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVImageProcessing.h; sourceTree = "<group>"; };
 		67E640401947EB92C031F274 /* OCVScalar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCVScalar.m; sourceTree = "<group>"; };
 		67E6414DA192C455EE9F6374 /* OCVInputArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVInputArray.h; sourceTree = "<group>"; };
@@ -768,7 +768,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3848D3371E3F973A00379F4F /* opencv2.framework in Frameworks */,
-				389718701E361A3600CB02B4 /* opencv2.framework in Frameworks */,
 				381F150B1E2AA22A0072F870 /* LegoCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -872,6 +871,7 @@
 				38B4D4B21E2AA01F008AAAB0 /* LegoCV */,
 				38B4D4BD1E2AA01F008AAAB0 /* LegoCVTests */,
 				38B4D4D11E2AA110008AAAB0 /* FaceDetection */,
+				38DDD2482181022F007B999D /* Playgrounds */,
 				38B4D4B11E2AA01F008AAAB0 /* Products */,
 				38B4D4CA1E2AA090008AAAB0 /* Frameworks */,
 			);
@@ -950,6 +950,14 @@
 				38C0D9371E7D8FFC00246963 /* OCVCascadeClassifierOptions.m */,
 			);
 			path = ObjectDetection;
+			sourceTree = "<group>";
+		};
+		38DDD2482181022F007B999D /* Playgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				38DDD2492181033B007B999D /* MatrixOperations.playground */,
+			);
+			path = Playgrounds;
 			sourceTree = "<group>";
 		};
 		67E640EEFD7D8239C61CDF92 /* VideoStab */ = {
@@ -1784,7 +1792,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Unified Sense";
 				TargetAttributes = {
 					38B4D4AF1E2AA01F008AAAB0 = {
@@ -1795,6 +1803,7 @@
 					38B4D4B81E2AA01F008AAAB0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 289M6XEDV4;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					38B4D4CF1E2AA110008AAAB0 = {
@@ -2072,15 +2081,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2125,15 +2142,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -2210,7 +2235,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.LegoCVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2222,7 +2248,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.LegoCVTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
