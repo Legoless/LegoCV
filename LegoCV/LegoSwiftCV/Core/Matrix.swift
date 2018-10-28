@@ -10,5 +10,4 @@ import Foundation
 import LegoCV
 
 public class Matrix<T : Numeric> : OCVMat {
-    
 }
