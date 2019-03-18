@@ -1786,6 +1786,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B4D4C41E2AA020008AAAB0 /* Build configuration list for PBXNativeTarget "LegoCV" */;
 			buildPhases = (
+				E2D9E70A223F8E44002D52ED /* Compile OpenCV */,
 				38B4D4AB1E2AA01F008AAAB0 /* Sources */,
 				38B4D4AC1E2AA01F008AAAB0 /* Frameworks */,
 				38B4D4AD1E2AA01F008AAAB0 /* Headers */,
@@ -1892,6 +1893,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2D9E70A223F8E44002D52ED /* Compile OpenCV */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile OpenCV";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo ${PROJECT_DIR}\nopencv_framework_dir=\"${PROJECT_DIR}/../ios/opencv2.framework\"\nif [ ! -d \"$opencv_framework_dir\" ]\nthen\n    echo \"OpenCV framework not found at: ${opencv_framework_dir}\"\n    echo \"Compiling OpenCV\"\n    /usr/bin/python ../opencv/platforms/ios/build_framework.py ../ios --dynamic\nelse\n    echo \"OpenCV framework found\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		388B228721863CF000F24D45 /* Sources */ = {
