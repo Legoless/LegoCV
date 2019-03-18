@@ -67,27 +67,36 @@
     self.classifier->load(path.UTF8String);
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image {
-    return [self detectMultiscaleWith:image scaleFactor:1.1];
+/*
+ - (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor;
+ - (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours;
+ - (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags;
+ - (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize;
+ - (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize;
+
+ */
+
+- (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image {
+    return [self detectMultiScaleOnImage:image scaleFactor:1.1];
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor {
-    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:3];
+- (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor {
+    return [self detectMultiScaleOnImage:image scaleFactor:scaleFactor minNeighbours:3];
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours {
-    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:0];
+- (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours {
+    return [self detectMultiScaleOnImage:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:0];
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags {
-    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:flags minSize:OCVSize()];
+- (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags {
+    return [self detectMultiScaleOnImage:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:flags minSize:OCVSize()];
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize {
-    return [self detectMultiscaleWith:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:flags minSize:minSize maxSize:OCVSize()];
+- (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize {
+    return [self detectMultiScaleOnImage:image scaleFactor:scaleFactor minNeighbours:minNeighbours flags:flags minSize:minSize maxSize:OCVSize()];
 }
 
-- (NSArray<OCVRectValue *>*)detectMultiscaleWith:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize {
+- (NSArray<OCVRectValue *>*)detectMultiScaleOnImage:(id<OCVInputArrayable>)image scaleFactor:(double)scaleFactor minNeighbours:(NSInteger)minNeighbours flags:(NSInteger)flags minSize:(OCVSize)minSize maxSize:(OCVSize)maxSize {
     
     std::vector<cv::Rect> faceRects;
     

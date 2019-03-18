@@ -225,8 +225,6 @@
 		386F2B841E3524D300320AEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 386F2B811E3524D300320AEB /* UIKit.framework */; };
 		386F2B871E352A4800320AEB /* OCVPointerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 386F2B851E352A4800320AEB /* OCVPointerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		386F2B881E352A4800320AEB /* OCVPointerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 386F2B861E352A4800320AEB /* OCVPointerObject.m */; };
-		388B229421863CF000F24D45 /* LegoSwiftCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388B228B21863CF000F24D45 /* LegoSwiftCV.framework */; };
-		388B229B21863CF000F24D45 /* LegoSwiftCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388B229A21863CF000F24D45 /* LegoSwiftCVTests.swift */; };
 		388B229D21863CF000F24D45 /* LegoSwiftCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 388B228D21863CF000F24D45 /* LegoSwiftCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		388B22A021863CF000F24D45 /* LegoSwiftCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 388B228B21863CF000F24D45 /* LegoSwiftCV.framework */; };
 		388B22A121863CF000F24D45 /* LegoSwiftCV.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 388B228B21863CF000F24D45 /* LegoSwiftCV.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -257,8 +255,6 @@
 		389871191E6F32BE00020CFB /* OCVPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 389871181E6F32BE00020CFB /* OCVPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3898711D1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3898711B1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3898711E1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3898711C1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m */; };
-		38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */; };
-		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38B4D4D31E2AA110008AAAB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4D21E2AA110008AAAB0 /* AppDelegate.swift */; };
 		38B4D4D81E2AA110008AAAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4D61E2AA110008AAAB0 /* Main.storyboard */; };
@@ -358,6 +354,7 @@
 		67E64EDCC12B0E85158EED46 /* OCVInterpolationType.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E645697CBF982455006B11 /* OCVInterpolationType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67E64F5B14D37BB167F88E90 /* OCVGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E648280FA290221C92DE01 /* OCVGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		67E64F822344F94C3B4967C8 /* OCVInputOutputArray+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E6438D1CE78C8D148D0DE8 /* OCVInputOutputArray+Private.h */; };
+		E2EF901A223F16B5009E8312 /* data in Resources */ = {isa = PBXBuildFile; fileRef = E2EF9019223F16B4009E8312 /* data */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -368,33 +365,12 @@
 			remoteGlobalIDString = 38B4D4AF1E2AA01F008AAAB0;
 			remoteInfo = LegoCV;
 		};
-		388B229521863CF000F24D45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38B4D4A71E2AA01F008AAAB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 388B228A21863CF000F24D45;
-			remoteInfo = LegoSwiftCV;
-		};
-		388B229721863CF000F24D45 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38B4D4A71E2AA01F008AAAB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38B4D4CF1E2AA110008AAAB0;
-			remoteInfo = FaceDetection;
-		};
 		388B229E21863CF000F24D45 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38B4D4A71E2AA01F008AAAB0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 388B228A21863CF000F24D45;
 			remoteInfo = LegoSwiftCV;
-		};
-		38B4D4BB1E2AA01F008AAAB0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38B4D4A71E2AA01F008AAAB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 38B4D4AF1E2AA01F008AAAB0;
-			remoteInfo = LegoCV;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -633,9 +609,6 @@
 		388B228B21863CF000F24D45 /* LegoSwiftCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoSwiftCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		388B228D21863CF000F24D45 /* LegoSwiftCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoSwiftCV.h; sourceTree = "<group>"; };
 		388B228E21863CF000F24D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		388B229321863CF000F24D45 /* LegoSwiftCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoSwiftCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		388B229A21863CF000F24D45 /* LegoSwiftCVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoSwiftCVTests.swift; sourceTree = "<group>"; };
-		388B229C21863CF000F24D45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		389718681E36175E00CB02B4 /* LiveCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveCameraVC.swift; sourceTree = "<group>"; };
 		3897186A1E36176B00CB02B4 /* FaceRecognitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognitionVC.swift; sourceTree = "<group>"; };
 		3897186C1E3618B200CB02B4 /* FaceRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceRecognizer.swift; sourceTree = "<group>"; };
@@ -666,9 +639,6 @@
 		38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LegoCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38B4D4B91E2AA01F008AAAB0 /* LegoCVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoCVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCVTests.swift; sourceTree = "<group>"; };
-		38B4D4C01E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38B4D4D01E2AA110008AAAB0 /* FaceDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4D21E2AA110008AAAB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38B4D4D71E2AA110008AAAB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -770,6 +740,7 @@
 		67E64F947B816F412C783679 /* OCVUMat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVUMat.h; sourceTree = "<group>"; };
 		67E64FA8CD286E50EC4C0D24 /* OCVLDA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCVLDA.h; sourceTree = "<group>"; };
 		67E64FDA4612629A3D339C5D /* OCVSize+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCVSize+Private.h"; sourceTree = "<group>"; };
+		E2EF9019223F16B4009E8312 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../opencv/data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -777,14 +748,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388B229021863CF000F24D45 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388B229421863CF000F24D45 /* LegoSwiftCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,14 +765,6 @@
 				389718931E3643B600CB02B4 /* QuartzCore.framework in Frameworks */,
 				386F2B841E3524D300320AEB /* UIKit.framework in Frameworks */,
 				381F15091E2AA1D50072F870 /* opencv2.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38B4D4B61E2AA01F008AAAB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38B4D4BA1E2AA01F008AAAB0 /* LegoCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -893,15 +848,6 @@
 			path = LegoSwiftCV;
 			sourceTree = "<group>";
 		};
-		388B229921863CF000F24D45 /* LegoSwiftCVTests */ = {
-			isa = PBXGroup;
-			children = (
-				388B229A21863CF000F24D45 /* LegoSwiftCVTests.swift */,
-				388B229C21863CF000F24D45 /* Info.plist */,
-			);
-			path = LegoSwiftCVTests;
-			sourceTree = "<group>";
-		};
 		389718661E36172200CB02B4 /* Recognition */ = {
 			isa = PBXGroup;
 			children = (
@@ -953,13 +899,12 @@
 		38B4D4A61E2AA01F008AAAB0 = {
 			isa = PBXGroup;
 			children = (
+				E2EF9019223F16B4009E8312 /* data */,
 				388B228221863C9600F24D45 /* LegoSwiftCV */,
 				38B4D4B21E2AA01F008AAAB0 /* LegoCV */,
-				38B4D4BD1E2AA01F008AAAB0 /* LegoCVTests */,
 				38B4D4D11E2AA110008AAAB0 /* FaceDetection */,
 				38DDD2482181022F007B999D /* Playgrounds */,
 				388B228C21863CF000F24D45 /* LegoSwiftCV */,
-				388B229921863CF000F24D45 /* LegoSwiftCVTests */,
 				38B4D4B11E2AA01F008AAAB0 /* Products */,
 				38B4D4CA1E2AA090008AAAB0 /* Frameworks */,
 			);
@@ -969,10 +914,8 @@
 			isa = PBXGroup;
 			children = (
 				38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */,
-				38B4D4B91E2AA01F008AAAB0 /* LegoCVTests.xctest */,
 				38B4D4D01E2AA110008AAAB0 /* FaceDetection.app */,
 				388B228B21863CF000F24D45 /* LegoSwiftCV.framework */,
-				388B229321863CF000F24D45 /* LegoSwiftCVTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -985,15 +928,6 @@
 				38B4D4B41E2AA01F008AAAB0 /* Info.plist */,
 			);
 			path = LegoCV;
-			sourceTree = "<group>";
-		};
-		38B4D4BD1E2AA01F008AAAB0 /* LegoCVTests */ = {
-			isa = PBXGroup;
-			children = (
-				38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */,
-				38B4D4C01E2AA01F008AAAB0 /* Info.plist */,
-			);
-			path = LegoCVTests;
 			sourceTree = "<group>";
 		};
 		38B4D4CA1E2AA090008AAAB0 /* Frameworks */ = {
@@ -1846,25 +1780,6 @@
 			productReference = 388B228B21863CF000F24D45 /* LegoSwiftCV.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		388B229221863CF000F24D45 /* LegoSwiftCVTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 388B22A521863CF000F24D45 /* Build configuration list for PBXNativeTarget "LegoSwiftCVTests" */;
-			buildPhases = (
-				388B228F21863CF000F24D45 /* Sources */,
-				388B229021863CF000F24D45 /* Frameworks */,
-				388B229121863CF000F24D45 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				388B229621863CF000F24D45 /* PBXTargetDependency */,
-				388B229821863CF000F24D45 /* PBXTargetDependency */,
-			);
-			name = LegoSwiftCVTests;
-			productName = LegoSwiftCVTests;
-			productReference = 388B229321863CF000F24D45 /* LegoSwiftCVTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		38B4D4AF1E2AA01F008AAAB0 /* LegoCV */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38B4D4C41E2AA020008AAAB0 /* Build configuration list for PBXNativeTarget "LegoCV" */;
@@ -1882,24 +1797,6 @@
 			productName = LegoCV;
 			productReference = 38B4D4B01E2AA01F008AAAB0 /* LegoCV.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		38B4D4B81E2AA01F008AAAB0 /* LegoCVTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38B4D4C71E2AA020008AAAB0 /* Build configuration list for PBXNativeTarget "LegoCVTests" */;
-			buildPhases = (
-				38B4D4B51E2AA01F008AAAB0 /* Sources */,
-				38B4D4B61E2AA01F008AAAB0 /* Frameworks */,
-				38B4D4B71E2AA01F008AAAB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38B4D4BC1E2AA01F008AAAB0 /* PBXTargetDependency */,
-			);
-			name = LegoCVTests;
-			productName = LegoCVTests;
-			productReference = 38B4D4B91E2AA01F008AAAB0 /* LegoCVTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		38B4D4CF1E2AA110008AAAB0 /* FaceDetection */ = {
 			isa = PBXNativeTarget;
@@ -1928,35 +1825,23 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Unified Sense";
 				TargetAttributes = {
 					388B228A21863CF000F24D45 = {
 						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = 289M6XEDV4;
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
-					};
-					388B229221863CF000F24D45 = {
-						CreatedOnToolsVersion = 10.0;
-						DevelopmentTeam = 289M6XEDV4;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 38B4D4CF1E2AA110008AAAB0;
 					};
 					38B4D4AF1E2AA01F008AAAB0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 289M6XEDV4;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-					};
-					38B4D4B81E2AA01F008AAAB0 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 289M6XEDV4;
+						DevelopmentTeam = "";
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					38B4D4CF1E2AA110008AAAB0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 289M6XEDV4;
+						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1976,8 +1861,6 @@
 			targets = (
 				38B4D4AF1E2AA01F008AAAB0 /* LegoCV */,
 				388B228A21863CF000F24D45 /* LegoSwiftCV */,
-				38B4D4B81E2AA01F008AAAB0 /* LegoCVTests */,
-				388B229221863CF000F24D45 /* LegoSwiftCVTests */,
 				38B4D4CF1E2AA110008AAAB0 /* FaceDetection */,
 			);
 		};
@@ -1991,21 +1874,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		388B229121863CF000F24D45 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		38B4D4AE1E2AA01F008AAAB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		38B4D4B71E2AA01F008AAAB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2018,6 +1887,7 @@
 			files = (
 				38B4D4DD1E2AA111008AAAB0 /* LaunchScreen.storyboard in Resources */,
 				38B4D4DA1E2AA111008AAAB0 /* Assets.xcassets in Resources */,
+				E2EF901A223F16B5009E8312 /* data in Resources */,
 				38B4D4D81E2AA110008AAAB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2030,14 +1900,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				388B22A821863E0200F24D45 /* Matrix.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		388B228F21863CF000F24D45 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				388B229B21863CF000F24D45 /* LegoSwiftCVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2197,14 +2059,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		38B4D4B51E2AA01F008AAAB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		38B4D4CC1E2AA110008AAAB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2225,25 +2079,10 @@
 			target = 38B4D4AF1E2AA01F008AAAB0 /* LegoCV */;
 			targetProxy = 381F150D1E2AA22A0072F870 /* PBXContainerItemProxy */;
 		};
-		388B229621863CF000F24D45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 388B228A21863CF000F24D45 /* LegoSwiftCV */;
-			targetProxy = 388B229521863CF000F24D45 /* PBXContainerItemProxy */;
-		};
-		388B229821863CF000F24D45 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38B4D4CF1E2AA110008AAAB0 /* FaceDetection */;
-			targetProxy = 388B229721863CF000F24D45 /* PBXContainerItemProxy */;
-		};
 		388B229F21863CF000F24D45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 388B228A21863CF000F24D45 /* LegoSwiftCV */;
 			targetProxy = 388B229E21863CF000F24D45 /* PBXContainerItemProxy */;
-		};
-		38B4D4BC1E2AA01F008AAAB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 38B4D4AF1E2AA01F008AAAB0 /* LegoCV */;
-			targetProxy = 38B4D4BB1E2AA01F008AAAB0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2274,10 +2113,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2303,10 +2142,10 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2321,55 +2160,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		388B22A621863CF000F24D45 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = LegoSwiftCVTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.LegoSwiftCVTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceDetection.app/FaceDetection";
-			};
-			name = Debug;
-		};
-		388B22A721863CF000F24D45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = LegoSwiftCVTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.LegoSwiftCVTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FaceDetection.app/FaceDetection";
 			};
 			name = Release;
 		};
@@ -2494,7 +2284,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2516,7 +2306,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2531,45 +2321,19 @@
 			};
 			name = Release;
 		};
-		38B4D4C81E2AA020008AAAB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 289M6XEDV4;
-				INFOPLIST_FILE = LegoCVTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.LegoCVTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		38B4D4C91E2AA020008AAAB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = 289M6XEDV4;
-				INFOPLIST_FILE = LegoCVTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.LegoCVTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
 		38B4D4E01E2AA111008AAAB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = ../ios;
 				INFOPLIST_FILE = FaceDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.legocv.FaceDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -2579,13 +2343,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = ../ios;
 				INFOPLIST_FILE = FaceDetection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.unifiedsense.legocv.FaceDetection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -2597,15 +2361,6 @@
 			buildConfigurations = (
 				388B22A321863CF000F24D45 /* Debug */,
 				388B22A421863CF000F24D45 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		388B22A521863CF000F24D45 /* Build configuration list for PBXNativeTarget "LegoSwiftCVTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				388B22A621863CF000F24D45 /* Debug */,
-				388B22A721863CF000F24D45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2624,15 +2379,6 @@
 			buildConfigurations = (
 				38B4D4C51E2AA020008AAAB0 /* Debug */,
 				38B4D4C61E2AA020008AAAB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		38B4D4C71E2AA020008AAAB0 /* Build configuration list for PBXNativeTarget "LegoCVTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				38B4D4C81E2AA020008AAAB0 /* Debug */,
-				38B4D4C91E2AA020008AAAB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

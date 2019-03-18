@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "38B4D4AF1E2AA01F008AAAB0"
-               BuildableName = "LegoCV.framework"
-               BlueprintName = "LegoCV"
+               BlueprintIdentifier = "38B4D4CF1E2AA110008AAAB0"
+               BuildableName = "FaceDetection.app"
+               BlueprintName = "FaceDetection"
                ReferencedContainer = "container:LegoCV.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38B4D4AF1E2AA01F008AAAB0"
-            BuildableName = "LegoCV.framework"
-            BlueprintName = "LegoCV"
+            BlueprintIdentifier = "38B4D4CF1E2AA110008AAAB0"
+            BuildableName = "FaceDetection.app"
+            BlueprintName = "FaceDetection"
             ReferencedContainer = "container:LegoCV.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38B4D4AF1E2AA01F008AAAB0"
-            BuildableName = "LegoCV.framework"
-            BlueprintName = "LegoCV"
+            BlueprintIdentifier = "38B4D4CF1E2AA110008AAAB0"
+            BuildableName = "FaceDetection.app"
+            BlueprintName = "FaceDetection"
             ReferencedContainer = "container:LegoCV.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -69,15 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "38B4D4AF1E2AA01F008AAAB0"
-            BuildableName = "LegoCV.framework"
-            BlueprintName = "LegoCV"
+            BlueprintIdentifier = "38B4D4CF1E2AA110008AAAB0"
+            BuildableName = "FaceDetection.app"
+            BlueprintName = "FaceDetection"
             ReferencedContainer = "container:LegoCV.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
