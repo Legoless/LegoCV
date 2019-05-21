@@ -8,7 +8,7 @@
 
 import LegoCV
 
-class FaceDetector : OCVVideoCameraDelegate {
+class FaceDetector : NSObject, OCVVideoCameraDelegate {
     private var imageView : UIImageView
     private var scale : CGFloat
     
@@ -66,7 +66,7 @@ class FaceDetector : OCVVideoCameraDelegate {
     private func setupCamera () {
         videoCamera = OCVVideoCamera(parentView: imageView)
         videoCamera.defaultAVCaptureDevicePosition = .front
-        videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPreset640x480
+        videoCamera.defaultAVCaptureSessionPreset = AVCaptureSession.Preset.vga640x480.rawValue
         videoCamera.defaultAVCaptureVideoOrientation = .portrait
         videoCamera.defaultFPS = 30
         videoCamera.grayscaleMode = false
