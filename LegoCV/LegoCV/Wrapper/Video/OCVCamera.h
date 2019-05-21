@@ -27,7 +27,7 @@
 @property (nonatomic, assign) AVCaptureDevicePosition defaultAVCaptureDevicePosition;
 @property (nonatomic, assign) AVCaptureVideoOrientation defaultAVCaptureVideoOrientation;
 @property (nonatomic, assign) BOOL useAVCaptureVideoPreviewLayer;
-@property (nonatomic, strong) NSString *const defaultAVCaptureSessionPreset;
+@property (nonatomic, strong) AVCaptureSessionPreset defaultAVCaptureSessionPreset;
 
 @property (nonatomic, assign) NSInteger imageWidth;
 @property (nonatomic, assign) NSInteger imageHeight;

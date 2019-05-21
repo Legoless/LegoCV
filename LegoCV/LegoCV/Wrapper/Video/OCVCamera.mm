@@ -79,11 +79,11 @@
     self.source.useAVCaptureVideoPreviewLayer = useAVCaptureVideoPreviewLayer;
 }
 
-- (NSString *)defaultAVCaptureSessionPreset {
-    return self.source.defaultAVCaptureSessionPreset;
+- (AVCaptureSessionPreset)defaultAVCaptureSessionPreset {
+    return (AVCaptureSessionPreset)self.source.defaultAVCaptureSessionPreset;
 }
 
-- (void)setDefaultAVCaptureSessionPreset:(NSString *)defaultAVCaptureSessionPreset {
+- (void)setDefaultAVCaptureSessionPreset:(AVCaptureSessionPreset)defaultAVCaptureSessionPreset {
     self.source.defaultAVCaptureSessionPreset = defaultAVCaptureSessionPreset;
 }
 
