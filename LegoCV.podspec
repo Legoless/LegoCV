@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'LegoCV'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Simple, lightweight native OpenCV wrapper for Objective-C and Swift.'
 
   s.description      = <<-DESC
@@ -14,7 +14,7 @@ LegoCV is native OpenCV framework built for Swift and Objective-C projects. It e
   s.source           = { :git => 'https://github.com/legoless/legocv.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/thelegoless'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.public_header_files = 'LegoCV/LegoCV/LegoCV.h'
   s.source_files = 'LegoCV/LegoCV/LegoCV.h'
